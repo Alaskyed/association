@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<!--这里的status是log4j2本身的日志级别(log4j2本身也会产生日志),这里设置成off表示不记录log4j2本身的日志,不影响其他日志-->
+<Configuration monitorInterval="30">
+    <!--Appenders是附加器,里面可以设置多个,这里用于配置输出端-->
+    <Appenders>
+        <!-- console附加器,会把日志输出到控制台里面,target是输出的方式-->
+        <Console name="console" target="SYSTEM_OUT">
+            <!--这里指定的是日志的格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %class{36} %L %M - %msg%xEx%n" />
+        </Console>
+
+
+        <!--
+            name:           输出端的名字
+            fileName:       指定当前日志文件的位置和文件名称
+            filePattern:    指定当发生自动封存日志时，文件的路径和重命名规则
+            这个filePatten结合下面的TimeBasedTriggeringPolicy一起使用，可以实现控制日志按天生成文件.
+            自动封存日志的策略可以设置时间策略和文件大小策略（见下面的Policies配置）
+            时间策略：
+                文件名_%d{yyyy-MM-dd}_%i.log  这里%d表示自动封存日志的单位是天
+                如果下面的TimeBasedTriggeringPolicy的interval设为1,
+                表示每天自动封存日志一次;那么就是一天生成一个文件。
+            文件大小策略：
+                如果你设置了SizeBasedTriggeringPolicy的size的话，
+                超过了这个size就会再生成一个文件，这里的%i用来区分的
+            %d{yyyy-MM-dd}会自动替代为日期，如2017-06-30
+                -->
+        <!-- rollingFile附加器,滚动日志文件,fileName是当前日志文件,filePattern是达到一定的条件之后,重命名的文件格式 -->
+        <RollingFile name="rollingFlie" fileName="logs/association.log" filePattern="logs/association-%d{yyyy-MM-dd HH}.log">
+            <!-- 只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %class{36} %L %M - %msg%xEx%n" />
+            <OnStartupTriggeringPolicy/>
+            <Policies>
+                <!--每天单独一个文件-->
+                <!--<TimeBasedTriggeringPolicy modulate="true" interval="1"/>-->
+                <!--文件超过10M，拆分文件-->
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--
+                DefaultRolloverStrategy属性如不设置，
+                则默认为最多同一文件夹下7个文件，这里设置了20
+             -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </Appenders>
+
+    <!--
+            Logger： 用于指定部分包的日志级别
+                日志级别局部的会覆盖全局的
+                比如这里hibernate的级别设为debug，而控制台没有设级别，那么控制台会打印debug级别的日志
+                而输出到文件这个输出端设置了info级别，那么hibernate的debug级别的日志还是看不了。
+                所以最终输出的级别和输出端设置的级别是有关系的。
+            name: 包名
+            level：日志级别
+            additivity：是否冒泡，既在当前logger的输出端输出日志后是否需要在父输出端上输出该日志，默认为 true。如果设为false，则必须配置AppendRef。
+         -->
+    <Loggers>
+<!--    <Logger name="org.hibernate" level="debug" additivity="true"/>-->
+        <Root level="info">
+            <!-- 这里和上面的输出端命名是一样的 -->
+            <AppenderRef ref="console" />
+            <AppenderRef ref="rollingFlie" />
+        </Root>
+    </Loggers>
+</Configuration>

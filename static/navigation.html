@@ -1,0 +1,122 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin-top: 70px;;
+        }
+
+        .fixed-top {
+            background-color: #ffffff;
+            filter: alpha(Opacity=50);
+            -moz-opacity: 0.8;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <a class="navbar-brand heading-black" href="/index.html">
+            云社团
+        </a>
+        <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span data-feather="grid"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        主页导航
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#Abort">了解云社团</a>
+                        <a class="dropdown-item" href="#News">最新资讯</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#Contact">联系我们</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">活动 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">论坛 </a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#" data-toggle="modal" data-target="#loginForm">登录|注册</a>
+                </li>
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link page-scroll" href="#features">Features</a>-->
+                <!--                </li>-->
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link page-scroll" href="#pricing">Pricing</a>-->
+                <!--                </li>-->
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link page-scroll" href="#news">News</a>-->
+                <!--                </li>-->
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link page-scroll" href="#careers">Careers</a>-->
+                <!--                </li>-->
+            </ul>
+            <!--            <form class="form-inline">-->
+            <!--                <a class="btn btn-primary" href="#">Sign up</a>-->
+            <!--            </form>-->
+        </div>
+    </nav>
+
+    <!--登录表单-->
+    <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--注册表单-->
+    <div class="modal fade" id="registerForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+</body>

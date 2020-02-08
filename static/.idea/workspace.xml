@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WWHrd6Rf6oyXGKitX3qLY7OZy6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fonts" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\associationplatform\static\fonts" />
+      <recent name="F:\develop\associationplatform\static\js\index" />
+      <recent name="F:\develop\associationplatform\static\images\index" />
+      <recent name="F:\develop\associationplatform\static\css\color" />
+      <recent name="F:\develop\associationplatform\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\develop\associationplatform\static" />
+      <recent name="F:\develop\associationplatform\static\css" />
+      <recent name="F:\develop\associationplatform\static\images\index" />
+      <recent name="F:\develop\associationplatform\static\fonts" />
+      <recent name="F:\develop\associationplatform\static\css\index" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="" />
+      <created>1579258631009</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579258631009</updated>
+      <workItem from="1579258632239" duration="262000" />
+      <workItem from="1579258989856" duration="3000" />
+      <workItem from="1579261475776" duration="659000" />
+      <workItem from="1579658068024" duration="3000" />
+      <workItem from="1580035539540" duration="45000" />
+      <workItem from="1580038353732" duration="430000" />
+      <workItem from="1580038809312" duration="3543000" />
+      <workItem from="1580179573187" duration="9008000" />
+      <workItem from="1580285856761" duration="6293000" />
+      <workItem from="1580347435430" duration="1913000" />
+      <workItem from="1580373371549" duration="3159000" />
+      <workItem from="1580438300996" duration="865000" />
+      <workItem from="1580442805501" duration="4445000" />
+      <workItem from="1580472359508" duration="2315000" />
+      <workItem from="1580474690676" duration="3259000" />
+      <workItem from="1580526441052" duration="18714000" />
+      <workItem from="1580607440441" duration="4423000" />
+      <workItem from="1580625017933" duration="3000" />
+      <workItem from="1580649644509" duration="605000" />
+      <workItem from="1580732391684" duration="3782000" />
+      <workItem from="1580816807022" duration="5163000" />
+      <workItem from="1580867265970" duration="4792000" />
+      <workItem from="1580958708672" duration="1485000" />
+      <workItem from="1580990379357" duration="3736000" />
+      <workItem from="1581041351321" duration="25484000" />
+      <workItem from="1581128151890" duration="21748000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2058" y="241" width="802" height="699" key="#Vim_Emulation" timestamp="1580474674100">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2058" y="241" width="802" height="699" key="#Vim_Emulation/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474674100" />
+    <state x="1982" y="317" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580474656438">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1982" y="317" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474656438" />
+    <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581152661162">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581152661162" />
+    <state x="2137" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580477070936" />
+    <state x="-1278" y="83" width="1378" height="900" key="SettingsEditor" timestamp="1581134605202">
+      <screen x="-1440" y="0" width="1378" height="900" />
+    </state>
+    <state x="-1440" y="0" width="1378" height="900" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@-1440.0.1378.900" timestamp="1580737217642" />
+    <state x="-1278" y="83" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581134605202" />
+    <state x="1716" y="90" width="1440" height="900" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580289845711" />
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1581069462861">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581069462861" />
+    <state x="2063" y="239" width="720" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580563456357" />
+  </component>
+</project>

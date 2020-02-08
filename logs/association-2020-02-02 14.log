@@ -1,0 +1,45 @@
+2020-02-02 10:01:36 INFO  cn.com.alasky.StartApp 24 main - 启动应用
+2020-02-02 10:01:37 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartApp on spartan-PC with PID 13064 (/home/spartan/codes/associationplatform/target/classes started by spartan in /home/spartan/codes/associationplatform)
+2020-02-02 10:01:37 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-02-02 10:01:40 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8080 (http)
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-02 10:01:40 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-02-02 10:01:40 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3054 ms
+2020-02-02 10:01:41 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 10:01:41 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8080"]
+2020-02-02 10:01:41 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 10:01:41 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartApp in 5.007 seconds (JVM running for 7.641)
+2020-02-02 10:12:37 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 10:12:37 INFO  org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+2020-02-02 10:12:37 INFO  org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 8 ms
+2020-02-02 10:12:37 INFO  cn.com.alasky.controller.RegisterController 36 getRegisterInfo - 新的注册: testname 11122223333
+2020-02-02 10:12:37 INFO  com.zaxxer.hikari.HikariDataSource 110 getConnection - HikariPool-1 - Starting...
+2020-02-02 10:12:38 INFO  com.zaxxer.hikari.HikariDataSource 123 getConnection - HikariPool-1 - Start completed.
+2020-02-02 10:12:38 INFO  cn.com.alasky.service.RegisterService 39 addUser - 插入新用户出错
+2020-02-02 10:12:38 ERROR cn.com.alasky.service.RegisterService 40 addUser - org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
+### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error occurred while setting parameters
+### SQL: insert into user values(?,?,?,?,null)
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+; Data truncation: Data too long for column 'password' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+2020-02-02 10:20:18 INFO  cn.com.alasky.controller.RegisterController 36 getRegisterInfo - 新的注册: testname 11122223333
+2020-02-02 10:23:37 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: 11122223333
+2020-02-02 10:23:45 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: 11122223333
+2020-02-02 10:25:09 INFO  cn.com.alasky.controller.RegisterController 36 getRegisterInfo - 新的注册: test 11122223333
+2020-02-02 10:25:19 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: test
+2020-02-02 10:26:11 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper 766 run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s607ms739µs200ns).
+2020-02-02 10:26:11 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: test
+2020-02-02 10:26:58 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: test
+2020-02-02 10:28:20 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper 766 run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s671ms526µs121ns).
+2020-02-02 10:32:26 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper 766 run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s386ms575µs981ns).
+2020-02-02 10:32:26 INFO  cn.com.alasky.controller.LoginController 29 getLoginInfo - 新的登录: 11122223333
+2020-02-02 10:41:55 INFO  cn.com.alasky.controller.RegisterController 36 getRegisterInfo - 新的注册: test2 22233334444
+2020-02-02 14:03:55 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:03:55 INFO  com.zaxxer.hikari.HikariDataSource 350 close - HikariPool-1 - Shutdown initiated...
+2020-02-02 14:03:55 INFO  com.zaxxer.hikari.HikariDataSource 352 close - HikariPool-1 - Shutdown completed.
