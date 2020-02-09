@@ -69,9 +69,8 @@ function logout() {
         //响应成功执行的方法,参数为相应结果
         success: function (result) {
             if (result == "success") {
-                $("#myAssociation").css("display","none")
-                $("#userName").html("<a href=\"#\" data-toggle=\"modal\" data-target=\"#login\">登录|注册</a>")
-                $("#logout").css("display", "none");
+                //注销成功,刷新单签页面
+                location.reload();
             } else {
                 window.location = "/";
             }

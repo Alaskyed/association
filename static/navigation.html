@@ -1,10 +1,12 @@
 ﻿<head>
     <meta charset="UTF-8">
-    <style>
-        body {
-            margin-top: 70px;;
-        }
 
+    <script src="/js/logreg/checkLogin.js"></script>
+    <script src="/js/logreg/login.js"></script>
+    <script src="/js/logreg/register.js"></script>
+    <script src="/js/logreg/md5.js"></script>
+    <!--    导航栏样式-->
+    <style>
         .fixed-top {
             background-color: #ffffff;
             filter: alpha(Opacity=50);
@@ -32,14 +34,14 @@
                         主页导航
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#Abort">了解云社团</a>
-                        <a class="dropdown-item" href="#News">最新资讯</a>
+                        <a class="dropdown-item page-scroll" href="#About">了解云社团</a>
+                        <a class="dropdown-item page-scroll" href="#News">最新资讯</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#Contact">联系我们</a>
+                        <a class="dropdown-item page-scroll" href="#Contact">联系我们</a>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">活动 <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="">活动 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">论坛 </a>
@@ -48,9 +50,10 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#" data-toggle="modal" data-target="#loginForm">登录|注册</a>
-                </li>
+                <li class="nav-item" id="myAssociation" style="display: none"><a href="#">我的社团</a></li>
+                <li class="nav-item" id="userName"></li>
+                <li class="nav-item" id="logout" style="display: none"><a href="#">注销</a></li>
+
                 <!--                <li class="nav-item">-->
                 <!--                    <a class="nav-link page-scroll" href="#features">Features</a>-->
                 <!--                </li>-->
@@ -76,17 +79,36 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">登录</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+                        <div class="form-group row">
+                            <label for="loginUserName" class="col-sm-2 col-form-label">手机号</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="loginUserName" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="loginPassword" class="col-sm-2 col-form-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="loginPassword" placeholder="请输入密码">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerForm">
+                            没有账号?点击注册!
+                        </button>
+                    </div>
                 </div>
+                <div id="loginTip"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="loginSubmit">登录</button>
                 </div>
             </div>
         </div>
@@ -98,25 +120,72 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="">Modal title</h5>
+                    <h5 class="modal-title" id="">注册</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+                        <div class="form-group row">
+                            <label for="loginUserName" class="col-sm-2 col-form-label">用户名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerUserName" placeholder="请输入你的用户名"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入用户昵称">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerPassword" class="col-sm-2 col-form-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="registerPassword" placeholder="密码"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerPassword2" class="col-sm-2 col-form-label">重复密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="registerPassword2" placeholder="请重复密码"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="两次密码不一致!">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerPhoneNumber" class="col-sm-2 col-form-label">手机号</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerPhoneNumber" placeholder="请输入你的手机号"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入手机号!">
+                            </div>
+                        </div>
+                    </form>
                 </div>
+                <div id="registerTip"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="registerSubmit">注册</button>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-
 </div>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+        // $('#registerUserName').popover({
+        //     container: 'body'
+        // });
+        // $('#registerPassword').popover({
+        //     container: 'body'
+        // });
+        // $('#registerPassword2').popover({
+        //     container: 'body'
+        // });
+        // $('#registerPoneNumber').popover({
+        //     container: 'body'
+        // });
+    });
+</script>
 </body>

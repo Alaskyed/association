@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS / Color Scheme -->
-    <link rel="stylesheet" href="/css/color/blue.css" id="theme-color">
+    <link rel="stylesheet" href="/css/color/default.css" id="theme-color">
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -42,17 +42,17 @@
                 <img src="/images/index/mockup.svg" class="img-fluid d-block mx-auto" alt="Mockup"/>
                 <h1 class="heading-black mt-3">云社团</h1>
                 <p class="lead py-3">让你的社团更出彩!</p>
-                            <button class="btn btn-primary">登录|注册</button>
+                <button class="btn btn-primary" data-toggle='modal' data-target='#loginForm'>登录|注册</button>
                 <form class="mx-md-6">
                     <div class="input-group input-group-lg">
                     </div>
                 </form>
                 <div class="d-flex flex-row align-items-center justify-content-center mt-5">
-                    <a href="#" class="btn btn-link font-weight-medium d-flex flex-row align-items-center">
+                    <a class="btn btn-link font-weight-medium d-flex flex-row align-items-center" id="qq">
                         <span class="fa fa-qq"></span>
-                        634402189
+                        1964554520
                     </a>
-                    <a href="#" class="btn btn-link font-weight-medium d-flex flex-row align-items-center">
+                    <a  class="btn btn-link font-weight-medium d-flex flex-row align-items-center" id="wechat">
                         <span class="fa fa-wechat"></span>
                         18580465458
                     </a>
@@ -63,15 +63,16 @@
 </section>
 
 <!-- features section -->
-<section class="py-6 border-top" id="features">
+<section class="py-6 border-top" id="About">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center">
-                <h2 class="heading-black">关于我们</h2>
-                <p class="text-muted lead">
-                    <ul></ul>
-                </p>
-
+                <h2 class="heading-black">关于云社团</h2>
+                <ul class="text-left lead">
+                    <li> 云社团平台是致力于方便各个高校社团的一体化管理和交流</li>
+                    <li>作为管理员,在这里你可以注册自己的社团,并且随时随地的管理自己社团的人员,发布活动和公告,或者浏览其他社团发布的动态</li>
+                    <li>作为社团成员,你可以在这里发表自己的博客,与兴趣爱好相同的同学共同探讨,一起学习</li>
+                </ul>
             </div>
         </div>
         <div class="row mt-5">
@@ -80,154 +81,160 @@
                     <div class="col-md-6 box">
                         <div class="icon-box box-primary">
                             <div class="icon-box-inner">
-                                <span data-feather="edit-3" width="35" height="35"></span>
+                                <span class="fa fa-mortar-board fa-3x"></span>
                             </div>
                         </div>
-                        <h5>Create once. Share everywhere.</h5>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-                            nisi commodo, tempus odio a, vestibulum nibh.</p>
+                        <h5>专为大学社团定制</h5>
+                        <p class="text-muted">
+                            专门针对大学社团的特点,做出适合大学生社团的管理和交流平台!
+                        </p>
                     </div>
                     <div class="col-md-6 box">
                         <div class="icon-box box-success">
                             <div class="icon-box-inner">
-                                <span data-feather="monitor" width="35" height="35"></span>
+                                <span class="fa fa-television fa-3x"></span>
                             </div>
                         </div>
-                        <h5>Unlimited devices</h5>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-                            nisi commodo, tempus odio a, vestibulum nibh.</p>
+                        <h5>不限设备</h5>
+                        <p class="text-muted">
+                            不限设备,只要你的设备可以上网,就可以随时随地查看自己的社团动态,轻松的管理自己的社团!
+                        </p>
                     </div>
                     <div class="col-md-6 box">
                         <div class="icon-box box-danger">
                             <div class="icon-box-inner">
-                                <span data-feather="layout" width="35" height="35"></span>
+                                <span class="fa fa-feed fa-3x"></span>
                             </div>
                         </div>
-                        <h5>Beautiful tempates & layouts</h5>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-                            nisi commodo, tempus odio a, vestibulum nibh.</p>
+                        <h5>管理+交流</h5>
+                        <p class="text-muted">
+                            不仅可以随时管理自己的社团,还可以通过博客发帖,与其他社团的小伙伴们交流讨论!
+                        </p>
                     </div>
                     <div class="col-md-6 box">
                         <div class="icon-box box-info">
                             <div class="icon-box-inner">
-                                <span data-feather="globe" width="35" height="35"></span>
+                                <span class="fa fa-envelope-o fa-3x"></span>
                             </div>
                         </div>
-                        <h5>Available globally</h5>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-                            nisi commodo, tempus odio a, vestibulum nibh.</p>
+                        <h5>社团信息及时知晓</h5>
+                        <p class="text-muted">
+                            你可以根据自己的喜好设置自己社团动态的消息提醒,可以通过手机或邮箱接收信息提示,也可以订阅其他社团的活动提示,让你及时了解各个社团的最新动态!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-md-6 mx-auto text-center">
-                <h5 class="mb-4">Be the first one to know when we go live.</h5>
-                <a href="#" class="btn btn-primary">Request an early access</a>
+                <h5 class="mb-4">了解各个社团的最新活动</h5>
+                <a href="#" class="btn btn-primary">进入活动页面</a>
             </div>
         </div>
     </div>
 </section>
 
 <!--pricing section-->
-<section class="py-7 bg-dark" id="pricing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mx-auto text-center">
-                <h2 class="text-white heading-black">Choose your pricing plan.</h2>
-                <p class="text-light lead">Simply pricing - 7 Days free trial</p>
-            </div>
-        </div>
-        <!--pricing tables-->
-        <div class="row pt-5 pricing-table">
-            <div class="col-sm-10 col-12 mx-auto">
-                <div class="card-deck pricing-table">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title pt-3">Personal</h3>
-                            <h2 class="card-title text-primary mb-0 pt-4">$59</h2>
-                            <div class="text-muted font-weight-medium mt-2">per month</div>
-                            <ul class="list-unstyled pricing-list">
-                                <li>1 startup</li>
-                                <li>5 devices (desktop only)</li>
-                                <li>Access to premium templates</li>
-                                <li>Basic support</li>
-                            </ul>
-                            <a href="#" class="btn btn-primary">
-                                Start free trial
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card active">
-                        <div class="card-body">
-                            <h3 class="card-title pt-3">Agencies</h3>
-                            <h2 class="card-title text-info mb-0 pt-4">$159</h2>
-                            <div class="text-muted font-weight-medium mt-2">per month</div>
-                            <ul class="list-unstyled pricing-list">
-                                <li>10 startups</li>
-                                <li>50 devices (desktop & mobiles)</li>
-                                <li>Access to premium templates</li>
-                                <li>Priority support</li>
-                            </ul>
-                            <a href="#" class="btn btn-info">
-                                Start free trial
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section class="py-7 bg-dark" id="pricing">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 mx-auto text-center">-->
+<!--                <h2 class="text-white heading-black">Choose your pricing plan.</h2>-->
+<!--                <p class="text-light lead">Simply pricing - 7 Days free trial</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;pricing tables&ndash;&gt;-->
+<!--        <div class="row pt-5 pricing-table">-->
+<!--            <div class="col-sm-10 col-12 mx-auto">-->
+<!--                <div class="card-deck pricing-table">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h3 class="card-title pt-3">Personal</h3>-->
+<!--                            <h2 class="card-title text-primary mb-0 pt-4">$59</h2>-->
+<!--                            <div class="text-muted font-weight-medium mt-2">per month</div>-->
+<!--                            <ul class="list-unstyled pricing-list">-->
+<!--                                <li>1 startup</li>-->
+<!--                                <li>5 devices (desktop only)</li>-->
+<!--                                <li>Access to premium templates</li>-->
+<!--                                <li>Basic support</li>-->
+<!--                            </ul>-->
+<!--                            <a href="#" class="btn btn-primary">-->
+<!--                                Start free trial-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card active">-->
+<!--                        <div class="card-body">-->
+<!--                            <h3 class="card-title pt-3">Agencies</h3>-->
+<!--                            <h2 class="card-title text-info mb-0 pt-4">$159</h2>-->
+<!--                            <div class="text-muted font-weight-medium mt-2">per month</div>-->
+<!--                            <ul class="list-unstyled pricing-list">-->
+<!--                                <li>10 startups</li>-->
+<!--                                <li>50 devices (desktop & mobiles)</li>-->
+<!--                                <li>Access to premium templates</li>-->
+<!--                                <li>Priority support</li>-->
+<!--                            </ul>-->
+<!--                            <a href="#" class="btn btn-info">-->
+<!--                                Start free trial-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!--CTA section-->
-<section class="py-6">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mr-auto">
-                <h3>Everything Covered</h3>
-                <p class="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.
-                </p>
-            </div>
-            <div class="col-md-7 offset-md-1">
-                <ul class="features-list">
-                    <li>Weekly pitch updates</li>
-                    <li>Access to new features</li>
-                    <li>Competitor analysis</li>
-                    <li>100 refund guarantee</li>
-                    <li>Premium templates</li>
-                    <li>Advance SEO tools</li>
-                    <li>Free unlimited support</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-10 mx-auto">
-                <div class="card bg-gradient p-4">
-                    <div class="card-body d-md-flex flex-row align-items-center text-center text-md-left">
-                        <div class="mb-4 mb-md-0">
-                            <h4 class="text-white">Try Pitch free for 7 days</h4>
-                            <span class="text-light">Sign up now and setup your own pitch deck.</span>
-                        </div>
-                        <button class="btn btn-primary ml-md-auto d-inline-flex flex-row align-items-center">
-                            Get Started
-                            <em data-feather="chevrons-right" width="20" height="20" class="ml-2"></em>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!--<section class="py-6">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4 mr-auto">-->
+<!--                <h3>Everything Covered</h3>-->
+<!--                <p class="lead">-->
+<!--                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a,-->
+<!--                    vestibulum nibh.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <div class="col-md-7 offset-md-1">-->
+<!--                <ul class="features-list">-->
+<!--                    <li>Weekly pitch updates</li>-->
+<!--                    <li>Access to new features</li>-->
+<!--                    <li>Competitor analysis</li>-->
+<!--                    <li>100 refund guarantee</li>-->
+<!--                    <li>Premium templates</li>-->
+<!--                    <li>Advance SEO tools</li>-->
+<!--                    <li>Free unlimited support</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-md-10 mx-auto">-->
+<!--                <div class="card bg-gradient p-4">-->
+<!--                    <div class="card-body d-md-flex flex-row align-items-center text-center text-md-left">-->
+<!--                        <div class="mb-4 mb-md-0">-->
+<!--                            <h4 class="text-white">Try Pitch free for 7 days</h4>-->
+<!--                            <span class="text-light">Sign up now and setup your own pitch deck.</span>-->
+<!--                        </div>-->
+<!--                        <button class="btn btn-primary ml-md-auto d-inline-flex flex-row align-items-center">-->
+<!--                            Get Started-->
+<!--                            <em data-feather="chevrons-right" width="20" height="20" class="ml-2"></em>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+
 <!--news section-->
 <section class="py-7 bg-light" id="news">
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center">
-                <h2 class="heading-black">News from Pitch.</h2>
-                <p class="text-muted lead">What's new at Pitch.</p>
+                <h2 class="heading-black">公开活动展示</h2>
+                <p class="text-muted lead">最新的社团优秀活动展示</p>
             </div>
         </div>
         <div class="row mt-5">
@@ -273,110 +280,65 @@
         </div>
         <div class="row mt-6">
             <div class="col-md-6 mx-auto text-center">
-                <a href="#" class="btn btn-primary">Follow us on Medium</a>
+                <a href="#" class="btn btn-primary">查看更多</a>
             </div>
         </div>
     </div>
 </section>
 
 <!--careers section-->
-<section class="py-7" id="careers">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mx-auto text-center">
-                <h2 class="heading-black">We are hiring.</h2>
-                <p class="text-muted lead">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card bg-light text-center">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Senior UI/UX Designer</h3>
-                        <p class="font-weight-medium">San Francisco</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card bg-light text-center">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Chief Marketing Officer</h3>
-                        <p class="font-weight-medium">London</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card bg-light text-center">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Node.js Developer</h3>
-                        <p class="font-weight-medium">San Francisco / Remote</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4 mx-auto">
-                <div class="card bg-light text-center">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Content Writer</h3>
-                        <p class="font-weight-medium">Remote</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section class="py-7" id="careers">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 mx-auto text-center">-->
+<!--                <h2 class="heading-black">We are hiring.</h2>-->
+<!--                <p class="text-muted lead">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,-->
+<!--                    consectetur adipiscing elit.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-md-4 col-sm-6 mb-4">-->
+<!--                <div class="card bg-light text-center">-->
+<!--                    <div class="card-body">-->
+<!--                        <h3 class="card-title text-primary">Senior UI/UX Designer</h3>-->
+<!--                        <p class="font-weight-medium">San Francisco</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 col-sm-6 mb-4">-->
+<!--                <div class="card bg-light text-center">-->
+<!--                    <div class="card-body">-->
+<!--                        <h3 class="card-title text-primary">Chief Marketing Officer</h3>-->
+<!--                        <p class="font-weight-medium">London</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 col-sm-6 mb-4">-->
+<!--                <div class="card bg-light text-center">-->
+<!--                    <div class="card-body">-->
+<!--                        <h3 class="card-title text-primary">Node.js Developer</h3>-->
+<!--                        <p class="font-weight-medium">San Francisco / Remote</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 col-sm-6 mb-4 mx-auto">-->
+<!--                <div class="card bg-light text-center">-->
+<!--                    <div class="card-body">-->
+<!--                        <h3 class="card-title text-primary">Content Writer</h3>-->
+<!--                        <p class="font-weight-medium">Remote</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!--footer-->
 <footer class="py-6">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 mr-auto">
-                <h5>About Pitch</h5>
-                <p class="text-muted">Magnis modipsae que voloratati andigen daepeditem quiate conecus aut labore.
-                    Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam explabo.</p>
-                <ul class="list-inline social social-rounded social-sm">
-                    <li class="list-inline-item">
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href=""><i class="fa fa-google-plus"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href=""><i class="fa fa-dribbble"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <h5>Legal</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Refund policy</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <h5>Partner</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Refer a friend</a></li>
-                    <li><a href="#">Affiliates</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <h5>Help</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Log in</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12 text-muted text-center small-xl">
-                &copy; 2019 Pitch - All Rights Reserved - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-            </div>
-        </div>
-    </div>
+    <div id="foot"></div>
+    <script>
+        $("#foot").load("foot.html");
+    </script>
 </footer>
 
 <!--scroll to top-->

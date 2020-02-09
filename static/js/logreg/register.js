@@ -61,7 +61,8 @@ function sendRegisterInfo() {
     //手机号
     var registerPhoneNumber = $("#registerPhoneNumber").val();
     if (registerPhoneNumber==null || registerPhoneNumber.trim() == "") {
-        $("#registerPhoneNumber").popover("show");
+        // $("#registerPhoneNumber").popover("show");
+
         setTimeout(function () {
             $("#registerPhoneNumber").popover("hide");
         }, 2000);
@@ -74,17 +75,17 @@ function sendRegisterInfo() {
         }
     }
 
-    //邮箱
-    var registerEmail = $("#registerEmail").val();
-    var emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
-    if(!(registerEmail==null||registerEmail.trim()=="") && !emailReg.test(registerEmail)){
-        //检查邮箱格式
-        $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>邮箱格式不正确!</div>");
-        return false;
-    }
-
-    var registerQQ = $("#registerQQ").val();
-    var registerWechat = $("#registerWechat").val();
+    // //邮箱
+    // var registerEmail = $("#registerEmail").val();
+    // var emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+    // if(!(registerEmail==null||registerEmail.trim()=="") && !emailReg.test(registerEmail)){
+    //     //检查邮箱格式
+    //     $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>邮箱格式不正确!</div>");
+    //     return false;
+    // }
+    //
+    // var registerQQ = $("#registerQQ").val();
+    // var registerWechat = $("#registerWechat").val();
 
 
 
@@ -99,9 +100,9 @@ function sendRegisterInfo() {
                 "registerUserName": registerUserName,
                 "registerPassword": registerPasswordSubmit,
                 "registerPhoneNumber": registerPhoneNumber,
-                "registerEmail": registerEmail,
-                "registerQQ": registerQQ,
-                "registerWechat": registerWechat
+                // "registerEmail": registerEmail,
+                // "registerQQ": registerQQ,
+                // "registerWechat": registerWechat
             },
         //数据格式
         dataType: "text",
@@ -111,7 +112,7 @@ function sendRegisterInfo() {
                 $("#registerTip").html("<div class='alert alert-success' role='alert' style='text-align: center'>注册成功!</div>");
                 //停顿1s,关闭注册页面
                 setTimeout(function () {
-                    $("#register").modal("hide");
+                    $("#registerForm").modal("hide");
                 }, 1000);
             } else {
                 $("#registerTip").html("<div class='alert alert-danger' role='alert' style='text-align: center'>"+result+"</div>");

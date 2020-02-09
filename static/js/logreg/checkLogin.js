@@ -1,10 +1,10 @@
 ﻿//# sourceURL=checkLogin.js
 $(function () {
-    // checkLogin();
+    checkLogin();
 });
 
 function checkLogin() {
-    console.log("haha");
+    console.log("检查登录状态...");
     $.ajax({
         //请求地址
         url: "/java/checkLogin",
@@ -18,10 +18,13 @@ function checkLogin() {
         //响应成功执行的方法,参数为相应结果
         success: function (user) {
             if (user.userName == null || user.userName == "") {
-                $("#userName").html("<a href=\"#\" data-toggle=\"modal\" data-target=\"#login\">登录|注册</a>");
+                $("#userName").html("<a class='btn btn-primary' href='#' data-toggle='modal' data-target='#loginForm' style='color: #ffffff'>登录|注册</a>")
+                $("#logout").css("display", "none");
+                $("#myAssociation").css("display","none");
             } else {
-                $("#myAssociation").css("display","block")
-                $("#userName").html("<a href='#' class='text-capitalize'>欢迎! " + user.userName + "</a>");
+                $("#logreg").css("display", "none");
+                $("#myAssociation").css("display","block");
+                $("#userName").html("<a href='#'>欢迎! " + user.userName + "</a>");
                 $("#logout").css("display", "block");
             }
         },

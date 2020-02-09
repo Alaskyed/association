@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="" />
+    <list default="true" id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/association.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/associationplatform.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logs/association.log" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/association.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/myassociation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/myassociation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logreg/checkLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/checkLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logreg/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logreg/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +38,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WWHrd6Rf6oyXGKitX3qLY7OZy6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,8 +51,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
@@ -94,6 +121,8 @@
       <workItem from="1580990379357" duration="3736000" />
       <workItem from="1581041351321" duration="25484000" />
       <workItem from="1581128151890" duration="21748000" />
+      <workItem from="1581166077377" duration="9659000" />
+      <workItem from="1581211394208" duration="4777000" />
     </task>
     <servers />
   </component>
@@ -120,10 +149,10 @@
     <state x="-1440" y="0" width="1378" height="900" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@-1440.0.1378.900" timestamp="1580737217642" />
     <state x="-1278" y="83" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581134605202" />
     <state x="1716" y="90" width="1440" height="900" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580289845711" />
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1581069462861">
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1581166353131">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581069462861" />
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581166353131" />
     <state x="2063" y="239" width="720" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580563456357" />
   </component>
 </project>

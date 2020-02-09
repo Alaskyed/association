@@ -2,87 +2,55 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <!-- 适应手机 -->
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>我的社团</title>
-    <!-- 引入bootstrap样式 -->
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>云社团</title>
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
 
-    <style>
-        .navs {
-            padding: 15px 15px;
-            display: none;
-        }
-    </style>
+    <!--字体-->
 
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="/css/color/default.css" id="theme-color">
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+    <script src="js/index/scripts.js"></script>
 </head>
 
 <body>
-    <div>
-        <div id="header">
-        </div>
-        <script>
-            $("#header").load("../head.html");
-        </script>
-    </div>
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("../navigation.html");
+    </script>
+</section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">标签1</a></li>
-                    <li class=""><a href="#">标签2</a></li>
-                    <li class=""><a href="#">标签3</a></li>
-                    <li class=""><a href="#">标签4</a></li>
-                    <li class=""><a href="#">标签5</a></li>
-                </ul>
-            </div>
-            <div class="col-md-10">
-                <div class="navs">
-                    <img src="images/hasky_1.jpg" class="img-responsive">
-                    <p>这是标签1里面的内容</p>
-                </div>
-                <div class="navs">
-                    <img src="images/hasky_3.jpg" class="img-responsive">
-                    <p>这是标签2里面的内容</p>
-                </div>
-                <div class="navs">
-                    <img src="images/hasky_4.jpg" class="img-responsive">
-                    <p>这是标签3里面的内容</p>
-                </div>
-                <div class="navs">
-                    <img src="images/hasky_5.jpg" class="img-responsive">
-                    <p>这是标签4里面的内容</p>
-                </div>
-                <div class="navs">
-                    <img src="images/hasky_6.jpg" class="img-responsive">
-                    <p>这是标签5里面的内容</p>
-                </div>
 
-            </div>
-        </div>
-    </div>
 </body>
 
-<script>
-    $('li').mousedown(function () {
-        $(this).addClass('active');
-        $('li').not($(this)).removeClass('active');
+<!--<script>-->
+<!--    $('li').mousedown(function () {-->
+<!--        $(this).addClass('active');-->
+<!--        $('li').not($(this)).removeClass('active');-->
 
-        idx = $(this).index('li');
-        //alert(idx);
-        //show和hide的参数是执行该方法等待的时间
-        $('.navs').eq(idx).stop().show(500);
-        $('.navs').not($('.navs').eq(idx)).stop().hide(100);
-    });
+<!--        idx = $(this).index('li');-->
+<!--        //alert(idx);-->
+<!--        //show和hide的参数是执行该方法等待的时间-->
+<!--        $('.navs').eq(idx).stop().show(500);-->
+<!--        $('.navs').not($('.navs').eq(idx)).stop().hide(100);-->
+<!--    });-->
 
-    $('.navs').eq(0).show(500);
+<!--    $('.navs').eq(0).show(500);-->
 
-</script>
+<!--</script>-->
 
 </html>
