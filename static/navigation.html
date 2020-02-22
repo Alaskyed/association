@@ -7,11 +7,16 @@
     <script src="/js/logreg/md5.js"></script>
     <!--    导航栏样式-->
     <style>
+        body {
+            margin-top: 100px;
+
+        }
+
         .fixed-top {
             background-color: #ffffff;
-            filter: alpha(Opacity=50);
-            -moz-opacity: 0.8;
-            opacity: 0.8;
+            filter: alpha(Opacity=90);
+            -moz-opacity: 0.9;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -22,11 +27,11 @@
             云社团
         </a>
         <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span data-feather="grid"></span>
+                data-target="#topNavBar" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation" id="navBtn">
+            <span class="fa fa-tags"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -36,7 +41,6 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item page-scroll" href="#About">了解云社团</a>
                         <a class="dropdown-item page-scroll" href="#News">最新资讯</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item page-scroll" href="#Contact">联系我们</a>
                     </div>
                 </li>
@@ -47,29 +51,12 @@
                     <a class="nav-link" href="#">论坛 </a>
                 </li>
             </ul>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="dropdown-divider"></div>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" id="myAssociation" style="display: none"><a href="#">我的社团</a></li>
+                <li class="nav-item" id="myAssociation" style="display: none"><a href="/html/admin.html">我的社团</a></li>
                 <li class="nav-item" id="userName"></li>
                 <li class="nav-item" id="logout" style="display: none"><a href="#">注销</a></li>
-
-                <!--                <li class="nav-item">-->
-                <!--                    <a class="nav-link page-scroll" href="#features">Features</a>-->
-                <!--                </li>-->
-                <!--                <li class="nav-item">-->
-                <!--                    <a class="nav-link page-scroll" href="#pricing">Pricing</a>-->
-                <!--                </li>-->
-                <!--                <li class="nav-item">-->
-                <!--                    <a class="nav-link page-scroll" href="#news">News</a>-->
-                <!--                </li>-->
-                <!--                <li class="nav-item">-->
-                <!--                    <a class="nav-link page-scroll" href="#careers">Careers</a>-->
-                <!--                </li>-->
             </ul>
-            <!--            <form class="form-inline">-->
-            <!--                <a class="btn btn-primary" href="#">Sign up</a>-->
-            <!--            </form>-->
         </div>
     </nav>
 
@@ -125,10 +112,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                    <div class="row justify-content-center">
+                        <span>注意:标 * 的为必填</span>
+                    </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group row">
-                            <label for="loginUserName" class="col-sm-2 col-form-label">用户名</label>
+                            <label for="loginUserName" class="col-sm-2 col-form-label">用户名 *</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="registerUserName" placeholder="请输入你的用户名"
                                        data-toggle="popover" data-trigger="manual" data-container="body"
@@ -136,7 +126,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="registerPassword" class="col-sm-2 col-form-label">密码</label>
+                            <label for="registerPhoneNumber" class="col-sm-2 col-form-label">手机号 *</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerPhoneNumber" placeholder="请输入你的手机号"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入手机号!">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerPassword" class="col-sm-2 col-form-label">密码 *</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="registerPassword" placeholder="密码"
                                        data-toggle="popover" data-trigger="manual" data-container="body"
@@ -144,7 +142,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="registerPassword2" class="col-sm-2 col-form-label">重复密码</label>
+                            <label for="registerPassword2" class="col-sm-2 col-form-label">重复密码 </label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="registerPassword2" placeholder="请重复密码"
                                        data-toggle="popover" data-trigger="manual" data-container="body"
@@ -152,11 +150,36 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="registerPhoneNumber" class="col-sm-2 col-form-label">手机号</label>
+                            <label for="registerUniversity" class="col-sm-2 col-form-label">学校 *</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="registerPhoneNumber" placeholder="请输入你的手机号"
+                                <input type="text" class="form-control" id="registerUniversity" placeholder="请填写你的学校名称"
                                        data-toggle="popover" data-trigger="manual" data-container="body"
-                                       data-placement="top" title="提示" data-content="请输入手机号!">
+                                       data-placement="top" title="提示" data-content="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="registerEmail" class="col-sm-2 col-form-label">邮箱</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="registerEmail" placeholder="请输入你的邮箱"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入邮箱!">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerQQ" class="col-sm-2 col-form-label">QQ</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerQQ" placeholder="请输入你的QQ号"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入QQ号!">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registerWechat" class="col-sm-2 col-form-label">微信</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerWechat" placeholder="请输入你的微信号"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入微信号!">
                             </div>
                         </div>
                     </form>
@@ -170,6 +193,30 @@
         </div>
     </div>
 
+</div>
+
+
+<!-- theme switcher (FOR DEMO ONLY - REMOVE FROM PRODUCTION)-->
+<div class="switcher-wrap">
+    <div class="switcher-trigger">
+        <span class="fa fa-cog fa-spin"></span>
+    </div>
+    <div class="color-switcher">
+        <h6>选择主题</h6>
+        <ul class="mt-3 clearfix">
+            <li class="bg-purple active" data-color="default" title="Default Purple"></li>
+            <li class="bg-blue" data-color="blue" title="Blue"></li>
+            <li class="bg-red" data-color="red" title="Red"></li>
+            <li class="bg-green" data-color="green" title="Green"></li>
+            <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+            <li class="bg-orange" data-color="orange" title="Orange"></li>
+            <li class="bg-black" data-color="black" title="Black"></li>
+            <li class="bg-teal" data-color="teal" title="Teal"></li>
+            <li class="bg-cyan" data-color="cyan" title="Cyan"></li>
+            <li class="bg-pink" data-color="pink" title="Pink"></li>
+        </ul>
+        <p>这里可以选择当前页面的主题颜色</p>
+    </div>
 </div>
 <script>
     $(function () {
@@ -186,6 +233,13 @@
         // $('#registerPoneNumber').popover({
         //     container: 'body'
         // });
+
+        //导航栏矢焦时自动收起
+        $("#navBtn").blur(function () {
+            setTimeout(function () {
+                $("#topNavBar").collapse('hide');
+            }, 300);
+        });
     });
 </script>
 </body>

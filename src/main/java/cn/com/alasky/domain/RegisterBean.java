@@ -18,10 +18,13 @@ public class RegisterBean {
     private String registerUserName;
     @Getter
     @Setter
-    private String registerPassword;
+    private String registerPhoneNumber;
     @Getter
     @Setter
-    private String registerPhoneNumber;
+    private String registerUniversity;
+    @Getter
+    @Setter
+    private String registerPassword;
     @Getter
     @Setter
     private String registerEmail;

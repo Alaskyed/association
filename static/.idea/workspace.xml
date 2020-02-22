@@ -2,27 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/association.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/associationplatform.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/UserDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/DataChangeBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/MajorBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/PersonalDataMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/UserDataMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/UserDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/utils/UserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/vo/PerosnalDataVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin/adminNavication.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin/personalData.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin/userData.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/admin/assData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/admin/personalData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/admin/userData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/admin/adminNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/admin/personalData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/admin/userData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../associationplatform.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../logs/association.log" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/association.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/RegisterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/RegisterBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/UserBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/RegisterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/RegisterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/RegisterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/myassociation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/myassociation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/myassociation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/logreg/checkLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/checkLogin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/logreg/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/logreg/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/META-INF/associationplatform.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/ServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/StartApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/config/RedisSessionConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/Index.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/LoginBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/RegisterBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/LoginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/RegisterMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/RegisterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/utils/RequestInfoUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/vo/LoginSessionVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/mail.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/redis.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +67,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,24 +88,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\develop\associationplatform\static\fonts" />
-      <recent name="F:\develop\associationplatform\static\js\index" />
-      <recent name="F:\develop\associationplatform\static\images\index" />
-      <recent name="F:\develop\associationplatform\static\css\color" />
-      <recent name="F:\develop\associationplatform\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\develop\association\static\js\logreg" />
       <recent name="F:\develop\associationplatform\static" />
       <recent name="F:\develop\associationplatform\static\css" />
       <recent name="F:\develop\associationplatform\static\images\index" />
       <recent name="F:\develop\associationplatform\static\fonts" />
-      <recent name="F:\develop\associationplatform\static\css\index" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\association\static\html\admin" />
+      <recent name="F:\develop\associationplatform\static\fonts" />
+      <recent name="F:\develop\associationplatform\static\js\index" />
+      <recent name="F:\develop\associationplatform\static\images\index" />
+      <recent name="F:\develop\associationplatform\static\css\color" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -123,6 +158,20 @@
       <workItem from="1581128151890" duration="21748000" />
       <workItem from="1581166077377" duration="9659000" />
       <workItem from="1581211394208" duration="4777000" />
+      <workItem from="1581238103954" duration="18284000" />
+      <workItem from="1581304959282" duration="15500000" />
+      <workItem from="1581759454504" duration="18277000" />
+      <workItem from="1581784346221" duration="983000" />
+      <workItem from="1581848461806" duration="6073000" />
+      <workItem from="1581993849470" duration="17982000" />
+      <workItem from="1582085082791" duration="20964000" />
+      <workItem from="1582162281874" duration="1212000" />
+      <workItem from="1582198410723" duration="3662000" />
+      <workItem from="1582250833385" duration="962000" />
+      <workItem from="1582252272463" duration="261000" />
+      <workItem from="1582252561876" duration="5884000" />
+      <workItem from="1582335298988" duration="9851000" />
+      <workItem from="1582364823577" duration="1606000" />
     </task>
     <servers />
   </component>
@@ -143,16 +192,20 @@
     </state>
     <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581152661162" />
     <state x="2137" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580477070936" />
-    <state x="-1278" y="83" width="1378" height="900" key="SettingsEditor" timestamp="1581134605202">
+    <state x="-1278" y="83" width="1378" height="900" key="SettingsEditor" timestamp="1582198803710">
       <screen x="-1440" y="0" width="1378" height="900" />
     </state>
     <state x="-1440" y="0" width="1378" height="900" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@-1440.0.1378.900" timestamp="1580737217642" />
-    <state x="-1278" y="83" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581134605202" />
+    <state x="-1278" y="83" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582198803710" />
     <state x="1716" y="90" width="1440" height="900" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580289845711" />
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1581166353131">
+    <state x="388" y="197" key="run.anything.popup" timestamp="1582114944755">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581166353131" />
+    <state x="388" y="197" key="run.anything.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582114944755" />
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1582200111928">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582200111928" />
     <state x="2063" y="239" width="720" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580563456357" />
   </component>
 </project>

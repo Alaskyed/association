@@ -35,6 +35,9 @@ public class LoginController {
     @RequestMapping(value = "/loginInfo", method = RequestMethod.POST)
     @ResponseBody
     public String getLoginInfo(LoginBean loginBean, HttpServletRequest httpServletRequest) {
+        System.out.println(RequestInfoUtils.getIPAndDeviceInfo(httpServletRequest));
+        System.out.println(RequestInfoUtils.getDeviceInfo(httpServletRequest));
+
         boolean result = loginService.checkUser(loginBean, httpServletRequest.getSession());
         if (result) {
             //记录登录信息
@@ -49,12 +52,17 @@ public class LoginController {
 
     @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
     @ResponseBody
-    public LoginSessionVo checkLogin(HttpSession session) {
+    public LoginSessionVo checkLogin(HttpSession session,HttpServletRequest request) {
+        //获取登录设备信息
+        log.info(RequestInfoUtils.getIPAndDeviceInfo(request));
+        //判断session中是否存在该用户
         if (session.getAttribute("user") == null) {
+            //用户不存在,返回空的user
             user.setUserPhoneNumber(null);
             user.setUserName(null);
             return user;
         } else {
+            //用户存在,更新session,返回user信息
             user = (LoginSessionVo) session.getAttribute("user");
             session.setAttribute("user", user);
             LoginSessionVo loginUser = (LoginSessionVo) session.getAttribute("user");

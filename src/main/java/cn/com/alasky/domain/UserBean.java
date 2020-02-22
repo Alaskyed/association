@@ -19,13 +19,14 @@ public class UserBean {
     @Getter
     @Setter
     private String email;
-//    @Getter
-//    @Setter
-//    private String qq;
-//    @Getter
-//    @Setter
-//    private String wechat;
+    @Getter
+    @Setter
+    private String qq;
+    @Getter
+    @Setter
+    private String wechat;
     @Getter
     @Setter
     private String stuUuid;
+
 }

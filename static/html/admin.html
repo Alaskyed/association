@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>云社团</title>
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="/css/color/default.css" id="theme-color">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+
+    <!--    Custom-->
+    <link rel="stylesheet" href="/css/admin/adminNavication.css">
+    <script src="/js/index/scripts.js"></script>
+    <script src="/js/admin/adminNavigation.js"></script>
+</head>
+
+
+<body>
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("../navigation.html");
+    </script>
+</section>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+
+            <nav class="navbar navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" id="adminNav">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav nav-pills flex-column">
+                        <li><a href="#personalAdmin" aria-expanded="true" data-toggle="collapse"
+                               class="collapsed font-weight-bold"><big>个人管理 <span class="fa fa-sort-down"></span></big> </a>
+                            <ul id="personalAdmin" class="list-unstyled collapse show">
+                                <li><a class="navs nav-link active" href="#userData">用户资料</a></li>
+                                <li><a class="navs nav-link " href="#personalData">个人资料</a></li>
+                            </ul>
+                        </li>
+
+                        <!--                        中间的横杠-->
+                        <div class="dropdown-divider" style="border-top: 1px solid #9e9e9e"></div>
+
+                        <li><a href="#assAdmin" aria-expanded="true" data-toggle="collapse"
+                               class="collapsed font-weight-bold"><big>社团管理 <span class="fa fa-sort-down"></span></big></a>
+                            <ul id="assAdmin" class="list-unstyled collapse show">
+                                <li><a class="navs nav-link " href="#assData">我的社团</a></li>
+                                <li><a class="navs nav-link " href="#two"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--        内容部分-->
+        <div class="col-md-10">
+            <!--      每个版块的内容      -->
+            <div id="content">
+                <div id="userData" class="tab-pane" style="display: block"></div>
+                <script>
+                    $("#userData").load("admin/userData.html");
+                </script>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<footer style="margin-top: 40px">
+
+</footer>
+
+<div class="scroll-top active">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+
+
+</body>
+</html>

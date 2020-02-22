@@ -18,7 +18,7 @@ function checkLogin() {
         //响应成功执行的方法,参数为相应结果
         success: function (user) {
             if (user.userName == null || user.userName == "") {
-                $("#userName").html("<a class='btn btn-primary' href='#' data-toggle='modal' data-target='#loginForm' style='color: #ffffff'>登录|注册</a>")
+                $("#userName").html("<a class='btn btn-primary btn-sm' href='#' data-toggle='modal' data-target='#loginForm' style='color: #ffffff'>登录|注册</a>")
                 $("#logout").css("display", "none");
                 $("#myAssociation").css("display","none");
             } else {

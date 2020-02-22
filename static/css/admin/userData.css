@@ -1,0 +1,14 @@
+﻿.row{
+    /*上 右 下 左*/
+    margin: 15px 0px 0px 0px;
+}
+
+.border{
+    margin: 5px 10px 0px 10px;
+
+}
+
+/*确认修改资料按钮默认不显示*/
+#userDataSubmitChange{
+    display: none;
+}

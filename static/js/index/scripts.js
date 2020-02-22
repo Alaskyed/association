@@ -51,6 +51,11 @@ $(function () {
     });
 
     /**Theme switcher - DEMO PURPOSE ONLY */
+    //随机使用一种颜色
+    var colors = new Array("default","blue","red","green","indigo","black","cyan","pink");
+    var randomColor = Math.floor(Math.random()*8);
+    $('#theme-color').attr("href", "/css/color/" + colors[randomColor] + ".css");
+
     $('.switcher-trigger').click(function () {
         $('.switcher-wrap').toggleClass('active');
     });

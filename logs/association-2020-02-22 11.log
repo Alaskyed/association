@@ -1,0 +1,61 @@
+2020-02-22 11:55:20 INFO  cn.com.alasky.StartApp 26 main - 启动应用
+2020-02-22 11:55:20 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartApp on Alasky with PID 3740 (F:\develop\association\target\classes started by Alasky in F:\develop\association)
+2020-02-22 11:55:20 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-02-22 11:55:21 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 244 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-22 11:55:21 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-22 11:55:21 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2020-02-22 11:55:22 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d5c899b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-22 11:55:22 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8080 (http)
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Software\python\Scripts\;C:\Software\python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Software\java\jdk1.8.0_211\bin;C:\Software\java\jdk1.8.0_211\jre\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\hadoop-2.7.1\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Software\Git\cmd;D:\mysql-8.0.18-winx64\bin;D:\pandoc\;C:\Software\python\python3.6\Scripts\;C:\Software\python\python3.6\;C:\Software\Scripts\;C:\Software\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.2\bin;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.1\bin;C:\Software\python\Scripts;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;.]
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-22 11:55:22 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-02-22 11:55:22 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2000 ms
+2020-02-22 11:55:23 INFO  io.lettuce.core.EpollProvider 68 <clinit> - Starting without optional epoll library
+2020-02-22 11:55:23 INFO  io.lettuce.core.KqueueProvider 70 <clinit> - Starting without optional kqueue library
+2020-02-22 11:55:24 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-22 11:55:25 INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor 295 finishRegistration - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-02-22 11:55:25 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8080"]
+2020-02-22 11:55:25 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-22 11:55:25 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartApp in 5.405 seconds (JVM running for 7.331)
+2020-02-22 12:02:53 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-22 12:02:53 INFO  org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+2020-02-22 12:02:53 INFO  org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 11 ms
+2020-02-22 12:02:53 INFO  cn.com.alasky.controller.admin.UserDataController 36 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:02:53 INFO  cn.com.alasky.controller.LoginController 57 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:02:57 INFO  com.zaxxer.hikari.HikariDataSource 110 getConnection - HikariPool-1 - Starting...
+2020-02-22 12:02:58 INFO  com.zaxxer.hikari.HikariDataSource 123 getConnection - HikariPool-1 - Start completed.
+2020-02-22 12:02:58 INFO  cn.com.alasky.controller.LoginController 44 getLoginInfo - 新的登录(127.0.0.1): 11122223333
+2020-02-22 12:02:59 INFO  cn.com.alasky.controller.LoginController 57 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:02:59 INFO  cn.com.alasky.controller.admin.UserDataController 36 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:03:03 INFO  cn.com.alasky.controller.admin.PersonalDataController 48 getPersonalData - 查看个人信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:03:27 INFO  cn.com.alasky.controller.admin.PersonalDataController 48 getPersonalData - 查看个人信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:05:58 INFO  cn.com.alasky.controller.LoginController 57 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:05:58 INFO  cn.com.alasky.controller.admin.UserDataController 36 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:05:59 INFO  cn.com.alasky.controller.LoginController 57 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:05:59 INFO  cn.com.alasky.controller.admin.UserDataController 36 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:06:00 INFO  cn.com.alasky.controller.admin.PersonalDataController 48 getPersonalData - 查看个人信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-02-22 12:06:11 INFO  cn.com.alasky.service.admin.PersonalDataService 146 changePersonalName - 修改姓名出错
+2020-02-22 12:06:11 ERROR cn.com.alasky.service.admin.PersonalDataService 147 changePersonalName - org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+### The error may exist in cn/com/alasky/mapper/admin/PersonalDataMapper.java (best guess)
+### The error may involve cn.com.alasky.mapper.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE student_info SET stu_name=? WHERE stu_uuid=( SELECT stu_uuid FROM ? WHERE phone_number='11122223333' )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+2020-02-22 12:06:55 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper 766 run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s168ms28µs700ns).
+2020-02-22 12:06:56 INFO  cn.com.alasky.service.admin.PersonalDataService 146 changePersonalName - 修改姓名出错
+2020-02-22 12:06:56 ERROR cn.com.alasky.service.admin.PersonalDataService 147 changePersonalName - org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+### The error may exist in cn/com/alasky/mapper/admin/PersonalDataMapper.java (best guess)
+### The error may involve cn.com.alasky.mapper.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE student_info SET stu_name=? WHERE stu_uuid=( SELECT stu_uuid FROM ? WHERE phone_number='11122223333' )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
+2020-02-22 12:07:42 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-22 12:07:42 INFO  com.zaxxer.hikari.HikariDataSource 350 close - HikariPool-1 - Shutdown initiated...
+2020-02-22 12:07:42 INFO  com.zaxxer.hikari.HikariDataSource 352 close - HikariPool-1 - Shutdown completed.

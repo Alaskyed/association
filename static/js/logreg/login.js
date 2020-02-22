@@ -36,7 +36,7 @@ function sendLoginInfo() {
                 $("#loginTip").html("<div class='alert alert-success' role='alert' style='text-align: center'>登录成功!</div>");
                 //停顿1s,刷新页面
                 setTimeout(function () {
-                    window.location = "/";
+                    location.reload();
                 }, 1000);
             } else {
                 $("#loginTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>登录失败,请检查用户名或密码!</div>");
@@ -69,10 +69,10 @@ function logout() {
         //响应成功执行的方法,参数为相应结果
         success: function (result) {
             if (result == "success") {
-                //注销成功,刷新单签页面
+                //注销成功,刷新当前页面
                 location.reload();
             } else {
-                window.location = "/";
+                location.reload();
             }
         },
         //响应失败执行的方法

@@ -26,6 +26,23 @@ function sendRegisterInfo() {
         return false;
     }
 
+    //手机号
+    var registerPhoneNumber = $("#registerPhoneNumber").val();
+    if (registerPhoneNumber == null || registerPhoneNumber.trim() == "") {
+        // $("#registerPhoneNumber").popover("show");
+
+        setTimeout(function () {
+            $("#registerPhoneNumber").popover("hide");
+        }, 2000);
+        return false;
+    } else {
+        //检验手机号码是否为11位
+        if (!/^\d{11}$/.test(registerPhoneNumber)) {
+            $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>请检查手机号码格式是否正确!</div>");
+            return false;
+        }
+    }
+
     //密码
     var registerPassword = $("#registerPassword").val();
     if (registerPassword == "") {
@@ -34,7 +51,7 @@ function sendRegisterInfo() {
             $("#registerPassword").popover("hide");
         }, 2000);
         return false;
-    }else{
+    } else {
         //检查密码位数(6~18)
         if (registerPassword.length < 6 || registerPassword.length > 18) {
             $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>密码长度需要在6~18位!</div>");
@@ -48,7 +65,7 @@ function sendRegisterInfo() {
             $("#registerPassword2").popover("hide");
         }, 2000);
         return false;
-    }else {
+    } else {
         //对比两次密码是否一致
         if (registerPassword2 != registerPassword) {
             $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>两次密码不一致!</div>");
@@ -58,35 +75,30 @@ function sendRegisterInfo() {
     //信息无误后,密码加密
     var registerPasswordSubmit = hex_md5(registerPassword);
 
-    //手机号
-    var registerPhoneNumber = $("#registerPhoneNumber").val();
-    if (registerPhoneNumber==null || registerPhoneNumber.trim() == "") {
-        // $("#registerPhoneNumber").popover("show");
-
+    //获取学校名称
+    var registerUniversity = $("#registerUniversity").val();
+    //判断学校名称是否为空
+    if (registerUniversity== "") {
+        $("#registerUniversity").popover("show");
         setTimeout(function () {
-            $("#registerPhoneNumber").popover("hide");
+            $("#registerUniversity").popover("hide");
         }, 2000);
-        return false;
-    }else {
-        //检验手机号码是否为11位
-        if (!/^\d{11}$/.test(registerPhoneNumber)) {
-            $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>请检查手机号码格式是否正确!</div>");
+    }
+
+    //邮箱
+    var registerEmail = $("#registerEmail").val();
+    //检查是否有邮箱内容
+    if (!(registerEmail == null || registerEmail.trim() == "")) {
+        //检查邮箱格式
+        var emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+        if (!emailReg.test(registerEmail)) {
+            $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>邮箱格式不正确!</div>");
             return false;
         }
     }
 
-    // //邮箱
-    // var registerEmail = $("#registerEmail").val();
-    // var emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
-    // if(!(registerEmail==null||registerEmail.trim()=="") && !emailReg.test(registerEmail)){
-    //     //检查邮箱格式
-    //     $("#registerTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>邮箱格式不正确!</div>");
-    //     return false;
-    // }
-    //
-    // var registerQQ = $("#registerQQ").val();
-    // var registerWechat = $("#registerWechat").val();
-
+    var registerQQ = $("#registerQQ").val();
+    var registerWechat = $("#registerWechat").val();
 
 
     $.ajax({
@@ -98,11 +110,12 @@ function sendRegisterInfo() {
         data:
             {
                 "registerUserName": registerUserName,
-                "registerPassword": registerPasswordSubmit,
                 "registerPhoneNumber": registerPhoneNumber,
-                // "registerEmail": registerEmail,
-                // "registerQQ": registerQQ,
-                // "registerWechat": registerWechat
+                "registerPassword": registerPasswordSubmit,
+                "registerUniversity": registerUniversity,
+                "registerEmail": registerEmail,
+                "registerQQ": registerQQ,
+                "registerWechat": registerWechat
             },
         //数据格式
         dataType: "text",
@@ -114,8 +127,10 @@ function sendRegisterInfo() {
                 setTimeout(function () {
                     $("#registerForm").modal("hide");
                 }, 1000);
+            }else if (result == "noone") {
+                $("#registerTip").html("<div class='alert alert-success' role='alert' style='text-align: center'>注册失败,学校名称不准确,请确认你的学校名称,或者填写'其他'</div>");
             } else {
-                $("#registerTip").html("<div class='alert alert-danger' role='alert' style='text-align: center'>"+result+"</div>");
+                $("#registerTip").html("<div class='alert alert-danger' role='alert' style='text-align: center'>" + result + "</div>");
             }
         },
         //响应失败执行的方法
