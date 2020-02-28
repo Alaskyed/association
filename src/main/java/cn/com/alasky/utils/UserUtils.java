@@ -18,7 +18,7 @@ public class UserUtils {
      * 检查用户是否登录
      *
      * @param session
-     * @return
+     * @return 登录的用户信息(手机号,用户名),如果没有用户信息就返回null
      */
     public static LoginSessionVo checkLogin(HttpSession session) {
         //获取session信息

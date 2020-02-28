@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 import java.util.UUID;
@@ -167,6 +169,15 @@ public class PersonalDataService {
 
     }
 
+    /**
+     * 获取用户加入的社团名称
+     * @return
+     * @param userPhoneNumber
+     */
+    public List<String> getAssNames(String userPhoneNumber) {
+        List<String> assNames = personalDataMapper.queryAssNames(userPhoneNumber);
+        return assNames;
+    }
 
 
     /**

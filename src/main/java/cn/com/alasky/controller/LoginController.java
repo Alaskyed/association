@@ -31,12 +31,14 @@ public class LoginController {
      */
     @Autowired
     LoginSessionVo user;
+    @Autowired
+    HttpServletRequest request;
 
     @RequestMapping(value = "/loginInfo", method = RequestMethod.POST)
     @ResponseBody
     public String getLoginInfo(LoginBean loginBean, HttpServletRequest httpServletRequest) {
-        System.out.println(RequestInfoUtils.getIPAndDeviceInfo(httpServletRequest));
-        System.out.println(RequestInfoUtils.getDeviceInfo(httpServletRequest));
+//        System.out.println(RequestInfoUtils.getIPAndDeviceInfo(httpServletRequest));
+//        System.out.println(RequestInfoUtils.getDeviceInfo(httpServletRequest));
 
         boolean result = loginService.checkUser(loginBean, httpServletRequest.getSession());
         if (result) {
@@ -52,7 +54,7 @@ public class LoginController {
 
     @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
     @ResponseBody
-    public LoginSessionVo checkLogin(HttpSession session,HttpServletRequest request) {
+    public LoginSessionVo checkLogin(HttpSession session) {
         //获取登录设备信息
         log.info(RequestInfoUtils.getIPAndDeviceInfo(request));
         //判断session中是否存在该用户

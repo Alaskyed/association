@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的社团管理台</title>
+
+    <!--  适应手机  -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <!--    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--  字体图标  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 侧边导航栏的字体-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-color">
+    <!-- Favicon 图标-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- navbar-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow">
+        <a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead">
+            <i class="fa fa-align-left"></i>
+        </a>
+        <a href="/index.html" class="navbar-brand font-weight-bold text-uppercase text-base">返回云社团主页</a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+            <!--            <li class="nav-item">-->
+            <!--                <form id="searchForm" class="ml-auto d-none d-lg-block">-->
+            <!--                    <div class="form-group position-relative mb-0">-->
+            <!--                        <button type="submit" style="top: -3px; left: 0;"-->
+            <!--                                class="position-absolute bg-white border-0 p-0"><i-->
+            <!--                                class="o-search-magnify-1 text-gray text-lg"></i></button>-->
+            <!--                        <input type="search" placeholder="Search ..."-->
+            <!--                               class="form-control form-control-sm border-0 no-shadow pl-4">-->
+            <!--                    </div>-->
+            <!--                </form>-->
+            <!--            </li>-->
+            <!--            <li class="nav-item dropdown mr-3">-->
+            <!--                <a id="notifications" href="http://example.com" data-toggle="dropdown" aria-haspopup="true"-->
+            <!--                   aria-expanded="false" class="nav-link dropdown-toggle text-gray-400 px-1">-->
+            <!--                    <i class="fa fa-bell"></i><span class="notification-icon"></span>-->
+            <!--                </a>-->
+            <!--                <div aria-labelledby="notifications" class="dropdown-menu">-->
+            <!--                    <a href="#" class="dropdown-item">-->
+            <!--                        <div class="d-flex align-items-center">-->
+            <!--                            <div class="icon icon-sm bg-violet text-white">-->
+            <!--                                <i class="fab fa-twitter"></i>-->
+            <!--                            </div>-->
+            <!--                            <div class="text ml-2">-->
+            <!--                                <p class="mb-0">You have 2 followers</p>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </a>-->
+            <!--                    <a href="#" class="dropdown-item">-->
+            <!--                        <div class="d-flex align-items-center">-->
+            <!--                            <div class="icon icon-sm bg-green text-white"><i class="fas fa-envelope"></i></div>-->
+            <!--                            <div class="text ml-2">-->
+            <!--                                <p class="mb-0">You have 6 new messages</p>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </a>-->
+            <!--                    <a href="#" class="dropdown-item">-->
+            <!--                        <div class="d-flex align-items-center">-->
+            <!--                            <div class="icon icon-sm bg-blue text-white"><i class="fas fa-upload"></i></div>-->
+            <!--                            <div class="text ml-2">-->
+            <!--                                <p class="mb-0">Server rebooted</p>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </a><a href="#" class="dropdown-item">-->
+            <!--                    <div class="d-flex align-items-center">-->
+            <!--                        <div class="icon icon-sm bg-violet text-white"><i class="fab fa-twitter"></i></div>-->
+            <!--                        <div class="text ml-2">-->
+            <!--                            <p class="mb-0">You have 2 followers</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </a>-->
+            <!--                    <div class="dropdown-divider"></div>-->
+            <!--                    <a href="#" class="dropdown-item text-center"><small-->
+            <!--                            class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>-->
+            <!--                </div>-->
+            <!--            </li>-->
+            <li class="nav-item dropdown ml-auto">
+                <a id="userInfo" href="#" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false" class="nav-link dropdown-toggle">
+                    <!--                    <img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;"-->
+                    <!--                         class="img-fluid rounded-circle shadow">-->
+                    未登录
+                </a>
+                <div aria-labelledby="userInfo" class="dropdown-menu">
+<!--                    <a href="#" class="dropdown-item">-->
+<!--                        <strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong>-->
+<!--                        <small>Web Developer</small>-->
+<!--                    </a>-->
+<!--                    <div class="dropdown-divider"></div>-->
+<!--                    <a href="#" class="dropdown-item">Settings</a><a href="#" class="dropdown-item">Activity log </a>-->
+<!--                    <div class="dropdown-divider"></div>-->
+                    <a id="signIn" href="html/login.html" class="dropdown-item" style="display: none">登录</a>
+                    <a id="signOut" href="#" class="dropdown-item" style="display: none">退出登录</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="d-flex align-items-stretch">
+    <div id="sidebar" class="sidebar py-3">
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">个人管理
+        </div>
+        <ul class="sidebar-menu list-unstyled">
+            <li class="sidebar-list-item"><a href="#userData" class="sidebar-link text-muted navs" id="firstContext">
+                <i class="fa fa-user mr-3 text-gray" style="width: 27.44px"></i><span> 用户资料</span></a>
+            </li>
+            <li class="sidebar-list-item"><a href="#personalData" class="sidebar-link text-muted navs">
+                <i class="fa fa-vcard mr-3 text-gray"></i><span>个人资料</span></a>
+            </li>
+
+        </ul>
+
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">社团管理
+        </div>
+        <ul class="sidebar-menu list-unstyled">
+            <li class="sidebar-list-item"><a href="#assData" class="sidebar-link text-muted navs">
+                <i class="fa fa-home mr-3 text-gray"></i><span>我的社团</span></a>
+            </li>
+            <li id="assAdminNav" class="sidebar-list-item" style="display: none"><a href="#assAdmin" class="sidebar-link text-muted navs">
+                <i class="fa fa-gears mr-3 text-gray"></i><span>管理社团</span></a>
+            </li>
+            <li id="depAdminNav" class="sidebar-list-item" style="display: none"><a href="#depAdmin" class="sidebar-link text-muted navs">
+                <i class="fa fa-gear mr-3 text-gray"></i><span>管理部门</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--  内容部分  -->
+    <div class="page-holder w-100 d-flex flex-wrap">
+        <div id="userData" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="personalData" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="assData" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="assAdmin" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="depAdmin" class="container-fluid px-xl-5 tab-pane"></div>
+
+    </div>
+</div>
+
+
+<!--新添加的js-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!--原本自带的-->
+<!--<script src="js/js.cookie.min.js"></script>-->
+<!--这是图表使用的js-->
+<!--<script src="vendor/chart.js/Chart.min.js"></script>-->
+<!--<script src="js/charts-home.js"></script>-->
+
+<!--自定义的js-->
+<script src="js/adminNavigation.js"></script>
+<script src="js/custom/admin.js"></script>
+
+
+</body>
+</html>

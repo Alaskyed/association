@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--  适应手机  -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <!--    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--  字体图标  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 侧边导航栏的字体-->
+    <link rel="stylesheet" href="../css/orionicons.css">
+    <!- theme stylesheet-->
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+    <!-- Favicon 图标-->
+    <link rel="shortcut icon" href="img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+<div class="page-holder d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center py-5">
+            <div class="col-5 col-lg-7 mx-auto mb-5 mb-lg-0">
+                <div class="pr-lg-5"><img src="../img/illustration.svg" alt="" class="img-fluid"></div>
+            </div>
+            <div class="col-lg-5 px-lg-4">
+                <h1 class="text-base text-primary text-uppercase mb-4">云社团控制台登录</h1>
+                <h2 class="mb-4">欢迎回来!</h2>
+                <p class="text-muted">输入手机号和密码登录</p>
+                <div action="/index.html" class="mt-4">
+                    <div class="form-group mb-4">
+                        <input id="loginUserName" type="text" name="username" placeholder="手机号"
+                               class="form-control border-0 shadow form-control-lg">
+                    </div>
+                    <div class="form-group mb-4">
+                        <input id="loginPassword" type="password" name="passowrd" placeholder="密码"
+                               class="form-control border-0 shadow form-control-lg text-violet">
+                    </div>
+                    <div id="loginTip"></div>
+                    <p>没有账号?<a href="/index.html">点击注册</a></p>
+                    <button id="loginSubmit" class="btn btn-primary shadow px-5">确认登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--新添加的js-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!--登录js,直接卸载这里-->
+<script src="/js/logreg/md5.js"></script>
+<script>
+    $("#loginSubmit").click(function () {
+        sendLoginInfo();
+    });
+
+    //发送登录数据
+    function sendLoginInfo() {
+        var loginUserName = $("#loginUserName").val();
+        var loginPassword = $("#loginPassword").val();
+        //密码加密
+        var loginPasswordSubmit = hex_md5(loginPassword);
+
+        console.log("正在尝试登录...");
+
+        //发送登录数据
+        $.ajax({
+            //请求地址
+            url: "/java/loginInfo",
+            //请求类型
+            type: "POST",
+            //发送的数据
+            data:
+                {
+                    "loginUserName": loginUserName,
+                    "loginPassword": loginPasswordSubmit
+                },
+            //数据格式
+            dataType: "text",
+            //响应成功执行的方法,参数为相应结果
+            success: function (result) {
+                if (result == "success") {
+                    $("#loginTip").html("<div class='alert alert-success' role='alert' style='text-align: center'>登录成功!</div>");
+                    //停顿1s,刷新页面
+                    setTimeout(function () {
+                        window.location = "../admin.html";
+                    }, 1000);
+                } else {
+                    $("#loginTip").html("<div class='alert alert-warning' role='alert' style='text-align: center'>登录失败,请检查用户名或密码!</div>");
+                }
+            },
+            //响应失败执行的方法
+            error: function () {
+                alert("服务器响应失败!")
+            }
+        });
+
+    }
+</script>
+
+</body>
+</html>

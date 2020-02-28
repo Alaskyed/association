@@ -2,62 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b60814e4-a0d0-46b2-a92a-0804de0d389b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/UserDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/DataChangeBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/MajorBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/PersonalDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/UserDataMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/UserDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/utils/UserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/vo/PerosnalDataVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/admin/adminNavication.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/admin/personalData.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/admin/userData.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/admin/assData.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/admin/personalData.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/admin/userData.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/adminNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/personalData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/userData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../associationplatform.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/AssDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/dao/StuAssDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/DepartmentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/NewAssBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/AdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/AssDataMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/AssDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/vo/AssDataVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logs/association-2020-02-22 18.log" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/association-2020-02-22 18.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logs/association.log" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/association.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/RegisterBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/RegisterBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/domain/UserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/RegisterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/RegisterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/PersonalDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/mapper/admin/PersonalDataMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/cn/com/alasky/utils/UserUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/foot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/myassociation.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin/adminNavication.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin/personalData.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin/userData.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/admin/personalData.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/admin/personalData.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/logreg/checkLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/checkLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/logreg/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/logreg/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/logreg/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/adminNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/personalData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/userData.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/META-INF/associationplatform.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/StartApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/config/RedisSessionConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/Index.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/LoginBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/RegisterBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/domain/UserBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/LoginMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/RegisterMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/LoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/RegisterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/utils/RequestInfoUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/vo/LoginSessionVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/mail.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/redis.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/admin/PersonalDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/controller/admin/PersonalDataController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/admin/PersonalDataMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/mapper/admin/PersonalDataMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/admin/PersonalDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/cn/com/alasky/service/admin/PersonalDataService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,25 +68,35 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\develop\association\static\html" />
+      <recent name="F:\develop\association\static\html\admin" />
       <recent name="F:\develop\association\static\js\logreg" />
       <recent name="F:\develop\associationplatform\static" />
       <recent name="F:\develop\associationplatform\static\css" />
-      <recent name="F:\develop\associationplatform\static\images\index" />
-      <recent name="F:\develop\associationplatform\static\fonts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\develop\association\static\html\admin" />
-      <recent name="F:\develop\associationplatform\static\fonts" />
-      <recent name="F:\develop\associationplatform\static\js\index" />
-      <recent name="F:\develop\associationplatform\static\images\index" />
-      <recent name="F:\develop\associationplatform\static\css\color" />
+      <recent name="F:\develop\association\static\admin\html" />
+      <recent name="F:\develop\association\static\admin\js\custom" />
+      <recent name="F:\develop\association\static\admin\css\custom" />
+      <recent name="F:\develop\association\static\admin" />
+      <recent name="F:\develop\association\static" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/static/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -171,7 +161,12 @@
       <workItem from="1582252272463" duration="261000" />
       <workItem from="1582252561876" duration="5884000" />
       <workItem from="1582335298988" duration="9851000" />
-      <workItem from="1582364823577" duration="1606000" />
+      <workItem from="1582364823577" duration="5519000" />
+      <workItem from="1582421087415" duration="3660000" />
+      <workItem from="1582425337475" duration="9146000" />
+      <workItem from="1582453218582" duration="27269000" />
+      <workItem from="1582681280897" duration="15946000" />
+      <workItem from="1582715998215" duration="35086000" />
     </task>
     <servers />
   </component>
@@ -179,33 +174,115 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2058" y="241" width="802" height="699" key="#Vim_Emulation" timestamp="1580474674100">
-      <screen x="1440" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2058" y="241" width="802" height="699" key="#Vim_Emulation/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474674100" />
-    <state x="1982" y="317" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580474656438">
-      <screen x="1440" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1982" y="317" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474656438" />
-    <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581152661162">
+    <state x="471" y="193" width="802" height="699" key="#Vim_Emulation" timestamp="1582425477187">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
+    <state x="471" y="193" key="#Vim_Emulation/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425477187" />
+    <state x="2058" y="241" width="802" height="699" key="#Vim_Emulation/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474674100" />
+    <state x="323" y="91" key="#Web_Browsers" timestamp="1582373334847">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="323" y="91" key="#Web_Browsers/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582373334847" />
+    <state x="186" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582422134860">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="186" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582422134860" />
+    <state x="413" y="254" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582891062285">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="413" y="254" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1582891062285" />
+    <state x="413" y="254" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425486987" />
+    <state x="1982" y="317" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580474656438" />
+    <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582772963413">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1582772963413" />
     <state x="531" y="221" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581152661162" />
     <state x="2137" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580477070936" />
-    <state x="-1278" y="83" width="1378" height="900" key="SettingsEditor" timestamp="1582198803710">
+    <state width="1441" height="187" key="GridCell.Tab.0.bottom" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.0.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.0.center" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.0.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.0.left" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.0.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.0.right" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.0.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.1.bottom" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.1.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.1.center" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.1.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.1.left" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.1.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.1.right" timestamp="1582425320937">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.1.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320937" />
+    <state width="1441" height="187" key="GridCell.Tab.2.bottom" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.2.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.2.center" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.2.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.2.left" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.2.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.2.right" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.2.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.3.bottom" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.3.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.3.center" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.3.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.3.left" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.3.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state width="1441" height="187" key="GridCell.Tab.3.right" timestamp="1582425320938">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state width="1441" height="187" key="GridCell.Tab.3.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425320938" />
+    <state x="-1153" y="104" width="1378" height="900" key="SettingsEditor" timestamp="1582425806709">
       <screen x="-1440" y="0" width="1378" height="900" />
     </state>
     <state x="-1440" y="0" width="1378" height="900" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@-1440.0.1378.900" timestamp="1580737217642" />
-    <state x="-1278" y="83" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582198803710" />
+    <state x="-1153" y="104" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425806709" />
     <state x="1716" y="90" width="1440" height="900" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580289845711" />
-    <state x="388" y="197" key="run.anything.popup" timestamp="1582114944755">
+    <state x="291" y="87" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1582375549930">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
-    <state x="388" y="197" key="run.anything.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582114944755" />
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1582200111928">
+    <state x="291" y="87" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582375549930" />
+    <state x="388" y="197" key="run.anything.popup" timestamp="1582624236046">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
-    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582200111928" />
+    <state x="388" y="197" key="run.anything.popup/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1582624236046" />
+    <state x="388" y="197" key="run.anything.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582425512419" />
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup" timestamp="1582791550704">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1582791550704" />
+    <state x="474" y="191" width="672" height="543" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582431209452" />
     <state x="2063" y="239" width="720" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580563456357" />
   </component>
 </project>

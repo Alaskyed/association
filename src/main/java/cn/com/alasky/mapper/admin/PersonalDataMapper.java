@@ -150,6 +150,16 @@ public interface PersonalDataMapper {
             ")")
     int updateGradeInStudentInfo(@Param("s") DataChangeBean dataChangeBean);
 
+    /**
+     * 查询用户加入的社团名称
+     * @param userPhoneNumber
+     * @return
+     */
+    @Select("SELECT CONCAT(university_name,' - ',ass_name) " +
+            "FROM ass_info " +
+            "WHERE phone_number=#{userPhoneNumber} ")
+    List<String> queryAssNames(String userPhoneNumber);
+
 
     /**
      * 在专业表中修改学院名称

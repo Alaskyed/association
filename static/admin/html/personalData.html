@@ -1,0 +1,147 @@
+﻿<head>
+    <!--  引入指定样式和js文件  -->
+    <link rel="stylesheet" href="/admin/css/custom/personalData.css">
+    <script src="/admin/js/custom/personalData.js"></script>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-lg-4 mb-5">
+        <div class="card">
+            <div class="card-header">
+                <h3 id="personalDataNameShow" class="h6 mb-0 text-primary align-middle text-center">未登录</h3>
+            </div>
+            <div id="personalDataUniversityShow" class="text-center">未添加学校</div>
+        </div>
+
+        <!--    占空    -->
+        <div style="height: 20px"></div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h6 mb-0 text-primary align-middle text-center">加入的社团</h3>
+            </div>
+            <div id="assJoined" style="margin-top: 10px;margin-bottom: 10px">
+
+            </div>
+        </div>
+    </div>
+
+    <!--  详细信息  -->
+    <div class="col-lg-8 mb-5">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h6 text-uppercase mb-0">详细资料</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="font-weight-bold" for="personalDataUniversity">学校名称</label>
+                            </div>
+                            <div class="col-1">
+                                <span id="personalDataUniversityChange" class="fa fa-pencil"
+                                      style="display: block;margin: 5px"></span>
+                                <span id="personalDataUniversityChangeSubmit" class="fa fa-check"
+                                      style="display: none;margin: 5px"></span>
+                            </div>
+                            <div class="col-6">
+                                <span id="personalDataUniversityTip" style="color: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="personalDataUniversity"
+                               placeholder="添加学校名称" readonly>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="font-weight-bold" for="personalDataMajor">专业名称</label>
+                            </div>
+                            <div class="col-1">
+                                <span id="personalDataMajorChange" class="fa fa-pencil"
+                                      style="display: block;margin: 5px"></span>
+                                <span id="personalDataMajorChangeSubmit" class="fa fa-check"
+                                      style="display: none;margin: 5px"></span>
+                            </div>
+                            <div class="col-6">
+                                <span id="personalDataMajorTip" style="color: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="personalDataMajor"
+                               placeholder="添加专业名称" readonly>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="font-weight-bold" for="personalDataName">姓名</label>
+                            </div>
+                            <div class="col-1">
+                                <span id="personalDataNameChange" class="fa fa-pencil"
+                                      style="display: block;margin: 5px"></span>
+                                <span id="personalDataNameChangeSubmit" class="fa fa-check"
+                                      style="display: none;margin: 5px"></span>
+                            </div>
+                            <div class="col-6">
+                                <span id="personalDataNameTip" style="color: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="personalDataName"
+                               placeholder="添加姓名" readonly>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="font-weight-bold" for="personalDataStuId">学号</label>
+                            </div>
+                            <div class="col-1">
+                                <span id="personalDataStuIdChange" class="fa fa-pencil"
+                                      style="display: block;margin: 5px"></span>
+                                <span id="personalDataStuIdChangeSubmit" class="fa fa-check"
+                                      style="display: none;margin: 5px"></span>
+                            </div>
+                            <div class="col-6">
+                                <span id="personalDataStuIdTip" style="color: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="personalDataStuId"
+                               placeholder="添加学号" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                                <label class="font-weight-bold" for="personalDataGrade">年级</label>
+                            </div>
+                            <div class="col-1">
+                                <span id="personalDataGradeChange" class="fa fa-pencil"
+                                      style="display: block;margin: 5px"></span>
+                                <span id="personalDataChangeGradeSubmit" class="fa fa-check"
+                                      style="display: none;margin: 5px"></span>
+                            </div>
+                            <div class="col-6">
+                                <span id="personalDataGradeTip" style="color: red;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" id="personalDataGrade"
+                               placeholder="添加年级" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>

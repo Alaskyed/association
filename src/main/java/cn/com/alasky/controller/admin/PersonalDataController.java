@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 个人信息Controller
@@ -66,6 +68,29 @@ public class PersonalDataController {
         }
     }
 
+    /**
+     * 获取用户加入的社团名称
+     *
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/getAssName",method = RequestMethod.POST)
+    public List<String> getAssNames(HttpServletRequest request) {
+        //获取session中user信息,并判断用户是否存在
+        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        if (user == null) {
+            return new ArrayList<>();
+        }
+        try {
+            List<String> assNames = personalDataService.getAssNames(user.getUserPhoneNumber());
+
+            return assNames;
+        } catch (Exception e) {
+            log.error("获取社团名称失败: " + String.valueOf(e));
+            return new ArrayList<>();
+        }
+    }
+
 
     /**
      * 修改个人信息
@@ -94,7 +119,7 @@ public class PersonalDataController {
                 //返回执行结果代码
                 return result;
             } catch (Exception e) {
-                log.info("修改姓名出错!");
+                log.info("修改学校名称出错!");
                 log.error(String.valueOf(e));
                 return "-2";
             }
@@ -108,12 +133,12 @@ public class PersonalDataController {
                 //返回执行结果代码
                 return result;
             } catch (Exception e) {
-                log.info("修改姓名出错!");
+                log.info("修改专业出错!");
                 log.error(String.valueOf(e));
                 return "-2";
             }
         } else if (dataType.equals("name")) {
-            //修改姓名
+            //修改手机号
             dataChangeBean.setUserPhoneNumber(user.getUserPhoneNumber());
             dataChangeBean.setNewValue(newData);
             //执行service中方法
@@ -122,7 +147,7 @@ public class PersonalDataController {
                 //返回执行结果代码
                 return result;
             } catch (Exception e) {
-                log.info("修改姓名出错!");
+                log.info("修改手机号出错!");
                 log.error(String.valueOf(e));
                 return "-2";
             }
@@ -141,7 +166,7 @@ public class PersonalDataController {
                 return "-2";
             }
 
-        }else if (dataType.equals("grade")) {
+        } else if (dataType.equals("grade")) {
             //修改年级
             dataChangeBean.setUserPhoneNumber(user.getUserPhoneNumber());
             dataChangeBean.setNewValue(newData);

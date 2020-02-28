@@ -38,16 +38,16 @@ public class RegisterService {
         //添加uuid
         String stuUuis = UUID.randomUUID().toString();
         userBean.setStuUuid(stuUuis);
-        //写入数据库
-        try {
-            //查询学校名称是否存在
+            //写入数据库
+            //1. 查询学校名称是否存在
             String universityCode = checkUniversityName(registerBean.getRegisterUniversity());
+            //学校名存在
             if (universityCode != "noone") {
-                //在user表中插入数据
+                //1. 在user表中插入数据
                 registerMapper.insertNewUser(userBean);
-                //在student信息表中插入数据(uuid)
+                //2. 在student信息表中插入数据(uuid)
                 registerMapper.insertUUIDIntoStuInfo(stuUuis);
-                //在student信息表中插入学校标识码
+                //3. 在student信息表中插入学校标识码
                 registerMapper.insertUniversityCodeIntoStudentInfo(universityCode, userBean.getPhoneNumber());
 
                 return "success";
@@ -55,17 +55,7 @@ public class RegisterService {
                 //返回noone
                 return "noone";
             }
-        } catch (DuplicateKeyException e) {
-            //主键重复异常,说明该手机号已注册
-            log.info("注册手机号重复");
-            log.error(String.valueOf(e));
-            return "当前手机号已注册!";
-        } catch (Exception e) {
-            //其他错误
-            log.info("插入新用户出错");
-            log.error(String.valueOf(e));
-            return "注册失败";
-        }
+
     }
 
     /**
@@ -93,7 +83,6 @@ public class RegisterService {
      * @return 如果存在, 返回学校的标识码
      * 如果不存在,返回 "noone"
      */
-    @Transactional
     public String checkUniversityName(String universityName) {
         //查血数据库中的内容
         try {
