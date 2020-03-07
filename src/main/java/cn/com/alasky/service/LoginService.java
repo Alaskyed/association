@@ -35,14 +35,15 @@ public class LoginService {
      * @return
      */
     @Transactional
-    public boolean checkUser(LoginBean loginBean, HttpSession session) {
+    public boolean checkLoginInfo(LoginBean loginBean, HttpSession session) {
         try {
-            List<UserBean> resultList = loginMapper.queryUser(loginBean);
+            List<LoginSessionVo> resultList = loginMapper.queryUser(loginBean);
             if (resultList.size() < 1) {
                 return false;
             } else {
-                loginSessionBean.setUserPhoneNumber(resultList.get(0).getPhoneNumber());
+                loginSessionBean.setUserPhoneNumber(resultList.get(0).getUserPhoneNumber());
                 loginSessionBean.setUserName(resultList.get(0).getUserName());
+                loginSessionBean.setUserStuUuid(resultList.get(0).getUserStuUuid());
                 session.setAttribute("user",loginSessionBean);
                 return true;
             }

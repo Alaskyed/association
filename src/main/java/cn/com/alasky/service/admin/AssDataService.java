@@ -55,7 +55,7 @@ public class AssDataService {
         }
 
         //检查该学校中是否存在该社团名称
-        List<String> existAss=assDataMapper.queryAssNameFromAssociationInfo(newAssBean);
+        List<String> existAss = assDataMapper.queryAssNameFromAssociationInfo(newAssBean);
         if (existAss.size() > 0) {
             return "-4";
         }
@@ -70,8 +70,8 @@ public class AssDataService {
         //2. 在部门表中添加信息
         List<DepartmentBean> departmentBeans = newAssBean.getDepartments();
         for (DepartmentBean departmentBean : departmentBeans) {
-            String depUuid = UUID.randomUUID().toString();
-            int result2= assDataMapper.insertInfoIntoDepartments(assUuid, depUuid, departmentBean);
+            departmentBean.setDepartmentUuid(UUID.randomUUID().toString());
+            int result2 = assDataMapper.insertInfoIntoDepartments(assUuid, departmentBean);
             if (result == 0) {
                 return "-2";
             }
@@ -79,8 +79,8 @@ public class AssDataService {
         //添加会长团
         DepartmentBean adminDepartment = new DepartmentBean();
         adminDepartment.setDepartmentName("会长团");
-        String adminDepUuid=UUID.randomUUID().toString();
-        int result2= assDataMapper.insertInfoIntoDepartments(assUuid, adminDepUuid, adminDepartment);
+        adminDepartment.setDepartmentUuid(UUID.randomUUID().toString());
+        int result2 = assDataMapper.insertInfoIntoDepartments(assUuid, adminDepartment);
         if (result2 == 0) {
             return "-2";
         }
@@ -90,7 +90,7 @@ public class AssDataService {
         StuAssDao stuAssDao = new StuAssDao();
         stuAssDao.setStuUuid(stuUuids.get(0));
         stuAssDao.setAssUuid(assUuid);
-        stuAssDao.setDepUuid(adminDepUuid);
+        stuAssDao.setDepUuid(adminDepartment.getDepartmentUuid());
         stuAssDao.setPosition("1");
         stuAssDao.setStatus("0");
 

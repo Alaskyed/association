@@ -8,7 +8,9 @@ $(function () {
     });
 });
 
-//发送登录数据
+/**
+ *  发送登录数据
+ */
 function sendLoginInfo() {
     var loginUserName = $("#loginUserName").val();
     var loginPassword = $("#loginPassword").val();
@@ -19,7 +21,7 @@ function sendLoginInfo() {
     $.ajax({
 
         //请求地址
-        url: "/java/loginInfo",
+        url: "/java/login",
         //请求类型
         type: "POST",
         //发送的数据

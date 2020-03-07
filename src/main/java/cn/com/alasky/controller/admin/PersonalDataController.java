@@ -3,10 +3,9 @@ package cn.com.alasky.controller.admin;
 import cn.com.alasky.domain.DataChangeBean;
 import cn.com.alasky.service.admin.PersonalDataService;
 import cn.com.alasky.utils.RequestInfoUtils;
-import cn.com.alasky.utils.UserUtils;
+import cn.com.alasky.utils.UserSessionUtils;
 import cn.com.alasky.vo.LoginSessionVo;
 import cn.com.alasky.vo.PerosnalDataVo;
-import com.sun.media.sound.RIFFReader;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -52,7 +51,7 @@ public class PersonalDataController {
         //创建个人信息对象
         PerosnalDataVo perosnalDataVo = null;
         //获取登录信息
-        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
         try {
             if (user != null) {
                 //获取成功继续执行下一步
@@ -77,7 +76,7 @@ public class PersonalDataController {
     @RequestMapping(value = "/getAssName",method = RequestMethod.POST)
     public List<String> getAssNames(HttpServletRequest request) {
         //获取session中user信息,并判断用户是否存在
-        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
         if (user == null) {
             return new ArrayList<>();
         }
@@ -103,7 +102,7 @@ public class PersonalDataController {
     @RequestMapping(value = "/personalDataChange/{dataType}", method = RequestMethod.POST)
     public String personalDataChange(@PathVariable String dataType, String newData, HttpServletRequest request) {
         //获取session中user信息,并判断用户是否存在
-        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
         if (user == null) {
             return "-1";
         }

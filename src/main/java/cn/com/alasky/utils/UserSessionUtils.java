@@ -12,22 +12,22 @@ import javax.servlet.http.HttpSession;
  * 检查用户是否登录
  */
 @Slf4j
-public class UserUtils {
+public class UserSessionUtils {
 
     /**
      * 检查用户是否登录
      *
      * @param session
-     * @return 登录的用户信息(手机号,用户名),如果没有用户信息就返回null
+     * @return 登录的用户信息(手机号, 用户名), 如果没有用户信息就返回null
      */
     public static LoginSessionVo checkLogin(HttpSession session) {
         //获取session信息
         LoginSessionVo user = (LoginSessionVo) session.getAttribute("user");
         if (user != null) {
-            LoginSessionVo loginSessionVo = new LoginSessionVo();
-            loginSessionVo.setUserName(user.getUserName());
-            loginSessionVo.setUserPhoneNumber(user.getUserPhoneNumber());
-            return loginSessionVo;
+            //先更新一下session,主要是为了重置过期时间
+            session.setAttribute("user", user);
+            //返回用户的session值
+            return user;
         } else {
             return null;
         }
@@ -35,6 +35,7 @@ public class UserUtils {
 
     /**
      * 更新手机号之后,在session中更新用户信息
+     *
      * @param newPhoneNumber
      * @param session
      * @return
@@ -59,6 +60,7 @@ public class UserUtils {
 
     /**
      * 更新用户名成功之后,更新session中的用户名
+     *
      * @param newUserName
      * @param session
      * @return

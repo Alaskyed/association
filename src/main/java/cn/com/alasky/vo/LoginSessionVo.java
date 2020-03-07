@@ -15,4 +15,8 @@ public class LoginSessionVo {
     @Getter
     @Setter
     private String userPhoneNumber;
+
+    @Getter
+    @Setter
+    private String userStuUuid;
 }

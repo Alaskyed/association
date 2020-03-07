@@ -4,7 +4,7 @@ import cn.com.alasky.domain.DataChangeBean;
 import cn.com.alasky.domain.UserBean;
 import cn.com.alasky.service.admin.UserDataService;
 import cn.com.alasky.utils.RequestInfoUtils;
-import cn.com.alasky.utils.UserUtils;
+import cn.com.alasky.utils.UserSessionUtils;
 import cn.com.alasky.vo.LoginSessionVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class UserDataController {
         //创建UserBean对象
         UserBean userBean = null;
         //获取session中user信息
-        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
         try {
             //判断用户是否登录
             if (user != null) {
@@ -73,7 +73,7 @@ public class UserDataController {
     @RequestMapping(value = "/userDataChange/{dataType}", method = RequestMethod.POST)
     public String userDataChange(@PathVariable String dataType, String newData, HttpServletRequest request) {
         //获取session中user信息,并判断用户是否存在
-        LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
         if (user == null) {
             return "-1";
         }
@@ -88,7 +88,7 @@ public class UserDataController {
             //返回执行结果
             if (result) {
                 //更新session中的用户名
-                boolean updateResult = UserUtils.updateUserSesionUserName(dataChangeBean.getNewValue(), request.getSession());
+                boolean updateResult = UserSessionUtils.updateUserSesionUserName(dataChangeBean.getNewValue(), request.getSession());
                 if (updateResult) {
                     return "0";
                 } else {
@@ -106,7 +106,7 @@ public class UserDataController {
             //返回执行结果
             if (result) {
                 //更新session中的手机号
-                boolean updateResult = UserUtils.updateUserSesionPhoneNumber(dataChangeBean.getNewValue(), request.getSession());
+                boolean updateResult = UserSessionUtils.updateUserSesionPhoneNumber(dataChangeBean.getNewValue(), request.getSession());
                 if (updateResult) {
                     return "0";
                 } else {

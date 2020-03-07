@@ -34,16 +34,20 @@ public class LoginController {
     @Autowired
     HttpServletRequest request;
 
-    @RequestMapping(value = "/loginInfo", method = RequestMethod.POST)
+    /**
+     * 用户登录
+     * @param loginBean
+     * @param
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public String getLoginInfo(LoginBean loginBean, HttpServletRequest httpServletRequest) {
-//        System.out.println(RequestInfoUtils.getIPAndDeviceInfo(httpServletRequest));
-//        System.out.println(RequestInfoUtils.getDeviceInfo(httpServletRequest));
+    public String getLoginInfo(LoginBean loginBean) {
 
-        boolean result = loginService.checkUser(loginBean, httpServletRequest.getSession());
+        boolean result = loginService.checkLoginInfo(loginBean, request.getSession());
         if (result) {
             //记录登录信息
-            log.info("新的登录(" + RequestInfoUtils.getIPAdrress(httpServletRequest) + "): " + loginBean.getLoginUserName());
+            log.info("新的登录(" + RequestInfoUtils.getIPAdrress(request) + "): " + loginBean.getLoginUserName());
             return "success";
         } else {
             log.info("登录失败: " + loginBean.getLoginUserName());
@@ -52,6 +56,11 @@ public class LoginController {
     }
 
 
+    /**
+     * 检查用户登录
+     * @param session
+     * @return
+     */
     @RequestMapping(value = "/checkLogin", method = RequestMethod.POST)
     @ResponseBody
     public LoginSessionVo checkLogin(HttpSession session) {
@@ -60,9 +69,7 @@ public class LoginController {
         //判断session中是否存在该用户
         if (session.getAttribute("user") == null) {
             //用户不存在,返回空的user
-            user.setUserPhoneNumber(null);
-            user.setUserName(null);
-            return user;
+            return new LoginSessionVo();
         } else {
             //用户存在,更新session,返回user信息
             user = (LoginSessionVo) session.getAttribute("user");

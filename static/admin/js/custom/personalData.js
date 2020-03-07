@@ -138,7 +138,7 @@ function getAssName() {
         dataType: "json",
         //响应成功执行的方法,参数为相应结果
         success: function (assNames) {
-            console.log(assNames);
+            // console.log(assNames);
             $.each(assNames, function (index, assName) {
                 $("#assJoined").append("<div class='text-center'>"+assName+"</div>");
             });

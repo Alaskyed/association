@@ -2,7 +2,7 @@ package cn.com.alasky.controller.admin;
 
 import cn.com.alasky.domain.NewAssBean;
 import cn.com.alasky.service.admin.AssDataService;
-import cn.com.alasky.utils.UserUtils;
+import cn.com.alasky.utils.UserSessionUtils;
 import cn.com.alasky.vo.AssDataVo;
 import cn.com.alasky.vo.LoginSessionVo;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +38,7 @@ public class AssDataController {
     public List<AssDataVo> getAssData() {
         try {
             LoginSessionVo user = (LoginSessionVo) request.getSession().getAttribute("user");
-            log.info(user.getUserPhoneNumber() + "获取社团信息");
+            log.info("获取社团信息: "+user.getUserPhoneNumber());
             List<AssDataVo> assDataVos = assDataService.getAssData(user.getUserPhoneNumber());
 
             return assDataVos;
@@ -65,7 +65,7 @@ public class AssDataController {
     public String createNewAss(@RequestBody NewAssBean newAssBean) {
         try {
             //检查用户是否登录
-            LoginSessionVo user = UserUtils.checkLogin(request.getSession());
+            LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
             if (user != null) {
                 String result=assDataService.createNewAss(newAssBean,user);
                 return result;

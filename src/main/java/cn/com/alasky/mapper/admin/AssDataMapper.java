@@ -39,13 +39,12 @@ public interface AssDataMapper {
     /**
      * 在部门表中插入部门信息
      * @param assUuid
-     * @param depUuid
      * @param departmentBean
      * @return
      */
     @Insert("INSERT INTO departments(ass_uuid,dep_uuid,department_name,department_description) " +
-            "VALUES(#{assUuid},#{depUuid},#{departmentBean.departmentName},#{departmentBean.departmentDescription})")
-    int insertInfoIntoDepartments(String assUuid, String depUuid, DepartmentBean departmentBean);
+            "VALUES(#{assUuid},#{d.departmentUuid},#{d.departmentName},#{d.departmentDescription})")
+    int insertInfoIntoDepartments(String assUuid,@Param("d") DepartmentBean departmentBean);
 
     /**
      * 用手机号查询stu_uuid

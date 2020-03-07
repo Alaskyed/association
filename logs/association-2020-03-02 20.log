@@ -1,0 +1,96 @@
+2020-03-02 20:30:22 INFO  cn.com.alasky.StartApp 26 main - 启动应用
+2020-03-02 20:30:22 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartApp on Alasky with PID 13740 (F:\develop\association\target\classes started by Alasky in F:\develop\association)
+2020-03-02 20:30:22 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-03-02 20:30:23 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 244 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-02 20:30:23 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-02 20:30:23 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2020-03-02 20:30:24 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$293b2396] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-02 20:30:24 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8080 (http)
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Software\python\Scripts\;C:\Software\python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Software\java\jdk1.8.0_211\bin;C:\Software\java\jdk1.8.0_211\jre\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\hadoop-2.7.1\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Software\Git\cmd;D:\mysql-8.0.18-winx64\bin;D:\pandoc\;C:\Software\python\python3.6\Scripts\;C:\Software\python\python3.6\;C:\Software\Scripts\;C:\Software\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.2\bin;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.1\bin;C:\Software\python\Scripts;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Program Files\Bandizip\;.]
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-02 20:30:24 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-03-02 20:30:24 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1999 ms
+2020-03-02 20:30:25 INFO  io.lettuce.core.EpollProvider 68 <clinit> - Starting without optional epoll library
+2020-03-02 20:30:25 INFO  io.lettuce.core.KqueueProvider 70 <clinit> - Starting without optional kqueue library
+2020-03-02 20:30:26 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-02 20:30:27 INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor 295 finishRegistration - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-02 20:30:28 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-02 20:30:28 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-02 20:30:28 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartApp in 5.738 seconds (JVM running for 7.748)
+2020-03-02 20:30:33 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-02 20:30:33 INFO  org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+2020-03-02 20:30:33 INFO  org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 9 ms
+2020-03-02 20:30:33 INFO  cn.com.alasky.controller.LoginController 64 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-02 20:30:49 INFO  com.zaxxer.hikari.HikariDataSource 110 getConnection - HikariPool-1 - Starting...
+2020-03-02 20:30:50 INFO  com.zaxxer.hikari.HikariDataSource 123 getConnection - HikariPool-1 - Start completed.
+2020-03-02 20:30:50 INFO  cn.com.alasky.controller.LoginController 46 getLoginInfo - 新的登录(127.0.0.1): 11122223333
+2020-03-02 20:30:52 INFO  cn.com.alasky.controller.LoginController 64 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-02 20:30:58 INFO  cn.com.alasky.controller.LoginController 64 checkLogin - IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-02 20:30:58 INFO  cn.com.alasky.controller.admin.UserDataController 36 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-02 20:31:00 INFO  cn.com.alasky.controller.admin.PersonalDataController 50 getPersonalData - 查看个人信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-02 20:31:02 INFO  cn.com.alasky.controller.admin.AssDataController 41 getAssData - 11122223333获取社团信息
+2020-03-02 21:32:59 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-02 21:32:59 INFO  com.zaxxer.hikari.HikariDataSource 350 close - HikariPool-1 - Shutdown initiated...
+2020-03-02 21:32:59 INFO  com.zaxxer.hikari.HikariDataSource 352 close - HikariPool-1 - Shutdown completed.
+2020-03-02 21:33:00 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler 96 handleError - Unexpected error occurred in scheduled task. org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.8.101:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1092) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1065) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:865) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:340) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:132) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:95) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:82) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:211) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:158) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:132) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.RedisOperationsSessionRepository.cleanupExpiredSessions(RedisOperationsSessionRepository.java:430) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration.lambda$configureTasks$0(RedisHttpSessionConfiguration.java:248) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_211]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.8.101:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[?:1.8.0_211]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 24 more
+Caused by: java.lang.IllegalStateException: executor not accepting a task
+	at io.netty.resolver.AddressResolverGroup.getResolver(AddressResolverGroup.java:60) ~[netty-resolver-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:200) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.bootstrap.Bootstrap.access$000(Bootstrap.java:49) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:188) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.bootstrap.Bootstrap$1.operationComplete(Bootstrap.java:174) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:485) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.DefaultPromise.trySuccess(DefaultPromise.java:103) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.DefaultChannelPromise.trySuccess(DefaultChannelPromise.java:84) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetSuccess(AbstractChannel.java:982) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:516) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:427) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:486) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495) ~[netty-transport-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.33.Final.jar:4.1.33.Final]
+	... 1 more
+

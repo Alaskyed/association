@@ -1,8 +1,11 @@
 package cn.com.alasky.domain;
 
+import cn.com.alasky.dao.AssMemberDao;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.List;
 
 /**
  * Author: Alaskyed
@@ -12,6 +15,11 @@ import lombok.ToString;
  */
 @ToString
 public class DepartmentBean {
+    //uuid
+    @Getter
+    @Setter
+    private String departmentUuid;
+
     @Getter
     @Setter
     private String departmentName;
@@ -19,4 +27,13 @@ public class DepartmentBean {
     @Getter
     @Setter
     private String departmentDescription;
+
+    //部门人数
+    @Getter
+    @Setter
+    private String departmentMemberCount;
+
+    @Getter
+    @Setter
+    private List<AssMemberDao> members;
 }

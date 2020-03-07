@@ -16,8 +16,7 @@ function getAssInfo() {
 //请求类型
         type: "POST",
 //发送的数据
-        data:
-            {},
+        data: {},
 //数据格式
         dataType: "json",
 //响应成功执行的方法,参数为相应结果
