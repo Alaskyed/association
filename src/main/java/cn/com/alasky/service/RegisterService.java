@@ -1,11 +1,11 @@
 package cn.com.alasky.service;
 
 import cn.com.alasky.domain.UserBean;
-import cn.com.alasky.mapper.RegisterMapper;
+import cn.com.alasky.mapper.master.RegisterMapper;
 import cn.com.alasky.domain.RegisterBean;
+import cn.com.alasky.returnandexception.ReturnValue;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,33 +28,33 @@ public class RegisterService {
     /**
      * 添加新的用户
      *
+     * @param userUuid
      * @param registerBean
      * @return
      */
     @Transactional
-    public String addUser(RegisterBean registerBean) {
+    public String addUser(String userUuid, RegisterBean registerBean) {
         //使用userBean对象接收registerBean
         UserBean userBean = regiserToUser(registerBean);
-        //添加uuid
-        String stuUuis = UUID.randomUUID().toString();
-        userBean.setStuUuid(stuUuis);
-            //写入数据库
-            //1. 查询学校名称是否存在
-            String universityCode = checkUniversityName(registerBean.getRegisterUniversity());
-            //学校名存在
-            if (universityCode != "noone") {
-                //1. 在user表中插入数据
-                registerMapper.insertNewUser(userBean);
-                //2. 在student信息表中插入数据(uuid)
-                registerMapper.insertUUIDIntoStuInfo(stuUuis);
-                //3. 在student信息表中插入学校标识码
-                registerMapper.insertUniversityCodeIntoStudentInfo(universityCode, userBean.getPhoneNumber());
+        //添加stu_uuid
+        String stuUuid = UUID.randomUUID().toString();
+        userBean.setStuUuid(stuUuid);
+        //写入数据库
+        //1. 查询学校名称是否存在
+        String universityCode = checkUniversityName(registerBean.getRegisterUniversity());
+        //学校名存在
+        if (!(universityCode.equals(ReturnValue.DATA_REPEAT_ERROR.value()) || universityCode.equals(ReturnValue.EXECUTION_ERROR.value()))) {
+            //1. 在user表中插入数据
+            registerMapper.insertNewUser(userUuid, userBean);
+            //2. 在student信息表中插入数据(uuid)
+            registerMapper.insertUUIDIntoStuInfo(stuUuid);
+            //3. 在student信息表中插入学校标识码
+            registerMapper.updateUniversityCodeIntoStudentInfo(universityCode, userBean.getPhoneNumber());
 
-                return "success";
-            }else{
-                //返回noone
-                return "noone";
-            }
+            return ReturnValue.SUCCESS.value();
+        } else {
+            return ReturnValue.DATA_REPEAT_ERROR.value();
+        }
 
     }
 
@@ -81,7 +81,6 @@ public class RegisterService {
      * 查询学校名称是否存在
      *
      * @return 如果存在, 返回学校的标识码
-     * 如果不存在,返回 "noone"
      */
     public String checkUniversityName(String universityName) {
         //查血数据库中的内容
@@ -91,13 +90,12 @@ public class RegisterService {
                 //查询成功,返回学校代码
                 return universityCodes.get(0);
             } else {
-                //查询失败,返回 noone
-                return "noone";
+                //查询失败,返回错误代码
+                return ReturnValue.DATA_REPEAT_ERROR.value();
             }
         } catch (Exception e) {
-            log.info("查询学校标识码出错!");
-            log.error(String.valueOf(e));
-            return "error";
+            log.info("查询学校标识码出错: " + String.valueOf(e));
+            return ReturnValue.EXECUTION_ERROR.value();
         }
     }
 

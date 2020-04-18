@@ -144,7 +144,7 @@
 2020-02-19 21:04:58 ERROR cn.com.alasky.service.RegisterService 47 addUser - org.springframework.dao.DuplicateKeyException: 
 ### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '11122223333' for key 'PRIMARY'
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user(user_name,password,phone_number,email,qq,wechat,stu_uuid) values(?,?,?,?,?,?,?)
 ### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '11122223333' for key 'PRIMARY'
@@ -155,7 +155,7 @@
 2020-02-19 21:05:30 ERROR cn.com.alasky.service.RegisterService 47 addUser - org.springframework.dao.DuplicateKeyException: 
 ### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '33344445555' for key 'PRIMARY'
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user(user_name,password,phone_number,email,qq,wechat,stu_uuid) values(?,?,?,?,?,?,?)
 ### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '33344445555' for key 'PRIMARY'

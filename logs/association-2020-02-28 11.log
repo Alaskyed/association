@@ -28,7 +28,7 @@
 2020-02-28 11:59:45 ERROR cn.com.alasky.controller.admin.AssDataController 76 createNewAss - 创建新的社团出错: org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''计协')' at line 1
 ### The error may exist in cn/com/alasky/mapper/admin/AssDataMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.admin.AssDataMapper.insertInfoIntoAssociationInfo-Inline
+### The error may involve cn.com.alasky.mapper.master.admin.AssDataMapper.insertInfoIntoAssociationInfo-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO association_info(ass_uuid,university_name,association_name) VALUES(?,?),?)
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''计协')' at line 1

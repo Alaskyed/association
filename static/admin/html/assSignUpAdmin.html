@@ -1,0 +1,101 @@
+﻿<div class="container">
+    <div style="height: 50px"></div>
+    <div class="form-group row">
+        <label class="col-md-3 form-control-label"><strong>选择要查看的社团</strong></label>
+        <div class="col-md-9 select mb-3">
+            <select class="form-control" id="assSignUpAdminActNames">
+                <option value="null">选择查看的社团</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div class="">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="text-uppercase mb-0">社团报名信息表</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-sm card-text">
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>学院</th>
+                            <th>性别</th>
+                            <th>意向部门</th>
+                            <th>状态</th>
+                            <th>查看更多</th>
+                        </tr>
+                        </thead>
+                        <tbody id="assSignUpAdminTable">
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><span class="fa fa-file-text-o assSignUpDetail"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  详细信息弹框  -->
+    <div class="modal fade" id="assSignUpInfoDetail" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="assSignUpInfoDetailTitle">title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+                    <div id="assSignUpInfoDetailId" style="display: none;"></div>
+
+                    <div class="row">
+                        <div class="col-md-2 offset-md-1"><strong>姓名</strong></div>
+                        <div class="col-md-8" id="assSignUpInfoDetailName"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 offset-md-1"><strong>性别</strong></div>
+                        <div class="col-md-8" id="assSignUpInfoDetailGender"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 offset-md-1"><strong>意向部门</strong></div>
+                        <div class="col-md-8" id="assSignUpInfoDetailDep"></div>
+                    </div>
+
+                    <div class="dropdown-divider border-primary"></div>
+                    <div class="">
+                        <div class="col-md-3 offset-md-1"><strong>自我介绍</strong></div>
+                        <div class="offset-md-1" id="assSignUpInfoDetailIntroduce"></div>
+                    </div>
+
+                    <div class="dropdown-divider border-primary"></div>
+                    <div class="">
+                        <div class="col-md-3 offset-md-1"><strong>参加理由</strong></div>
+                        <div class="offset-md-1" id="assSignUpInfoDetailReason"></div>
+                    </div>
+                </div>
+                <!--提示信息-->
+                <div class="text-center" id="assSignUpAdminTips" style="color: red;"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="assSignUpAdminAgree">同意加入</button>
+                    <button type="button" class="btn btn-primary" id="assSignUpAdminRefuse">拒绝加入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/admin/js/custom/assSignUpAdmin.js"></script>
+
+</div>

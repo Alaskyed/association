@@ -117,7 +117,7 @@ function deleteStu(thisObj) {
                     thisObj.parent().parent().empty().css("display", "none");
                 } else if (result == "-1") {
                     thisObj.next().html("用户信息出错,请检查是否登录!");
-                }else if (result == "-6") {
+                }else if (result == "-5") {
                     thisObj.next().html("注意,该部门只剩下唯一的管理员,所以不能删除!");
                 } else {
                     thisObj.next().html("删除失败,请重试!");

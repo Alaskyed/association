@@ -23,7 +23,7 @@
 2020-02-01 12:58:40 ERROR cn.com.alasky.service.LoginService 41 checkUser - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'phoneNumber' in 'where clause'
 ### The error may exist in cn/com/alasky/mapper/LoginMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.LoginMapper.queryUser-Inline
+### The error may involve cn.com.alasky.mapper.master.LoginMapper.queryUser-Inline
 ### The error occurred while setting parameters
 ### SQL: select * from user where (phoneNumber=? or email=?) and password=?
 ### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'phoneNumber' in 'where clause'

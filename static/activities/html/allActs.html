@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动浏览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/color/default.css" id="theme-color">
+    <link rel="stylesheet" href="../css/allActs.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <style>
+        #getMoreAct{
+            opacity: 40%;
+        }
+    </style>
+
+</head>
+<body>
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("/navigation.html");
+    </script>
+</section>
+
+<div class="container">
+    <form class="form-inline row">
+        <input class="form-control col-md-8 offset-md-1" type="search" placeholder="输入活动名称" aria-label="Search" id="allActSearch">
+        <button class="btn btn-primary btn-sm col-md-2" type="submit" id="allActSearchSubmit">查找</button>
+    </form>
+</div>
+
+<div class="container" id="waterfall">
+
+
+</div>
+
+
+<div class="text-center">
+    <button class="btn btn-primary btn-sm btn-block" id="getMoreAct">获 取 更 多</button>
+</div>
+
+<!--引入js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="/index/js/scripts.js"></script>
+
+<!--自己的js-->
+<script src="../js/allActs.js"></script>
+
+</body>
+</html>

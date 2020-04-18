@@ -22,7 +22,7 @@
 2020-01-31 14:57:35 ERROR org.apache.juli.logging.DirectJDKLog 175 log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into user values({#registerUserName},{#registerPassword},{#registerPhoneN' at line 1
 ### The error may exist in cn/com/alasky/mapper/LoginMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: inster into user values({#registerUserName},{#registerPassword},{#registerPhoneNumber},{#registerEmail},{#registerQQ},{#registerWechat}
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into user values({#registerUserName},{#registerPassword},{#registerPhoneN' at line 1

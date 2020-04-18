@@ -1,0 +1,83 @@
+2020-04-07 11:10:55 INFO  cn.com.alasky.StartStaticApp 22 main - 静态写入APP启动应用
+2020-04-07 11:10:56 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartStaticApp on Alasky with PID 18008 (F:\develop\associationstatic\target\classes started by Alasky in F:\develop\association)
+2020-04-07 11:10:56 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-04-07 11:10:57 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 244 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-07 11:10:57 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-07 11:10:57 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2020-04-07 11:10:57 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5bf3496] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-07 11:10:57 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8081 (http)
+2020-04-07 11:10:57 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8081"]
+2020-04-07 11:10:57 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-04-07 11:10:57 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-07 11:10:57 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Software\python\Scripts\;C:\Software\python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Software\java\jdk1.8.0_211\bin;C:\Software\java\jdk1.8.0_211\jre\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\hadoop-2.7.7\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Software\Git\cmd;D:\mysql-8.0.18-winx64\bin;D:\pandoc\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Software\python\python3.6\Scripts\;C:\Software\python\python3.6\;C:\Software\Scripts\;C:\Software\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.2\bin;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.1\bin;C:\Software\python\Scripts;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Program Files\Bandizip\;C:\Users\Administrator\AppData\Roaming\npm;.]
+2020-04-07 11:10:57 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-04-07 11:10:57 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1746 ms
+2020-04-07 11:10:58 INFO  io.lettuce.core.EpollProvider 68 <clinit> - Starting without optional epoll library
+2020-04-07 11:10:58 INFO  io.lettuce.core.KqueueProvider 70 <clinit> - Starting without optional kqueue library
+2020-04-07 11:10:59 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-07 11:11:00 INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor 295 finishRegistration - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-04-07 11:11:00 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8081"]
+2020-04-07 11:11:00 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8081 (http) with context path ''
+2020-04-07 11:11:00 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartStaticApp in 5.108 seconds (JVM running for 7.196)
+2020-04-07 15:50:34 INFO  io.netty.util.internal.logging.AbstractInternalLogger 219 log - [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host] Unexpected exception during request: [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host]
+2020-04-07 15:50:34 INFO  io.netty.util.internal.logging.AbstractInternalLogger 219 log - [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host] Unexpected exception during request: [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host]
+2020-04-07 15:50:35 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was /192.168.8.101:6379
+2020-04-07 15:50:35 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was /192.168.8.101:6379
+2020-04-07 15:50:45 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.8.101:6379
+2020-04-07 15:50:45 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.8.101:6379
+2020-04-07 15:50:45 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 15:50:45 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 15:50:45 INFO  io.lettuce.core.protocol.ReconnectionHandler 177 lambda$null$3 - Reconnected to 192.168.8.101:6379
+2020-04-07 15:50:45 INFO  io.lettuce.core.protocol.ReconnectionHandler 177 lambda$null$3 - Reconnected to 192.168.8.101:6379
+2020-04-07 18:55:59 INFO  io.netty.util.internal.logging.AbstractInternalLogger 219 log - [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host] Unexpected exception during request: [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host]
+2020-04-07 18:55:59 INFO  io.netty.util.internal.logging.AbstractInternalLogger 219 log - [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host] Unexpected exception during request: [null, java.io.IOException: An existing connection was forcibly closed by the remote host, java.io.IOException: An existing connection was forcibly closed by the remote host]
+2020-04-07 18:55:59 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was /192.168.8.101:6379
+2020-04-07 18:55:59 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was /192.168.8.101:6379
+2020-04-07 18:56:00 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler 96 handleError - Unexpected error occurred in scheduled task. org.springframework.dao.QueryTimeoutException: Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 200 millisecond(s)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:70) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:268) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.convertLettuceAccessException(LettuceSetCommands.java:520) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:245) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:607) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$6(DefaultSetOperations.java:158) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:158) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:132) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.RedisOperationsSessionRepository.cleanupExpiredSessions(RedisOperationsSessionRepository.java:430) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration.lambda$configureTasks$0(RedisHttpSessionConfiguration.java:248) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_211]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211]
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 200 millisecond(s)
+	at io.lettuce.core.ExceptionFactory.createTimeoutException(ExceptionFactory.java:51) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:114) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.FutureSyncInvocationHandler.handleInvocation(FutureSyncInvocationHandler.java:69) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.internal.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:80) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at com.sun.proxy.$Proxy80.smembers(Unknown Source) ~[?:?]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:243) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 20 more
+
+2020-04-07 20:09:00 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-04-07 20:09:00 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: java.util.concurrent.TimeoutException: Reconnection attempt exceeded timeout of 60 SECONDS 
+2020-04-07 20:09:03 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 20:09:03 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 20:09:13 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.8.101:6379
+2020-04-07 20:09:13 WARN  io.netty.util.internal.logging.AbstractInternalLogger 176 log - Cannot reconnect: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.8.101:6379
+2020-04-07 20:09:13 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 20:09:13 INFO  io.netty.util.internal.logging.AbstractInternalLogger 173 log - Reconnecting, last destination was 192.168.8.101:6379
+2020-04-07 20:09:13 INFO  io.lettuce.core.protocol.ReconnectionHandler 177 lambda$null$3 - Reconnected to 192.168.8.101:6379
+2020-04-07 20:09:13 INFO  io.lettuce.core.protocol.ReconnectionHandler 177 lambda$null$3 - Reconnected to 192.168.8.101:6379
+2020-04-07 23:16:10 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,73 @@
+2020-03-22 22:46:10 INFO  cn.com.alasky.StartApp 26 main - 启动应用
+2020-03-22 22:46:10 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartApp on Alasky with PID 3320 (F:\develop\association\target\classes started by Alasky in F:\develop\association)
+2020-03-22 22:46:10 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-03-22 22:46:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 244 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 22:46:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-22 22:46:11 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2020-03-22 22:46:11 WARN  org.mybatis.logging.Logger 44 warn - No MyBatis mapper was found in '[cn.com.alasky.mapper.second]' package. Please check your configuration.
+2020-03-22 22:46:12 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3e18442] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 22:46:12 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8080 (http)
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Software\python\Scripts\;C:\Software\python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Software\java\jdk1.8.0_211\bin;C:\Software\java\jdk1.8.0_211\jre\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\hadoop-2.7.7\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Software\Git\cmd;D:\mysql-8.0.18-winx64\bin;D:\pandoc\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Software\python\python3.6\Scripts\;C:\Software\python\python3.6\;C:\Software\Scripts\;C:\Software\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.2\bin;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.1\bin;C:\Software\python\Scripts;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Program Files\Bandizip\;C:\Users\Administrator\AppData\Roaming\npm;.]
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-22 22:46:12 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-03-22 22:46:12 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2061 ms
+2020-03-22 22:46:13 INFO  io.lettuce.core.EpollProvider 68 <clinit> - Starting without optional epoll library
+2020-03-22 22:46:13 INFO  io.lettuce.core.KqueueProvider 70 <clinit> - Starting without optional kqueue library
+2020-03-22 22:46:15 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 22:46:16 INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor 295 finishRegistration - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 22:46:16 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-22 22:46:16 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-22 22:46:16 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartApp in 5.774 seconds (JVM running for 7.846)
+2020-03-22 22:46:17 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 22:46:17 INFO  org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+2020-03-22 22:46:17 INFO  org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 12 ms
+2020-03-22 22:46:17 ERROR com.alibaba.druid.support.logging.Log4j2Impl 58 error - testWhileIdle is true, validationQuery not set
+2020-03-22 22:46:18 INFO  com.alibaba.druid.support.logging.Log4j2Impl 106 info - {dataSource-1} inited
+2020-03-22 22:46:35 INFO  cn.com.alasky.controller.LoginController 100 logout - 11122223333 退出登录
+2020-03-22 22:48:08 ERROR cn.com.alasky.controller.LoginController 61 getLoginInfo - 查询用户出错: java.lang.NullPointerException
+2020-03-22 22:49:01 ERROR cn.com.alasky.controller.LoginController 61 getLoginInfo - 查询用户出错: java.lang.NullPointerException
+2020-03-22 22:49:20 ERROR cn.com.alasky.controller.LoginController 61 getLoginInfo - 查询用户出错: java.lang.NullPointerException
+2020-03-22 22:49:22 ERROR cn.com.alasky.controller.LoginController 61 getLoginInfo - 查询用户出错: java.lang.NullPointerException
+2020-03-22 22:51:13 ERROR cn.com.alasky.controller.LoginController 61 getLoginInfo - 查询用户出错: java.lang.NullPointerException
+2020-03-22 22:51:13 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler 96 handleError - Unexpected error occurred in scheduled task. org.springframework.dao.QueryTimeoutException: Redis command timed out; nested exception is io.lettuce.core.RedisCommandTimeoutException: Command timed out after 200 millisecond(s)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:70) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:268) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.convertLettuceAccessException(LettuceSetCommands.java:520) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:245) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.sMembers(DefaultedRedisConnection.java:607) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultSetOperations.lambda$members$6(DefaultSetOperations.java:158) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:158) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundSetOperations.members(DefaultBoundSetOperations.java:152) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.session.data.redis.RedisSessionExpirationPolicy.cleanExpiredSessions(RedisSessionExpirationPolicy.java:132) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.RedisOperationsSessionRepository.cleanupExpiredSessions(RedisOperationsSessionRepository.java:430) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration.lambda$configureTasks$0(RedisHttpSessionConfiguration.java:248) ~[spring-session-data-redis-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [?:1.8.0_211]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_211]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_211]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211]
+Caused by: io.lettuce.core.RedisCommandTimeoutException: Command timed out after 200 millisecond(s)
+	at io.lettuce.core.ExceptionFactory.createTimeoutException(ExceptionFactory.java:51) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.LettuceFutures.awaitOrCancel(LettuceFutures.java:114) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.FutureSyncInvocationHandler.handleInvocation(FutureSyncInvocationHandler.java:69) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at io.lettuce.core.internal.AbstractInvocationHandler.invoke(AbstractInvocationHandler.java:80) ~[lettuce-core-5.1.4.RELEASE.jar:?]
+	at com.sun.proxy.$Proxy100.smembers(Unknown Source) ~[?:?]
+	at org.springframework.data.redis.connection.lettuce.LettuceSetCommands.sMembers(LettuceSetCommands.java:243) ~[spring-data-redis-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	... 20 more
+
+2020-03-22 23:00:02 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 23:00:02 INFO  com.alibaba.druid.support.logging.Log4j2Impl 106 info - {dataSource-1} closed

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动详细信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/color/default.css" id="theme-color">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("/navigation.html");
+    </script>
+</section>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="text-center text-primary mb-0" id="assDetailName"></h4>
+            <div id="assUuid" style="display:none"></div>
+        </div>
+        <div class="card-body">
+            <table class="table card-text">
+                <tr>
+                    <th scope="row">社团名称</th>
+                    <td id="assDetailAssName"></td>
+                </tr>
+                <tr>
+                    <th scope="row">所属学校</th>
+                    <td id="assDetailUniversity"></td>
+                </tr>
+            </table>
+
+            <div class="card-header">
+                <h5 class="text-center text-primary mb-0">部门介绍</h5>
+            </div>
+            <table class="table card-text">
+                <thead>
+                <tr>
+                    <th>部门名称</th>
+                    <th>部门介绍</th>
+                </tr>
+                </thead>
+                <tbody id="assDetailDeps">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="text-center">
+    <div class="btn btn-primary" data-toggle='modal' data-target="#assSignUp">申请加入!</div>
+
+    <div class="modal fade" id="assSignUp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">提交报名信息</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>注意: 提交报名信息之前请先登录!</strong></p>
+                    <form>
+                        <div class="form-group row">
+                            <label for="assSignUpName" class="col-sm-2 col-form-label">姓名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="assSignUpName" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-2 col-form-label">性别</div>
+                            <div class="col-sm-10">
+                                <select id="assSignUpGender" class="form-control">
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="assSignUpDep" class="col-sm-2 col-form-label">选择想要加入的部门</label>
+                            <div class="col-sm-10">
+                                <select id="assSignUpDep" class="form-control">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="assSignUpIntroduce" class="col-sm-2 col-form-label">自我介绍</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control" id="assSignUpIntroduce"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="assSignUpReason" class="col-sm-2 col-form-label">参加社团的理由</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control" id="assSignUpReason"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center">
+                        <button type="button" class="btn btn-primary" id="assSignUpSubmit">提交</button>
+                    </div>
+                </div>
+                <div class='alert alert-warning' role='alert' style='text-align: center' id="assSignUpTip"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--引入js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="/index/js/scripts.js"></script>
+
+<script src="../js/assDetail.js"></script>
+</body>
+</html>

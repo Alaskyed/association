@@ -33,7 +33,7 @@
 2020-02-16 21:56:28 ERROR cn.com.alasky.service.RegisterService 46 addUser - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user values(?,?,?,?,null)
 ### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
@@ -44,7 +44,7 @@
 2020-02-16 21:57:43 ERROR cn.com.alasky.service.RegisterService 46 addUser - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user values(?,?,?,?,null)
 ### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
@@ -54,7 +54,7 @@
 2020-02-16 21:58:44 ERROR cn.com.alasky.service.RegisterService 46 addUser - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user values(?,?,?,?,null)
 ### Cause: java.sql.SQLException: Column count doesn't match value count at row 1

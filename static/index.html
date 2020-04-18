@@ -13,16 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS / Color Scheme -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="/css/color/default.css" id="theme-color">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >-->
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/color/default.css" id="theme-color">
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
-    <script src="js/index/scripts.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script src="/bootstrap/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 
@@ -39,10 +37,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-10 col-12 mx-auto text-center">
-                <img src="/images/index/mockup.svg" class="img-fluid d-block mx-auto" alt="Mockup"/>
+                <img src="/index/images/mockup.svg" class="img-fluid d-block mx-auto" alt="Mockup"/>
                 <h1 class="heading-black mt-3">云社团</h1>
                 <p class="lead py-3">让你的社团更出彩!</p>
-                <a class="btn btn-primary" href="/admin/html/createNewAss.html">创建我的社团</a>
+                <a class="btn btn-primary" href="/association/html/joinNewAss.html">加入新的社团</a>
+                <a class="btn btn-primary" href="/association/html/createNewAss.html">创建我的社团</a>
                 <form class="mx-md-6">
                     <div class="input-group input-group-lg">
                     </div>
@@ -125,12 +124,12 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-md-6 mx-auto text-center">
-                <h5 class="mb-4">了解各个社团的最新活动</h5>
-                <a href="#" class="btn btn-primary">进入活动页面</a>
-            </div>
-        </div>
+<!--        <div class="row mt-5">-->
+<!--            <div class="col-md-6 mx-auto text-center">-->
+<!--                <h5 class="mb-4">了解各个社团的最新活动</h5>-->
+<!--                <a href="#" class="btn btn-primary">进入活动页面</a>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
 
@@ -233,54 +232,68 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto text-center">
-                <h2 class="heading-black">公开活动展示</h2>
-                <p class="text-muted lead">最新的社团优秀活动展示</p>
+                <h2 class="heading-black">热门活动</h2>
+                <p class="text-muted lead">本校最新的社团优秀活动展示</p>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top img-raised" src="/images/index/blog-1.jpg" alt="Blog 1">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title mb-2"><a href="#">Basic of mobile apps</a></h5>
-                        <p class="text-muted small-xl mb-2">January 27, 2018</p>
-                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
-                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top img-raised" src="/images/index/blog-2.jpg" alt="Blog 2">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title mb-2"><a href="#">How to create gradient</a></h5>
-                        <p class="text-muted small-xl mb-2">December 16, 2017</p>
-                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
-                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <a href="#">
-                        <img class="card-img-top img-raised" src="/images/index/blog-3.jpg" alt="Blog 3">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title mb-2"><a href="#">How to create T-shirt design</a></h5>
-                        <p class="text-muted small-xl mb-2">December 2nd, 2017</p>
-                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
-                            consectetur adipiscing elit. <a href="#">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
+        <div class="row mt-5"  id="indexActShow">
+<!--            <div class="col-md-3">-->
+<!--                <div class="card">-->
+<!--                    <a href="#">-->
+<!--                        <img class="" src="/imgages/39/39.png" alt="活动图片">-->
+<!--                    </a>-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title mb-2"><a href="#">Basic of mobile apps</a></h5>-->
+<!--                        <p class="text-muted small-xl mb-2">January 27, 2018</p>-->
+<!--                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,-->
+<!--                            consectetur adipiscing elit. <a href="#">Learn more</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="card">-->
+<!--                    <a href="#">-->
+<!--                        <img class="card-img-top img-raised" src="/index/images/blog-2.jpg" alt="Blog 2">-->
+<!--                    </a>-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title mb-2"><a href="#">How to create gradient</a></h5>-->
+<!--                        <p class="text-muted small-xl mb-2">December 16, 2017</p>-->
+<!--                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,-->
+<!--                            consectetur adipiscing elit. <a href="#">Learn more</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="card">-->
+<!--                    <a href="#">-->
+<!--                        <img class="card-img-top img-raised" src="/index/images/blog-3.jpg" alt="Blog 3">-->
+<!--                    </a>-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title mb-2"><a href="#">How to create T-shirt design</a></h5>-->
+<!--                        <p class="text-muted small-xl mb-2">December 2nd, 2017</p>-->
+<!--                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,-->
+<!--                            consectetur adipiscing elit. <a href="#">Learn more</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3">-->
+<!--                <div class="card">-->
+<!--                    <a href="#">-->
+<!--                        <img class="card-img-top img-raised" src="/index/images/blog-3.jpg" alt="Blog 3">-->
+<!--                    </a>-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title mb-2"><a href="#">How to create T-shirt design</a></h5>-->
+<!--                        <p class="text-muted small-xl mb-2">December 2nd, 2017</p>-->
+<!--                        <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,-->
+<!--                            consectetur adipiscing elit. <a href="#">Learn more</a></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
         <div class="row mt-6">
             <div class="col-md-6 mx-auto text-center">
-                <a href="#" class="btn btn-primary">查看更多</a>
+                <a href="/activities/html/allActs.html" class="btn btn-primary">查看更多活动</a>
+                <a href="/activities/html/newActivities.html" class="btn btn-primary">发布新的活动</a>
             </div>
         </div>
     </div>
@@ -346,8 +359,19 @@
     <i class="fa fa-angle-up" aria-hidden="true"></i>
 </div>
 
+<!--联网引入js-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+
+<script src="/bootstrap/bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.bundle.min.js"></script>
+
+<!--这是更换主题的小按钮使用的js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
 
 
+<script src="/index/js/scripts.js"></script>
+<script src="/index/js/index.js"></script>
 
 </body>
 </html>

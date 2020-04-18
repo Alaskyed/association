@@ -1,9 +1,9 @@
 package cn.com.alasky.service;
 
-import cn.com.alasky.domain.UserBean;
-import cn.com.alasky.mapper.LoginMapper;
+import cn.com.alasky.returnandexception.ReturnValue;
+import cn.com.alasky.mapper.master.LoginMapper;
 import cn.com.alasky.domain.LoginBean;
-import cn.com.alasky.vo.LoginSessionVo;
+import cn.com.alasky.pojo.UserSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,8 +24,6 @@ import java.util.List;
 public class LoginService {
     @Autowired
     LoginMapper loginMapper;
-    @Autowired
-    LoginSessionVo loginSessionBean;
 
     /**
      * 检查账号用户名和密码是否正确
@@ -35,22 +33,13 @@ public class LoginService {
      * @return
      */
     @Transactional
-    public boolean checkLoginInfo(LoginBean loginBean, HttpSession session) {
-        try {
-            List<LoginSessionVo> resultList = loginMapper.queryUser(loginBean);
-            if (resultList.size() < 1) {
-                return false;
-            } else {
-                loginSessionBean.setUserPhoneNumber(resultList.get(0).getUserPhoneNumber());
-                loginSessionBean.setUserName(resultList.get(0).getUserName());
-                loginSessionBean.setUserStuUuid(resultList.get(0).getUserStuUuid());
-                session.setAttribute("user",loginSessionBean);
-                return true;
-            }
-        } catch (Exception e) {
-            log.info("查询用户出错");
-            log.error(String.valueOf(e));
-            return false;
+    public String checkLoginInfo(LoginBean loginBean, HttpSession session) {
+        List<UserSession> resultList = loginMapper.queryUser(loginBean);
+        if (resultList.size() < 1) {
+            return ReturnValue.DATA_MATCHING_ERROR.value();
+        } else {
+            session.setAttribute("user", resultList.get(0));
+            return ReturnValue.SUCCESS.value();
         }
     }
 }

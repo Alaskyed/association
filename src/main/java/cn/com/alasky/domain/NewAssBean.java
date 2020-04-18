@@ -1,5 +1,6 @@
 package cn.com.alasky.domain;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,18 +13,12 @@ import java.util.List;
  * Package: cn.com.alasky.domain
  * Description:
  */
-@ToString
+@Data
 public class NewAssBean {
-    @Getter
-    @Setter
     private String associationName;
-
-    @Getter
-    @Setter
     private String universityName;
-
-    @Getter
-    @Setter
+    private String universityCode;
+    private String customUrl;
     private List<DepartmentBean> departments;
 }
 

@@ -2,14 +2,14 @@ package cn.com.alasky.service.admin;
 
 import cn.com.alasky.dao.AssMemberDao;
 import cn.com.alasky.domain.DepartmentBean;
-import cn.com.alasky.mapper.admin.DepAdminMapper;
-import cn.com.alasky.vo.DepAdminVo;
-import cn.com.alasky.vo.LoginSessionVo;
+import cn.com.alasky.mapper.master.admin.DepAdminMapper;
+import cn.com.alasky.returnandexception.ReturnValue;
+import cn.com.alasky.vo.admin.DepAdminVo;
+import cn.com.alasky.pojo.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -28,7 +28,7 @@ public class DepAdminService {
      *
      * @param user
      */
-    public List<DepAdminVo> getDepAdminAssInfo(LoginSessionVo user) {
+    public List<DepAdminVo> getDepAdminAssInfo(UserSession user) {
         //先将是会长或者部长的社团基本信息加到vo列表里
         List<DepAdminVo> depAdminVos = depAdminMapper.queryPositionByStuUuid(user.getUserStuUuid());
         for (DepAdminVo depAdminVo : depAdminVos) {
@@ -76,16 +76,16 @@ public class DepAdminService {
             //检查该部门剩余领导数目,如果<2,则不允许删除
             int admSum =depAdminMapper.queryNumInDep(depUuid);
             if (admSum < 2) {
-                return "-6";
+                return "-5";
             }
         }
         //执行删除
         int result = depAdminMapper.deleteStuInDep(depUuid, stuUuid);
         if (result > 0) {
             int i = 1 / 0;
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
-            return "-2";
+            return ReturnValue.EXECUTION_ERROR.value();
         }
     }
 }

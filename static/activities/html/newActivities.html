@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>发布新的活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+
+    <!--字体-->
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/color/default.css" id="theme-color">
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("/navigation.html");
+    </script>
+</section>
+
+<section class="container">
+    <div>
+        <h2 class="text-center text-primary text-uppercase mb-4">创建新活动</h2>
+        <p class="text-center text-primary">注意: 只有会长才可以添加新的活动哦!</p>
+        <p class="text-center text-primary">带 * 的为必填!</p>
+        <div class="card-body">
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">选择添加活动的社团</label>
+                <select class="form-control" id="newActAss">
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">活动名称 *</label>
+                <input type="text" placeholder="活动名称" class="form-control" id="newActName">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">活动内容</label>
+                <textarea class="form-control" placeholder="活动内容摘要" id="newActContent"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">联系方式 *</label>
+                <div class="form-row">
+                    <select class="col-md-1 custom-select-sm" id="newActContactType">
+                        <option selected>QQ</option>
+                        <option>QQ群</option>
+                        <option>微信</option>
+                        <option>微信群</option>
+                        <option>电话</option>
+                    </select>
+                    <input type="text" placeholder="前面选择类型,这里输入联系方式" class="col-md-11 form-control"
+                           id="newActContactNumber">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">活动时间 *</label>
+                <div class="form-row">
+                    <label class="col-md-2 form-control-label">活动开始时间 *:</label>
+                    <input type="date" placeholder="" class="col-md-2 form-control" id="newActStartDate">
+                    <input type="time" placeholder="" class="col-md-1 form-control" id="newActStartTime">
+                    <label class="col-md-2 form-control-label offset-md-1">活动结束时间 *:</label>
+                    <input type="date" placeholder="" class="col-md-2 form-control" id="newActEndDate">
+                    <input type="time" placeholder="" class="col-md-1 form-control" id="newActEndTime">
+                </div>
+                <div class="form-row">
+                    <label class="col-md-2 form-control-label">报名截止时间 *:</label>
+                    <input type="date" placeholder="" class="col-md-2 form-control" id="newActDeadLineDate">
+                    <input type="time" placeholder="" class="col-md-1 form-control" id="newActDeadLIneTime">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">活动地址</label>
+                <input type="text" placeholder="活动地址" class="form-control" id="newActAddress">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">备注</label>
+                <input type="text" placeholder="备注" class="form-control" id="newActRemarks">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label text-uppercase font-weight-bold">是否公开 *</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="newActIsOpen" checked="checked" value="1">
+                        <label class="form-check-label" for="inlineRadio1">公开</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="newActIsOpen" value="0">
+                        <label class="form-check-label"
+                               for="inlineRadio2">不公开(如果选择不公开,将只会在自己的学校页面显示,其他学校将看不到你的活动)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label font-weight-bold">添加宣传图片(图片比例最好为1:1)</label>
+                <input type="file" class="form-control-file" id="newActPic">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label font-weight-bold">添加附件(可以添加补充说明或者策划文档,也可以不添加)</label>
+                <input type="file" class="form-control-file" id="newActEnclosure">
+            </div>
+            <div class="text-center">
+                <span style="color: red" id="newActTips"></span><br />
+                <button class="btn btn-primary" id="newActSubmit">确认创建</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--引入js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="/index/js/scripts.js"></script>
+
+<!--自定义的js-->
+<script src="../js/newActivities.js"></script>
+
+</body>
+</html>

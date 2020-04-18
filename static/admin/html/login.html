@@ -60,7 +60,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <!--登录js,直接卸载这里-->
-<script src="/js/logreg/md5.js"></script>
+<script src="/index/js/logreg/md5.js"></script>
 <script>
     $("#loginSubmit").click(function () {
         sendLoginInfo();
@@ -91,7 +91,7 @@
             dataType: "text",
             //响应成功执行的方法,参数为相应结果
             success: function (result) {
-                if (result == "success") {
+                if (result == "0") {
                     $("#loginTip").html("<div class='alert alert-success' role='alert' style='text-align: center'>登录成功!</div>");
                     //停顿1s,刷新页面
                     setTimeout(function () {

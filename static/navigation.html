@@ -1,10 +1,6 @@
 ﻿<head>
     <meta charset="UTF-8">
 
-    <script src="/js/logreg/checkLogin.js"></script>
-    <script src="/js/logreg/login.js"></script>
-    <script src="/js/logreg/register.js"></script>
-    <script src="/js/logreg/md5.js"></script>
     <!--    导航栏样式-->
     <style>
         body {
@@ -33,19 +29,22 @@
         </button>
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        主页导航
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item page-scroll" href="#About">了解云社团</a>
-                        <a class="dropdown-item page-scroll" href="#News">最新资讯</a>
-                        <a class="dropdown-item page-scroll" href="#Contact">联系我们</a>
-                    </div>
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+<!--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                        主页导航-->
+<!--                    </a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                        <a class="dropdown-item page-scroll" href="#About">了解云社团</a>-->
+<!--                        <a class="dropdown-item page-scroll" href="#News">最新资讯</a>-->
+<!--                        <a class="dropdown-item page-scroll" href="#Contact">联系我们</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">首页 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">活动 </a>
+                    <a class="nav-link" href="/activities/html/allActs.html">活动 </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">论坛 </a>
@@ -55,7 +54,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" id="myAssociation" style="display: none"><a href="/admin/admin.html">管理台</a></li>
                 <li class="nav-item" id="userName"></li>
-                <li class="nav-item" id="logout" style="display: none"><a href="#">注销</a></li>
+                <li class="nav-item" id="logout" style="display: none"><a href="#">退出登录</a></li>
             </ul>
         </div>
     </nav>
@@ -87,15 +86,15 @@
                         </div>
                     </form>
                     <div class="row justify-content-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerForm">
-                            没有账号?点击注册!
-                        </button>
+                        <button type="button" class="btn btn-primary" id="loginSubmit">登录</button>
                     </div>
                 </div>
                 <div id="loginTip"></div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerForm">
+                        没有账号?点击注册!
+                    </button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="loginSubmit">登录</button>
                 </div>
             </div>
         </div>
@@ -112,25 +111,25 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                    <div class="row justify-content-center">
-                        <span>注意:标 * 的为必填</span>
-                    </div>
+                <div class="row justify-content-center">
+                    <span>注意:标 * 的为必填</span>
+                </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group row">
-                            <label for="loginUserName" class="col-sm-2 col-form-label">用户名 *</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="registerUserName" placeholder="请输入你的用户名"
-                                       data-toggle="popover" data-trigger="manual" data-container="body"
-                                       data-placement="top" title="提示" data-content="请输入用户昵称">
-                            </div>
-                        </div>
                         <div class="form-group row">
                             <label for="registerPhoneNumber" class="col-sm-2 col-form-label">手机号 *</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="registerPhoneNumber" placeholder="请输入你的手机号"
                                        data-toggle="popover" data-trigger="manual" data-container="body"
                                        data-placement="top" title="提示" data-content="请输入手机号!">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="loginUserName" class="col-sm-2 col-form-label">昵称 *</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="registerUserName" placeholder="请输入你的用户昵称"
+                                       data-toggle="popover" data-trigger="manual" data-container="body"
+                                       data-placement="top" title="提示" data-content="请输入用户昵称">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -218,6 +217,13 @@
         <p>这里可以选择当前页面的主题颜色</p>
     </div>
 </div>
+
+
+<script src="/index/js/logreg/checkLogin.js"></script>
+<script src="/index/js/logreg/login.js"></script>
+<script src="/index/js/logreg/register.js"></script>
+<script src="/index/js/logreg/md5.js"></script>
+
 <script>
     $(function () {
         $('[data-toggle="popover"]').popover();

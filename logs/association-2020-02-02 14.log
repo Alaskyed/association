@@ -23,7 +23,7 @@
 2020-02-02 10:12:38 ERROR cn.com.alasky.service.RegisterService 40 addUser - org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
 ### The error may exist in cn/com/alasky/mapper/RegisterMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.RegisterMapper.insertNewUser-Inline
+### The error may involve cn.com.alasky.mapper.master.RegisterMapper.insertNewUser-Inline
 ### The error occurred while setting parameters
 ### SQL: insert into user values(?,?,?,?,null)
 ### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1

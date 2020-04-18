@@ -28,7 +28,7 @@
 2020-03-06 10:59:51 ERROR cn.com.alasky.controller.admin.DepAdminController 46 getDepAdminAssInfo - 获取部门管理信息出错: org.springframework.jdbc.BadSqlGrammarException: 
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.'2')' at line 1
 ### The error may exist in cn/com/alasky/mapper/admin/DepAdminMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.admin.DepAdminMapper.queryPositionByStuUuid-Inline
+### The error may involve cn.com.alasky.mapper.master.admin.DepAdminMapper.queryPositionByStuUuid-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT sa.ass_uuid AS ass_uuid, a.association_name AS ass_name, a.university_name AS ass_university, sa.position AS position FROM stu_ass sa INNER JOIN association_info a ON sa.ass_uuid=a.ass_uuid WHERE stu_uuid= ? AND sa.position IN('1'.'2')
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.'2')' at line 1

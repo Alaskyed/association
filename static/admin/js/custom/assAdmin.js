@@ -28,6 +28,7 @@ function getAssAdminAssInfo() {
                 $(".assAdminAssName2").eq(index).html(assAdminAssData.assUniversity + " - " + assAdminAssData.assName);
                 $(".assAdminAssName3").eq(index).attr("value", assAdminAssData.assName);
                 $(".assAdminAssUniversity").eq(index).attr("value", assAdminAssData.assUniversity);
+                $(".assAdminAssCustomUrl").eq(index).attr("value", assAdminAssData.customUrl);
 
                 $.each(assAdminAssData.departments, function (i, department) {
                     // console.log(department);
@@ -61,6 +62,7 @@ function getAssAdminAssInfo() {
 
             //点击修改社团信息时的操作
             $(".assAdminChange").click(function () {
+                //按钮的显示和隐藏
                 $(this).css("display", "none");
                 $(this).next().css("display", "block");
                 $(this).prev().removeAttr("readonly");
@@ -116,6 +118,8 @@ function assAdminChangeSubmit(thisObj) {
         type = "assName";
     } else if (type == "学校") {
         type = "assUniversity";
+    } else if (type == "主页") {
+        type = "assCustomUrl";
     } else {
         alert("编码有问题,请尝试刷新网页或切换浏览器!")
     }
@@ -148,7 +152,7 @@ function assAdminChangeSubmit(thisObj) {
                 }, 2000);
             } else if (result == "-1") {
                 thisObj.next().html("用户信息出错,请检查是否登录!");
-            } else if (result == "-4") {
+            } else if (result == "-3") {
                 thisObj.next().html("请检查学校名称是否正确,或者检查自己是否有足够的权限(会长团)!");
             } else {
                 thisObj.next().html("修改失败,请重试!");
@@ -253,13 +257,13 @@ function assAdminDepDelete(thisObj) {
                         thisObj.parent().parent().empty();
                     }, 1000);
                 } else if (result == "-1") {
-                    thisObj.next().html("用户信息出错,请检查是否登录!");
+                    alert("用户信息出错,请检查是否登录!");
                 } else if (result == "-4") {
-                    thisObj.next().html("请检查自己是否有足够的权限(会长)!");
+                    alert("请检查自己是否有足够的权限(会长)!");
                 } else if (result == "-5") {
                     alert("检测到你要删除会长团,会长团不能被删除!!");
                 } else {
-                    thisObj.next().html("删除失败,请重试!");
+                    alert("删除失败,请重试!");
                 }
             },
             //响应失败执行的方法
@@ -285,7 +289,7 @@ function assAdminAssAddHtml(thisObj) {
         "<tr>" +
         "<td class='addAdminDepartmentUuid' style='display: none'></td>" +
         "<td><input type='text' class='form-control-plaintext' placeholder='前输入新的部门名称'></td>" +
-        "<td><textarea class='form-control-plaintext'>部门介绍</textarea></td>" +
+        "<td><textarea class='form-control-plaintext' placeholder='部门介绍'></textarea></td>" +
         "<td>0</td>" +
         "<td colspan='2' style='display: none;'><a href='#button'>已添加</a></td>" +
         "<td colspan='2'><a href='#button' class='fa fa-check text-primary assAdminDepAddSubmit' onclick='assAdminAssAdd($(this))'>确认添加</a></td>" +
@@ -301,7 +305,7 @@ function assAdminAssAdd(thisObj) {
     var depAddassUuid = thisObj.parents(".card-body").siblings(".card-header").find(".assAdminAssUuid").html();
     //获取社团名称
     var depAddName = thisObj.parent().prev().prev().prev().prev().find("input").val();
-    if (depAddName==null || depAddName== "") {
+    if (depAddName == null || depAddName == "") {
         thisObj.parents("#departmentsInfo").prev().find(".depTips").html("部门名称不能为空!");
         return false;
     }
@@ -349,6 +353,52 @@ function assAdminAssAdd(thisObj) {
 
 
 /**
+ * 删除社团
+ */
+function deleteAss(thisObj) {
+    var con = confirm("确定删除社团吗?\n这将会清空所有的社团数据, 并删除所有的社团人员!");
+    if (con) {
+        var assUuid = thisObj.siblings(".assAdminAssUuid").html();
+        $.ajax({
+            //请求地址
+            url: "/java/assAdminDelAss",
+            //请求类型
+            type: "POST",
+            //发送的数据
+            data: {
+                "assUuid":assUuid
+            },
+            //数据格式
+            dataType: "text",
+            //响应成功执行的方法,参数为相应结果
+            success: function (result) {
+                if (result == "0") {
+                    alert("删除成功!");
+                    location.reload();
+                }else if (result == "-1") {
+                    alert("请检查登录!");
+                }else if (result == "-2") {
+                    alert("删除失败, 请重试!");
+                }else if (result == "-3") {
+                    alert("权限不够, 只有会长级别才可以删除社团!");
+                } else {
+                    alert("操作失败!");
+                }
+            },
+            //响应失败执行的方法
+            error: function () {
+                alert("服务器响应失败!")
+            }
+        });
+
+
+    } else {
+        return false;
+    }
+}
+
+
+/**
  * 加载的部分内容
  * @type {string}
  */
@@ -360,9 +410,10 @@ assAdminAssName = "" +
 assAdminAssInfo = "<div class='assAdminAssInfo' style='margin-top: 20px; display: none;'>" +
     "    <div class='col-lg-12 mb-5'>" +
     "        <div class='card'>" +
-    "            <div class='card-header'>" +
-    "                <h3 class='h6 text-uppercase mb-0 assAdminAssName2'></h3>" +
+    "            <div class='row card-header'>" +
+    "                <h4 class='text-uppercase assAdminAssName2 col-md-10'></h4>" +
     "                <div class='assAdminAssUuid' style='display: none;'></div>" +
+    "                <button class='btn btn-primary col-md-2' onclick='deleteAss($(this))'>删除该社团</button>" +
     "            </div>" +
     "            <div class='card-body'>" +
     "                <div class='form-group row'>" +
@@ -384,12 +435,21 @@ assAdminAssInfo = "<div class='assAdminAssInfo' style='margin-top: 20px; display
     "                    <span class='' style='color: red;'></span>" +
     "                </div>" +
     "                <div class='form-group row'>" +
-    "                    <label  form-control-label'>" +
-    "                        <strong class='text-primary col-md-2'>部门</strong><span class='depTips' style='color: red;'></span>" +
+    "                    <label class='col-md-2 form-control-label'>" +
+    "                        <strong class='text-primary'>主页</strong>" +
     "                    </label>" +
-    "" +
+    "                    <input type='text' class='col-md-3 form-control-plaintext assAdminAssCustomUrl' readonly='readonly'/> " +
+    "                    <span class='col-md-1 fa fa-pencil assAdminChange'></span>" +
+    "                    <span class='col-md-1 fa fa-check assAdminChangeSubmit' style='display: none;'></span>" +
+    "                    <span class='' style='color: red;'></span>" +
+    "                </div>" +
+    "                <div class='form-group'>" +
+    "                   <div class='row'>" +
+    "                    <label  class='form-control-label'>" +
+    "                        <strong class='text-primary'>部门</strong><span class='depTips' style='color: red;'></span>" +
+    "                    </label>" +
+    "                   </div>" +
     "                    <div class='row' id='departmentsInfo'>" +
-    "                        <div class=''>" +
     "                            <table class='table table-hover table-responsive'>" +
     "                                <thead>" +
     "                                    <tr class='text-center'>" +
@@ -401,12 +461,11 @@ assAdminAssInfo = "<div class='assAdminAssInfo' style='margin-top: 20px; display
     "                                <tbody class='departments'>" +
     "" +
     "                                </tbody>" +
-    "                            </table>" +
-    "                        </div>" +
-    "                    </div>" +
-    "                </div>" +
-    "" +
-    "            </div>" +
-    "        </div>" +
-    "    </div>" +
-    "</div>";
+    "                            </table>"
+"                    </div>" +
+"                </div>" +
+"" +
+"            </div>" +
+"        </div>" +
+"    </div>" +
+"</div>";

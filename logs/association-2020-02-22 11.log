@@ -41,7 +41,7 @@
 2020-02-22 12:06:11 ERROR cn.com.alasky.service.admin.PersonalDataService 147 changePersonalName - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
 ### The error may exist in cn/com/alasky/mapper/admin/PersonalDataMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
+### The error may involve cn.com.alasky.mapper.master.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
 ### The error occurred while setting parameters
 ### SQL: UPDATE student_info SET stu_name=? WHERE stu_uuid=( SELECT stu_uuid FROM ? WHERE phone_number='11122223333' )
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
@@ -51,7 +51,7 @@
 2020-02-22 12:06:56 ERROR cn.com.alasky.service.admin.PersonalDataService 147 changePersonalName - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1
 ### The error may exist in cn/com/alasky/mapper/admin/PersonalDataMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
+### The error may involve cn.com.alasky.mapper.master.admin.PersonalDataMapper.updateNameInStudentInfo-Inline
 ### The error occurred while setting parameters
 ### SQL: UPDATE student_info SET stu_name=? WHERE stu_uuid=( SELECT stu_uuid FROM ? WHERE phone_number='11122223333' )
 ### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''咩咩咩' WHERE phone_number='11122223333' )' at line 1

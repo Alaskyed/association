@@ -1,7 +1,6 @@
 package cn.com.alasky.service.admin;
 
-import cn.com.alasky.mapper.admin.AdminMapper;
-import org.apache.ibatis.annotations.Arg;
+import cn.com.alasky.mapper.master.admin.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,12 +21,11 @@ public class AdminService {
 
     /**
      * 获取用户的职位
-     * @param userPhoneNumber
      * @return
      */
     @Transactional
-    public String getUserPosition(String userPhoneNumber) {
-        List<String> positions = adminMapper.queryPositionFromStuAss(userPhoneNumber);
+    public String getUserPosition(String userStuUuid) {
+        List<String> positions = adminMapper.queryPositionFromStuAss(userStuUuid);
         String position="";
         for (String po : positions) {
             position+=po;

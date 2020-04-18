@@ -1,9 +1,10 @@
 package cn.com.alasky.service.admin;
 
 import cn.com.alasky.domain.DepartmentBean;
-import cn.com.alasky.mapper.admin.AssAdminMapper;
-import cn.com.alasky.vo.AssAdminVo;
-import cn.com.alasky.vo.LoginSessionVo;
+import cn.com.alasky.mapper.master.admin.AssAdminMapper;
+import cn.com.alasky.returnandexception.ReturnValue;
+import cn.com.alasky.vo.admin.AssAdminVo;
+import cn.com.alasky.pojo.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,7 +33,7 @@ public class AssAdminService {
      * @param user
      * @return
      */
-    public List<AssAdminVo> getAssAdminAssInfo(LoginSessionVo user) {
+    public List<AssAdminVo> getAssAdminAssInfo(UserSession user) {
         List<AssAdminVo> assAdminVos = new LinkedList<>();
         //1. 查出该学生任会长的社团uuid
         List<String> assUuids = assAdminMapper.queryAssUuidsFromAssUuid(user.getUserStuUuid());
@@ -61,7 +62,7 @@ public class AssAdminService {
      * @return
      */
     @Transactional
-    public String assAdminNameChange(String assUuid, String newData, LoginSessionVo user) {
+    public String assAdminNameChange(String assUuid, String newData, UserSession user) {
         //检测用户是否具有权限
         String position = assAdminMapper.queryUserPosition(assUuid, user.getUserStuUuid());
         if (position.equals("1")) {
@@ -69,14 +70,14 @@ public class AssAdminService {
             int result = assAdminMapper.updateAssNameInAssociationInfo(assUuid, newData);
             if (result > 0) {
                 //执行成功
-                return "0";
+                return ReturnValue.SUCCESS.value();
             } else {
                 //执行失败
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         } else {
             //职位不付
-            return "-4";
+            return ReturnValue.USER_PERMISSION_ERROR.value();
         }
     }
 
@@ -89,25 +90,54 @@ public class AssAdminService {
      * @return
      */
     @Transactional
-    public String assAdminUniveisityChange(String assUuid, String newData, LoginSessionVo user) {
+    public String assAdminUniveisityChange(String assUuid, String newData, UserSession user) {
         //检测用户是否具有权限
         String position = assAdminMapper.queryUserPosition(assUuid, user.getUserStuUuid());
         //检查学校名称是否存在
         List<String> universityCode = assAdminMapper.queryUniversityCodeByName(newData);
         if (position != null && position.equals("1") && universityCode.size() > 0) {
+            newData = universityCode.get(0);
             //职位符合,执行逻辑
             int result = assAdminMapper.updateAssUniversityInAssociationInfo(assUuid, newData);
             if (result > 0) {
                 //执行成功
-                return "0";
+                return ReturnValue.SUCCESS.value();
             } else {
                 //执行失败
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
+            }
+        } else {
+            //职位权限不够
+            return ReturnValue.USER_PERMISSION_ERROR.value();
+        }
+    }
+
+    /**
+     * 修改社团主页链接
+     *
+     * @param assUuid
+     * @param newData
+     * @param user
+     * @return
+     */
+    public String assAdminCustomUrlChange(String assUuid, String newData, UserSession user) {
+        //检测用户是否具有权限
+        String position = assAdminMapper.queryUserPosition(assUuid, user.getUserStuUuid());
+        if (position.equals("1")) {
+            //职位符合,执行逻辑
+            int result = assAdminMapper.updateAssCustomUrl(assUuid, newData);
+            if (result > 0) {
+                //执行成功
+                return ReturnValue.SUCCESS.value();
+            } else {
+                //执行失败
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         } else {
             //职位不付
-            return "-4";
+            return ReturnValue.USER_PERMISSION_ERROR.value();
         }
+
     }
 
     /**
@@ -118,18 +148,18 @@ public class AssAdminService {
      * @return
      */
     @Transactional
-    public String assAdminDepChange(DepartmentBean departmentBean, LoginSessionVo user) {
+    public String assAdminDepChange(DepartmentBean departmentBean, UserSession user) {
         //检测用户是否具有权限
         String position = assAdminMapper.queryUserPositionByDepUuid(departmentBean.getDepartmentUuid(), user.getUserStuUuid());
         if (position != null && position.equals("1")) {
             int result = assAdminMapper.updateDepInfo(departmentBean);
             if (result > 0) {
-                return "0";
+                return ReturnValue.SUCCESS.value();
             } else {
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         } else {
-            return "-4";
+            return ReturnValue.USER_PERMISSION_ERROR.value();
         }
 
     }
@@ -142,7 +172,7 @@ public class AssAdminService {
      * @return
      */
     @Transactional
-    public String deleteDep(String departmentUuid, LoginSessionVo user) {
+    public String deleteDep(String departmentUuid, UserSession user) {
         //先查询是不是会长团,会长团不允许删除
         String position2 = assAdminMapper.queryPresident(departmentUuid, user.getUserStuUuid());
         if (position2 != null && position2.equals("1")) {
@@ -156,11 +186,12 @@ public class AssAdminService {
             int result = assAdminMapper.deleteDepByDepUuid(departmentUuid);
             //删除部门中的所有人
             int result2 = assAdminMapper.deleteDepMemberByDepUuid(departmentUuid);
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
-            return "-4";
+            return ReturnValue.USER_PERMISSION_ERROR.value();
         }
     }
+
 
     /**
      * 添加社团
@@ -171,7 +202,7 @@ public class AssAdminService {
      * @param user
      * @return
      */
-    public String addDep(String assUuid, String departmentName, String departmentDescription, LoginSessionVo user) {
+    public String addDep(String assUuid, String departmentName, String departmentDescription, UserSession user) {
         //检测用户是否具有权限
         String position = assAdminMapper.queryUserPosition(assUuid, user.getUserStuUuid());
         if (position != null && position.equals("1")) {
@@ -184,13 +215,40 @@ public class AssAdminService {
             //插入数据库
             int result = assAdminMapper.insertDepIntoDepartments(assUuid, newDep);
             if (result > 0) {
-                return "0";
+                return ReturnValue.SUCCESS.value();
             } else {
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         } else {
-            return "-4";
+            return ReturnValue.USER_PERMISSION_ERROR.value();
         }
+
+    }
+
+    /**
+     * 删除社团
+     *
+     * @param userStuUuid
+     * @param assUuid
+     */
+    @Transactional
+    public String delAss(String userStuUuid, String assUuid) {
+        //检查权限
+        String position = assAdminMapper.queryUserPosition(assUuid,userStuUuid);
+        if (!position.equals("1")) {
+            return ReturnValue.USER_PERMISSION_ERROR.value();
+        }
+
+        //先删除社团里所有的人
+        assAdminMapper.deleteMemberByAssUuid(assUuid);
+
+        //删除社团里所有的部门
+        assAdminMapper.deleteDepByAssUuid(assUuid);
+
+        //删除社团
+        assAdminMapper.deleteAssByAssUuid(assUuid);
+
+        return ReturnValue.SUCCESS.value();
 
     }
 }

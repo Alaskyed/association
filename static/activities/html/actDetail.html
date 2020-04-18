@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>活动详细信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/color/default.css" id="theme-color">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<!--navigation  导航栏-->
+<section>
+    <div id="navgation"></div>
+    <script>
+        $("#navgation").load("/navigation.html");
+    </script>
+</section>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="text-center text-primary mb-0" id="actName"></h4>
+            <div id="actId" style="display:none"></div>
+        </div>
+        <div class="card-body">
+            <table class="table card-text">
+                <tr>
+                    <th scope="row">学校</th>
+                    <td id="university"></td>
+                </tr>
+                <tr>
+                    <th scope="row">主办社团</th>
+                    <td id="ass"></td>
+                </tr>
+                <tr>
+                    <th scope="row">发布时间</th>
+                    <td id="releaseTime"></td>
+                </tr>
+                <tr>
+                    <th scope="row">活动开始时间</th>
+                    <td id="startTime"></td>
+                </tr>
+                <tr>
+                    <th scope="row">活动结束时间</th>
+                    <td id="endTime"></td>
+                </tr>
+                <tr>
+                    <th scope="row">报名截止时间</th>
+                    <td id="deadlineTime"></td>
+                </tr>
+                <tr>
+                    <th scope="row">活动地址</th>
+                    <td id="address"></td>
+                </tr>
+                <tr>
+                    <th scope="row">主要活动内容</th>
+                    <td id="content"></td>
+                </tr>
+                <tr>
+                    <th scope="row">联系方式</th>
+                    <td id="contact"></td>
+                </tr>
+                <tr>
+                    <th scope="row">备注</th>
+                    <td id="remarks"></td>
+                </tr>
+                <tr>
+                    <th scope="row">附件</th>
+                    <td id="enclosure"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="text-center">
+    <div class="btn btn-primary" data-toggle='modal' data-target="#actSignUp">立即报名参加!</div>
+
+    <div class="modal fade" id="actSignUp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">提交报名信息</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>注意: 提交报名信息之前请先登录!</strong></p>
+                    <form>
+                        <div class="form-group row">
+                            <label for="actSignUpName" class="col-sm-2 col-form-label">姓名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="actSignUpName" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="actSignUpRemarks" class="col-sm-2 col-form-label">备注</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="actSignUpRemarks" placeholder="">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center">
+                        <button type="button" class="btn btn-primary" id="actSignUpSubmit">提交</button>
+                    </div>
+                </div>
+                <div class='alert alert-warning' role='alert' style='text-align: center' id="actSignUpTip"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--引入js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+<script src="/index/js/scripts.js"></script>
+
+<script src="../js/actDetail.js"></script>
+</body>
+</html>

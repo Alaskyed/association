@@ -2,10 +2,9 @@ package cn.com.alasky.controller.admin;
 
 import cn.com.alasky.domain.DataChangeBean;
 import cn.com.alasky.service.admin.PersonalDataService;
-import cn.com.alasky.utils.RequestInfoUtils;
 import cn.com.alasky.utils.UserSessionUtils;
-import cn.com.alasky.vo.LoginSessionVo;
-import cn.com.alasky.vo.PerosnalDataVo;
+import cn.com.alasky.pojo.UserSession;
+import cn.com.alasky.vo.admin.PerosnalDataVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,14 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 个人信息Controller
- * 部分方法返回值说明:
- * 0 : 执行成功
- * -1 : session中没有用户信息
- * -2 : 执行失败
- * -3 : 请求名不匹配
- * -4 : 更新信息出错,但是数据库写入成功
- * -5 : 查询学校名失败
+ *
  */
 
 @RestController
@@ -45,24 +37,21 @@ public class PersonalDataController {
      */
     @RequestMapping(value = "/getPersonalData")
     public PerosnalDataVo getPersonalData(HttpServletRequest request) {
-        //记录登录信息
-        log.info("查看个人信息: " + RequestInfoUtils.getIPAndDeviceInfo(request));
+        //检查是否登录
+        UserSession user = UserSessionUtils.checkLogin(request.getSession());
+        if (user == null) {
+            return new PerosnalDataVo();
+        }
 
-        //创建个人信息对象
-        PerosnalDataVo perosnalDataVo = null;
-        //获取登录信息
-        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
+        //已登录, 返回个个人信息
         try {
-            if (user != null) {
-                //获取成功继续执行下一步
-                perosnalDataVo = personalDataService.getPersonalData(user.getUserPhoneNumber());
-                return perosnalDataVo;
-            } else {
-                return new PerosnalDataVo();
-            }
+            //获取成功继续执行下一步
+            PerosnalDataVo perosnalDataVo = personalDataService.getPersonalData(user.getUserPhoneNumber());
+            //记录登录信息
+            log.info("查看个人信息: " + user.getUserUuid());
+            return perosnalDataVo;
         } catch (Exception e) {
-            log.info("error");
-            log.error(String.valueOf(e));
+            log.error("获取个人信息失败: " + String.valueOf(e));
             return new PerosnalDataVo();
         }
     }
@@ -73,15 +62,15 @@ public class PersonalDataController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "/getAssName",method = RequestMethod.POST)
+    @RequestMapping(value = "/getAssName", method = RequestMethod.POST)
     public List<String> getAssNames(HttpServletRequest request) {
         //获取session中user信息,并判断用户是否存在
-        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
+        UserSession user = UserSessionUtils.checkLogin(request.getSession());
         if (user == null) {
             return new ArrayList<>();
         }
         try {
-            List<String> assNames = personalDataService.getAssNames(user.getUserPhoneNumber());
+            List<String> assNames = personalDataService.getAssNames(user.getUserStuUuid());
 
             return assNames;
         } catch (Exception e) {
@@ -102,7 +91,7 @@ public class PersonalDataController {
     @RequestMapping(value = "/personalDataChange/{dataType}", method = RequestMethod.POST)
     public String personalDataChange(@PathVariable String dataType, String newData, HttpServletRequest request) {
         //获取session中user信息,并判断用户是否存在
-        LoginSessionVo user = UserSessionUtils.checkLogin(request.getSession());
+        UserSession user = UserSessionUtils.checkLogin(request.getSession());
         if (user == null) {
             return "-1";
         }

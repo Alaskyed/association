@@ -1,0 +1,62 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+#waterfall {
+    width: 2000px;
+    margin: 20px auto;
+    columns: 5;
+    column-gap: 40px;
+}
+.box{
+    width: 200px;
+    margin: 0 0 20px;
+    padding: 10px;
+    overflow: hidden;
+    /*防止第一行剩余部分到第二行上面*/
+    break-inside: avoid;
+}
+
+.box img{
+    max-width: 100%;
+}
+
+/*.box h4{*/
+/*    margin: 10px 0 0;*/
+/*    padding: 0;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.box p{*/
+/*    margin: 0;*/
+/*    padding: 0 0 20px;*/
+/*    font-size: 10px;*/
+/*}*/
+
+
+@media (max-width: 1200px) {
+    #waterfall {
+        columns: 3;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #waterfall {
+        columns: 2;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #waterfall {
+        columns: 1;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+    }
+}

@@ -2,56 +2,186 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="346aa322-7b0a-490c-9f83-ae2e2c53fa6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/DepAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/dao/AssMemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AssAdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/DepAdminMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/DepAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/AssAdminVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/DepAdminVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/custom/assAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/admin/js/custom/depAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/config/MasterDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/config/SecondDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/activities/ActSignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/activities/GetActInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/activities/NewActController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/ActSignUpAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssSignUpAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/association/AssIGetInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/association/AssSignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/dao/AssSignUpDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/ActSignUpBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/AssSignUpBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/MessageBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/NewActBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/activites/ActSignUpMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/activites/GetActInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/activites/NewActMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/ActSignUpAdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/AssSignUpAdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/association/AssMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/association/AssSignUpMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/second/LoggerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/returnandexception/ReturnValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/activites/ActSignUpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/activites/GetActInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/activites/NewActService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/ActSignUpAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssSignUpAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/association/AssService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/association/AssSignUpService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/JedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/activities/ActAdminNameVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/activities/ActInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/activities/ActSignUpInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/activities/AssNameVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/AssSignUpAdminAssNameVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/AssSignUpDetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/association/AssDetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/association/AssInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/association/DepInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2-debug.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/css/allActs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/html/actDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/html/allActs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/html/newActivities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/js/actDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/js/allActs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/activities/js/newActivities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/html/actSignUpAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/html/assSignUpAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/custom/actSignUpAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/custom/assSignUpAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/association/html/assDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/association/html/joinNewAss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/association/js/assDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/association/js/joinNewAss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgages/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/index/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-28 20.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-28 20.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-01-31 14.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-01-31 14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-01 12.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-01 12.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-02 14.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-02 14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-16 21.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-16 21.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-19 19.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-19 19.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-21 20.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-21 20.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-21 22.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-21 22.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-22 11.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-22 11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-02-28 11.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-02-28 11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/association-2020-03-06 10.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association-2020-03-06 10.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/association.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/association.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/StartApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/StartApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/AssDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/DepAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/DepAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/PersonalDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/UserDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/controller/admin/UserDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/DepartmentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/DepartmentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/LoginMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AssDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AssDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/NewAssBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/domain/NewAssBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/RegisterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/RegisterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AssAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/AssAdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/AssDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/AssDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/DepAdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/DepAdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/PersonalDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/PersonalDataMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/admin/UserDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/mapper/master/admin/UserDataMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssAdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/AssDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/UserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/UserSessionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/LoginSessionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/LoginSessionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/DepAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/DepAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/PersonalDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/UserDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/service/admin/UserDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/UserSessionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils/UserSessionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/AssAdminVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/AssAdminVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/AssDataVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/AssDataVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/DepAdminVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/DepAdminVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/LoginSessionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/pojo/UserSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/PerosnalDataVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/com/alasky/vo/admin/PerosnalDataVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/html/assAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/html/assAdmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/html/assData.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/html/assData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/html/depAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/html/depAdmin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/html/createNewAss.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/association/html/createNewAss.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/html/personalData.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/html/personalData.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/js/adminNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/adminNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/custom/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/custom/assAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/custom/assAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/admin/js/custom/assData.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/custom/assData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/custom/personalData.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/custom/personalData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/html/admin/assData.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/html/admin/personalData.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/html/admin/userData.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/logreg/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/logreg/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/custom/createNewAss.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/association/js/createNewAss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/custom/depAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/custom/depAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/black.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/cyan.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/cyan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/green.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/indigo.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/indigo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/red.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/color/teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/css/color/teal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/html/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/banner3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/blog-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/images/blog-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/blog-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/images/blog-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/blog-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/images/blog-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/brands.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/images/brands.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/index/mockup.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/images/mockup.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/index/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/logreg/checkLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/logreg/checkLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/logreg/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/logreg/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/logreg/md5.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/logreg/md5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/logreg/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index/js/logreg/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/StartApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/StartApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AssAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AssAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AssDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/AssDataController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/DepAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/DepAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/PersonalDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/PersonalDataController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/UserDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/controller/admin/UserDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/domain/DepartmentBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/domain/DepartmentBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/LoginMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/LoginMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/AssDataMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/AssDataMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/domain/NewAssBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/domain/NewAssBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/LoginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/RegisterMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/AdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/AssAdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/AssDataMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/DepAdminMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/PersonalDataMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/mapper/admin/UserDataMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AssAdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AssAdminService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AssDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/AssDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/utils/UserUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/LoginSessionVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/LoginSessionVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/DepAdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/DepAdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/PersonalDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/PersonalDataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/UserDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/service/admin/UserDataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/utils/UserSessionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/com/alasky/utils/UserSessionUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/AssAdminVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/AssDataVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/DepAdminVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/LoginSessionVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/com/alasky/vo/PerosnalDataVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +191,15 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="206" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
         <option value="package.json" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -113,27 +247,37 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.com.alasky.controller.admin" />
+      <recent name="cn.com.alasky.service" />
+      <recent name="cn.com.alasky.domain" />
+      <recent name="cn.com.alasky.vo" />
+      <recent name="cn.com.alasky.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\association\src\main\resources" />
+      <recent name="F:\develop\associationstatic\src\main\java\cn\com\alasky" />
+      <recent name="F:\develop\associationstatic\src\main\resources" />
+      <recent name="F:\develop\association\src\main\java\cn\com\alasky\mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/cn/com/alasky/utils" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.StartStaticApp">
     <configuration name="StartApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="associationplatform" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.com.alasky.*" />
+          <option name="PATTERN" value="cn.com.alasky.returnandexception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,9 +286,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StartStaticApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="associationstatic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.com.alasky.returnandexception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.com.alasky.StartStaticApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.StartApp" />
+        <item itemvalue="Spring Boot.StartStaticApp" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +396,32 @@
       <workItem from="1583498608450" duration="4041000" />
       <workItem from="1583544416419" duration="153000" />
       <workItem from="1583576751834" duration="5908000" />
+      <workItem from="1583631946981" duration="31000" />
+      <workItem from="1583644191438" duration="15000" />
+      <workItem from="1583644212234" duration="3000" />
+      <workItem from="1584151818601" duration="4185000" />
+      <workItem from="1584187268082" duration="4861000" />
+      <workItem from="1584235635118" duration="24035000" />
+      <workItem from="1584279067273" duration="2138000" />
+      <workItem from="1584321896903" duration="22533000" />
+      <workItem from="1584411064976" duration="4000" />
+      <workItem from="1584872208292" duration="22180000" />
+      <workItem from="1584935120543" duration="14759000" />
+      <workItem from="1584960995199" duration="12749000" />
+      <workItem from="1585012787725" duration="2704000" />
+      <workItem from="1585045397354" duration="601000" />
+      <workItem from="1585051317005" duration="22000" />
+      <workItem from="1585360878470" duration="14841000" />
+      <workItem from="1585467943628" duration="21940000" />
+      <workItem from="1585531999805" duration="27264000" />
+      <workItem from="1585878062929" duration="14000" />
+      <workItem from="1586145605590" duration="11317000" />
+      <workItem from="1586224019666" duration="21026000" />
+      <workItem from="1586571895341" duration="22000" />
+      <workItem from="1586740869549" duration="14583000" />
+      <workItem from="1586833088357" duration="1997000" />
+      <workItem from="1586851808776" duration="18875000" />
+      <workItem from="1587024944565" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="完成主页所有的前端">
       <created>1581217229333</created>
@@ -269,6 +453,10 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1999" y="190" key="#Inspections/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580300153459" />
+    <state x="329" y="92" key="#Project_Structure" timestamp="1585470068740">
+      <screen x="0" y="0" width="1471" height="864" />
+    </state>
+    <state x="329" y="92" key="#Project_Structure/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1585470068740" />
     <state x="370" y="72" key="#StartApp" timestamp="1581166701426">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
@@ -281,15 +469,28 @@
       <screen x="0" y="0" width="1462" height="864" />
     </state>
     <state x="186" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581785051118" />
-    <state x="768" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580988965830">
+    <state x="537" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1584891578327">
       <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="537" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584891578327" />
+    <state x="556" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585557628901">
+      <screen x="0" y="0" width="1471" height="864" />
+    </state>
+    <state x="553" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584885240782" />
+    <state x="556" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1585557628901" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585395699743">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
     <state x="768" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1580988965830" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1585395699743" />
     <state x="2448" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580456563969" />
-    <state x="462" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581859403934">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state x="465" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585395884282">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
+    <state x="-1005" y="191" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584937487784" />
+    <state x="462" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584952193638" />
     <state x="462" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581859403934" />
+    <state x="465" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1585395884282" />
     <state x="348" y="30" key="CommitChangelistDialog2" timestamp="1582366792172">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
@@ -298,98 +499,134 @@
       <screen x="0" y="0" width="1462" height="864" />
     </state>
     <state x="344" y="281" key="FileChooserDialogImpl/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1580827873698" />
-    <state width="1463" height="241" key="GridCell.Tab.0.bottom" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.0.bottom" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.0.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.0.bottom/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450792" />
+    <state width="1463" height="250" key="GridCell.Tab.0.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121846" />
     <state width="1463" height="191" key="GridCell.Tab.0.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582424906258" />
+    <state width="1473" height="250" key="GridCell.Tab.0.bottom/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.0.bottom/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580608895788" />
-    <state width="1463" height="241" key="GridCell.Tab.0.center" timestamp="1583588773646">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.0.center" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.0.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773646" />
+    <state width="1377" height="253" key="GridCell.Tab.0.center/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450791" />
+    <state width="1463" height="250" key="GridCell.Tab.0.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121846" />
     <state width="1463" height="191" key="GridCell.Tab.0.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582424906258" />
+    <state width="1473" height="250" key="GridCell.Tab.0.center/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.0.center/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580608895788" />
-    <state width="1463" height="241" key="GridCell.Tab.0.left" timestamp="1583588773646">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.0.left" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.0.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773646" />
+    <state width="1377" height="253" key="GridCell.Tab.0.left/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450791" />
+    <state width="1463" height="250" key="GridCell.Tab.0.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121845" />
     <state width="1463" height="191" key="GridCell.Tab.0.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582424906257" />
+    <state width="1473" height="250" key="GridCell.Tab.0.left/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.0.left/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580608895788" />
-    <state width="1463" height="241" key="GridCell.Tab.0.right" timestamp="1583588773646">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.0.right" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.0.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773646" />
+    <state width="1377" height="253" key="GridCell.Tab.0.right/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450791" />
+    <state width="1463" height="250" key="GridCell.Tab.0.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121846" />
     <state width="1463" height="191" key="GridCell.Tab.0.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582424906258" />
+    <state width="1473" height="250" key="GridCell.Tab.0.right/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.0.right/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580608895788" />
-    <state width="1463" height="241" key="GridCell.Tab.1.bottom" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.1.bottom" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.1.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.1.bottom/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="234" key="GridCell.Tab.1.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121608" />
     <state width="1463" height="191" key="GridCell.Tab.1.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.1.bottom/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.1.bottom/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581344" />
     <state width="1388" height="319" key="GridCell.Tab.1.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.1.bottom/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580610332717" />
-    <state width="1463" height="241" key="GridCell.Tab.1.center" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.1.center" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.1.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.1.center/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="234" key="GridCell.Tab.1.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121607" />
     <state width="1463" height="191" key="GridCell.Tab.1.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.1.center/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.1.center/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.1.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.1.center/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580610332717" />
-    <state width="1463" height="241" key="GridCell.Tab.1.left" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.1.left" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.1.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.1.left/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="234" key="GridCell.Tab.1.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121607" />
     <state width="1463" height="191" key="GridCell.Tab.1.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.1.left/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.1.left/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.1.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.1.left/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580610332717" />
-    <state width="1463" height="241" key="GridCell.Tab.1.right" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.1.right" timestamp="1586878659034">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.1.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.1.right/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="234" key="GridCell.Tab.1.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019121608" />
     <state width="1463" height="191" key="GridCell.Tab.1.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.1.right/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659034" />
+    <state width="1473" height="250" key="GridCell.Tab.1.right/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581343" />
     <state width="1388" height="319" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580610332717" />
-    <state width="1463" height="241" key="GridCell.Tab.2.bottom" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.2.bottom" timestamp="1586878659035">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.2.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.2.bottom/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450581" />
+    <state width="1463" height="250" key="GridCell.Tab.2.bottom/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019051938" />
     <state width="1463" height="191" key="GridCell.Tab.2.bottom/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.2.bottom/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659035" />
+    <state width="1473" height="250" key="GridCell.Tab.2.bottom/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581345" />
     <state width="1388" height="319" key="GridCell.Tab.2.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327653" />
     <state width="1807" height="270" key="GridCell.Tab.2.bottom/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580566285017" />
-    <state width="1463" height="241" key="GridCell.Tab.2.center" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.2.center" timestamp="1586878659035">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.2.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.2.center/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="250" key="GridCell.Tab.2.center/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019051937" />
     <state width="1463" height="191" key="GridCell.Tab.2.center/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.2.center/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659035" />
+    <state width="1473" height="250" key="GridCell.Tab.2.center/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581344" />
     <state width="1388" height="319" key="GridCell.Tab.2.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.2.center/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580566285017" />
-    <state width="1463" height="241" key="GridCell.Tab.2.left" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.2.left" timestamp="1586878659035">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.2.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.2.left/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450580" />
+    <state width="1463" height="250" key="GridCell.Tab.2.left/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019051937" />
     <state width="1463" height="191" key="GridCell.Tab.2.left/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.2.left/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659035" />
+    <state width="1473" height="250" key="GridCell.Tab.2.left/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581344" />
     <state width="1388" height="319" key="GridCell.Tab.2.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327652" />
     <state width="1807" height="270" key="GridCell.Tab.2.left/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580566285017" />
-    <state width="1463" height="241" key="GridCell.Tab.2.right" timestamp="1583588773647">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state width="1473" height="250" key="GridCell.Tab.2.right" timestamp="1586878659035">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
-    <state width="1463" height="241" key="GridCell.Tab.2.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583588773647" />
+    <state width="1377" height="253" key="GridCell.Tab.2.right/0.0.1462.864/-1440.0.1376.900@-1440.0.1376.900" timestamp="1584872450581" />
+    <state width="1463" height="250" key="GridCell.Tab.2.right/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1585019051937" />
     <state width="1463" height="191" key="GridCell.Tab.2.right/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582372193932" />
+    <state width="1473" height="250" key="GridCell.Tab.2.right/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586878659035" />
+    <state width="1473" height="250" key="GridCell.Tab.2.right/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586272581345" />
     <state width="1388" height="319" key="GridCell.Tab.2.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580695327653" />
     <state width="1807" height="270" key="GridCell.Tab.2.right/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580566285017" />
     <state x="537" y="146" key="RollbackChangesDialog" timestamp="1581237877124">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
     <state x="537" y="146" key="RollbackChangesDialog/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1581237877124" />
-    <state x="-1259" y="132" width="1037" height="708" key="SettingsEditor" timestamp="1583152784824">
+    <state x="-1285" y="104" width="1037" height="708" key="SettingsEditor" timestamp="1584190857760">
       <screen x="-1440" y="0" width="1376" height="900" />
     </state>
-    <state x="-1259" y="132" width="1037" height="708" key="SettingsEditor/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583152784824" />
+    <state x="-1285" y="104" width="1037" height="708" key="SettingsEditor/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584190857760" />
     <state x="-1290" y="130" width="977" height="708" key="SettingsEditor/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582426017328" />
     <state x="279" y="117" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1580694992569" />
     <state x="1812" y="140" key="SettingsEditor/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580307079232" />
@@ -405,19 +642,50 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1879" y="268" width="980" height="680" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580554880980" />
+    <state x="93" y="93" width="1286" height="678" key="dock-window-1" timestamp="1586784191097">
+      <screen x="0" y="0" width="1471" height="864" />
+    </state>
+    <state x="93" y="93" width="1286" height="678" key="dock-window-1/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586784191097" />
+    <state x="25" y="220" key="new project wizard" timestamp="1584190393070">
+      <screen x="0" y="0" width="1462" height="864" />
+    </state>
+    <state x="25" y="220" key="new project wizard/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584190393070" />
     <state x="438" y="62" key="refactoring.ChangeSignatureDialog" timestamp="1583400508423">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
     <state x="438" y="62" key="refactoring.ChangeSignatureDialog/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583400508423" />
-    <state x="388" y="197" key="run.anything.popup" timestamp="1583462002844">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state x="390" y="197" key="run.anything.popup" timestamp="1585577808369">
+      <screen x="0" y="0" width="1471" height="864" />
     </state>
     <state x="388" y="197" key="run.anything.popup/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583462002844" />
-    <state x="526" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1583586445776">
+    <state x="390" y="197" key="run.anything.popup/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1585577808369" />
+    <state x="529" y="212" width="677" height="678" key="search.everywhere.popup" timestamp="1586869058228">
+      <screen x="0" y="0" width="1471" height="864" />
+    </state>
+    <state x="526" y="212" width="672" height="678" key="search.everywhere.popup/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584970640845" />
+    <state x="526" y="212" width="672" height="678" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582366273935" />
+    <state x="529" y="212" width="677" height="678" key="search.everywhere.popup/0.0.1471.864/-1440.0.1378.900@0.0.1471.864" timestamp="1586869058228" />
+    <state x="529" y="212" width="677" height="678" key="search.everywhere.popup/0.0.1471.864/-1440.0.1440.870@0.0.1471.864" timestamp="1586265534459" />
+    <state x="2131" y="265" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580299678444" />
+    <state x="454" y="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1584880346213">
       <screen x="0" y="0" width="1462" height="864" />
     </state>
-    <state x="526" y="212" width="672" height="678" key="search.everywhere.popup/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1583586445776" />
-    <state x="526" y="212" width="672" height="678" key="search.everywhere.popup/0.0.1462.864/-1440.0.1378.900@0.0.1462.864" timestamp="1582366273935" />
-    <state x="2131" y="265" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1580299678444" />
+    <state x="454" y="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1462.864/-1440.0.1376.900@0.0.1462.864" timestamp="1584880346213" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/com/alasky/service/activites/ActSignUpService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/association$StartApp.ic" NAME="StartApp Coverage Results" MODIFIED="1585019057317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cn.com.alasky.returnandexception.*</FILTER>
+    </SUITE>
   </component>
 </project>

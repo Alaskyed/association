@@ -1,7 +1,7 @@
 package cn.com.alasky.controller.admin;
 
 import cn.com.alasky.service.admin.AdminService;
-import cn.com.alasky.vo.LoginSessionVo;
+import cn.com.alasky.pojo.UserSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,11 +37,13 @@ public class AdminController {
     @RequestMapping(value = "/getUserPosition")
     public String getUserPosition() {
         try {
-            LoginSessionVo user = (LoginSessionVo) request.getSession().getAttribute("user");
-            String position = adminService.getUserPosition(user.getUserPhoneNumber());
+            UserSession user = (UserSession) request.getSession().getAttribute("user");
+            log.info("查看控制台: " + user.getUserUuid());
+            String position = adminService.getUserPosition(user.getUserStuUuid());
             return position;
         } catch (Exception e) {
             log.error("获取用户职位出错: " + String.valueOf(e));
+            //这里不能使用ReturnValue, 理由在方法介绍中
             return "error";
         }
     }

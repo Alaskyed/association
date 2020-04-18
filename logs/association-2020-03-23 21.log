@@ -1,0 +1,47 @@
+2020-03-23 21:45:36 INFO  cn.com.alasky.StartApp 28 main - 启动应用
+2020-03-23 21:45:37 INFO  org.springframework.boot.StartupInfoLogger 50 logStarting - Starting StartApp on Alasky with PID 3908 (F:\develop\association\target\classes started by Alasky in F:\develop\association)
+2020-03-23 21:45:37 INFO  org.springframework.boot.SpringApplication 675 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2020-03-23 21:45:38 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 244 multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-23 21:45:38 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 126 registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-23 21:45:38 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate 182 registerRepositoriesIn - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2020-03-23 21:45:38 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330 postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aaeed5cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-23 21:45:39 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 90 initialize - Tomcat initialized with port(s): 8080 (http)
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\java\jdk1.8.0_211\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Software\python\Scripts\;C:\Software\python\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Software\java\jdk1.8.0_211\bin;C:\Software\java\jdk1.8.0_211\jre\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\hadoop-2.7.7\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Software\Git\cmd;D:\mysql-8.0.18-winx64\bin;D:\pandoc\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Software\python\python3.6\Scripts\;C:\Software\python\python3.6\;C:\Software\Scripts\;C:\Software\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.2\bin;D:\Microsoft VS Code\bin;D:\apache-maven-3.6.1\bin;C:\Software\python\Scripts;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Program Files\Bandizip\;C:\Users\Administrator\AppData\Roaming\npm;.]
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-03-23 21:45:39 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+2020-03-23 21:45:39 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 296 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2204 ms
+2020-03-23 21:45:40 INFO  io.lettuce.core.EpollProvider 68 <clinit> - Starting without optional epoll library
+2020-03-23 21:45:40 INFO  io.lettuce.core.KqueueProvider 70 <clinit> - Starting without optional kqueue library
+2020-03-23 21:45:42 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 171 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-23 21:45:43 INFO  org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor 295 finishRegistration - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-23 21:45:43 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting ProtocolHandler ["http-nio-8080"]
+2020-03-23 21:45:43 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 204 start - Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-23 21:45:43 INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started StartApp in 6.637 seconds (JVM running for 9.304)
+2020-03-23 21:45:48 INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-23 21:45:48 INFO  org.springframework.web.servlet.FrameworkServlet 524 initServletBean - Initializing Servlet 'dispatcherServlet'
+2020-03-23 21:45:48 INFO  org.springframework.web.servlet.FrameworkServlet 546 initServletBean - Completed initialization in 12 ms
+2020-03-23 21:45:48 INFO  cn.com.alasky.controller.admin.AdminController 41 getUserPosition - 查看控制台: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 21:45:48 INFO  cn.com.alasky.controller.admin.UserDataController 49 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-23 21:45:48 ERROR com.alibaba.druid.support.logging.Log4j2Impl 58 error - testWhileIdle is true, validationQuery not set
+2020-03-23 21:45:48 INFO  com.alibaba.druid.support.logging.Log4j2Impl 106 info - {dataSource-1} inited
+2020-03-23 21:46:01 INFO  cn.com.alasky.controller.admin.AssAdminController 42 getAssAdminAssInfo - 查看控制台社团管理: 11122223333
+2020-03-23 21:46:02 INFO  cn.com.alasky.controller.admin.DepAdminController 47 getDepAdminAssInfo - 查看部门管理: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 21:46:10 INFO  cn.com.alasky.controller.admin.UserDataController 49 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-23 21:52:52 INFO  cn.com.alasky.controller.admin.PersonalDataController 53 getPersonalData - 查看个人信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 21:52:54 INFO  cn.com.alasky.controller.admin.AssDataController 42 getAssData - 获取社团信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 21:52:55 INFO  cn.com.alasky.controller.admin.AssAdminController 42 getAssAdminAssInfo - 查看控制台社团管理: 11122223333
+2020-03-23 21:52:56 INFO  cn.com.alasky.controller.admin.AssAdminController 42 getAssAdminAssInfo - 查看控制台社团管理: 11122223333
+2020-03-23 21:52:56 INFO  cn.com.alasky.controller.admin.AssDataController 42 getAssData - 获取社团信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 21:52:56 INFO  cn.com.alasky.controller.admin.PersonalDataController 53 getPersonalData - 查看个人信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 22:03:22 INFO  cn.com.alasky.controller.admin.AdminController 41 getUserPosition - 查看控制台: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 22:03:23 INFO  cn.com.alasky.controller.admin.UserDataController 49 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-23 22:03:26 INFO  cn.com.alasky.controller.admin.PersonalDataController 53 getPersonalData - 查看个人信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 22:03:29 INFO  cn.com.alasky.controller.admin.AssDataController 42 getAssData - 获取社团信息: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 22:03:29 INFO  cn.com.alasky.controller.admin.AssAdminController 42 getAssAdminAssInfo - 查看控制台社团管理: 11122223333
+2020-03-23 22:03:30 INFO  cn.com.alasky.controller.admin.DepAdminController 47 getDepAdminAssInfo - 查看部门管理: 8cff4bc2-07e3-4099-84f5-89e7b880a197
+2020-03-23 22:03:35 INFO  cn.com.alasky.controller.admin.UserDataController 49 getUserData - 查看用户信息: IP: 127.0.0.1 设备信息: [ Windows NT 10.0; Win64; x64 ]
+2020-03-23 22:13:14 INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 208 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-23 22:13:14 INFO  com.alibaba.druid.support.logging.Log4j2Impl 106 info - {dataSource-1} closed

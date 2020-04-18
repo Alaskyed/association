@@ -2,14 +2,13 @@ package cn.com.alasky.service.admin;
 
 import cn.com.alasky.domain.DataChangeBean;
 import cn.com.alasky.domain.MajorBean;
-import cn.com.alasky.mapper.admin.PersonalDataMapper;
-import cn.com.alasky.vo.PerosnalDataVo;
+import cn.com.alasky.mapper.master.admin.PersonalDataMapper;
+import cn.com.alasky.returnandexception.ReturnValue;
+import cn.com.alasky.vo.admin.PerosnalDataVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 import java.util.UUID;
@@ -54,10 +53,10 @@ public class PersonalDataService {
             int result = personalDataMapper.updateUniversityInStudentInfo(dataChangeBean);
             if (result > 0) {
                 //返回执行成功字符
-                return "0";
+                return ReturnValue.SUCCESS.value();
             } else {
                 //返回执行失败字符
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         } else {
             //查询失败,返回查询失败代码
@@ -87,7 +86,7 @@ public class PersonalDataService {
             int result = personalDataMapper.updateMajorUuidInStudentInfo(dataChangeBean);
 
             //返账执行成功代码
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
             //如果不存在,新建专业,并更换新的专业uuid
             //1. 创建一个major对象
@@ -104,12 +103,12 @@ public class PersonalDataService {
                 dataChangeBean.setNewValue(majorUuid);
                 int result2 = personalDataMapper.updateMajorUuidInStudentInfo(dataChangeBean);
                 if (result2 > 0) {
-                    return "0";
+                    return ReturnValue.SUCCESS.value();
                 } else {
-                    return "-2";
+                    return ReturnValue.EXECUTION_ERROR.value();
                 }
             } else {
-                return "-2";
+                return ReturnValue.EXECUTION_ERROR.value();
             }
         }
 
@@ -127,9 +126,9 @@ public class PersonalDataService {
         int result = personalDataMapper.updateNameInStudentInfo(dataChangeBean);
         if (result > 0) {
             //返回执行成功指令
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
-            return "-2";
+            return ReturnValue.EXECUTION_ERROR.value();
         }
     }
 
@@ -144,9 +143,9 @@ public class PersonalDataService {
         //修改学号
         int result = personalDataMapper.updateStuIdInStudentInfo(dataChangeBean);
         if (result > 0) {
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
-            return "-2";
+            return ReturnValue.EXECUTION_ERROR.value();
         }
 
     }
@@ -162,9 +161,9 @@ public class PersonalDataService {
         //修改年级
         int result = personalDataMapper.updateGradeInStudentInfo(dataChangeBean);
         if (result > 0) {
-            return "0";
+            return ReturnValue.SUCCESS.value();
         } else {
-            return "-2";
+            return ReturnValue.EXECUTION_ERROR.value();
         }
 
     }
@@ -172,25 +171,10 @@ public class PersonalDataService {
     /**
      * 获取用户加入的社团名称
      * @return
-     * @param userPhoneNumber
      */
-    public List<String> getAssNames(String userPhoneNumber) {
-        List<String> assNames = personalDataMapper.queryAssNames(userPhoneNumber);
+    public List<String> getAssNames(String userStuUuid) {
+        List<String> assNames = personalDataMapper.queryAssNames(userStuUuid);
         return assNames;
     }
-
-
-    /**
-     * 修改学院
-     * @param dataChangeBean
-     * @return
-     */
-//    public String changePersonalAcademic(DataChangeBean dataChangeBean) {
-//        try{
-//            int result = personalDataMapper.updateAcademyInStudentInfo(dataChangeBean);
-//
-//        }
-//    }
-
 
 }

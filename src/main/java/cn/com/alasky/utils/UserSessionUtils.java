@@ -1,10 +1,8 @@
 package cn.com.alasky.utils;
 
-import cn.com.alasky.vo.LoginSessionVo;
+import cn.com.alasky.pojo.UserSession;
 import lombok.extern.slf4j.Slf4j;
-import sun.rmi.runtime.Log;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -20,9 +18,9 @@ public class UserSessionUtils {
      * @param session
      * @return 登录的用户信息(手机号, 用户名), 如果没有用户信息就返回null
      */
-    public static LoginSessionVo checkLogin(HttpSession session) {
+    public static UserSession checkLogin(HttpSession session) {
         //获取session信息
-        LoginSessionVo user = (LoginSessionVo) session.getAttribute("user");
+        UserSession user = (UserSession) session.getAttribute("user");
         if (user != null) {
             //先更新一下session,主要是为了重置过期时间
             session.setAttribute("user", user);
@@ -43,7 +41,7 @@ public class UserSessionUtils {
     public static boolean updateUserSesionPhoneNumber(String newPhoneNumber, HttpSession session) {
         //先检查用户是否登录
         try {
-            LoginSessionVo user = checkLogin(session);
+            UserSession user = checkLogin(session);
             if (user != null) {
                 user.setUserPhoneNumber(newPhoneNumber);
                 session.setAttribute("user", user);
@@ -68,7 +66,7 @@ public class UserSessionUtils {
     public static boolean updateUserSesionUserName(String newUserName, HttpSession session) {
         //先检查用户是否登录
         try {
-            LoginSessionVo user = checkLogin(session);
+            UserSession user = checkLogin(session);
             if (user != null) {
                 user.setUserName(newUserName);
                 session.setAttribute("user", user);

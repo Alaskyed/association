@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- 侧边导航栏的字体-->
     <link rel="stylesheet" href="css/orionicons.css">
-    <!- theme stylesheet-->
+    <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-color">
     <!-- Favicon 图标-->
     <link rel="shortcut icon" href="img/favicon.png?3">
@@ -90,10 +90,9 @@
             <!--                </div>-->
             <!--            </li>-->
             <li class="nav-item dropdown ml-auto">
-                <a id="userInfo" href="#" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false" class="nav-link dropdown-toggle">
-                    <!--                    <img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;"-->
-                    <!--                         class="img-fluid rounded-circle shadow">-->
+                <a id="userInfo" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+<!--                    <img src="img/avatar-6.jpg" alt="Jason Doe" style="max-width: 2.5rem;"-->
+<!--                         class="img-fluid rounded-circle shadow">-->
                     未登录
                 </a>
                 <div aria-labelledby="userInfo" class="dropdown-menu">
@@ -126,8 +125,7 @@
 
         </ul>
 
-        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">社团管理
-        </div>
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">社团管理</div>
         <ul class="sidebar-menu list-unstyled">
             <li class="sidebar-list-item"><a href="#assData" class="sidebar-link text-muted navs">
                 <i class="fa fa-home mr-3 text-gray"></i><span>我的社团</span></a>
@@ -139,6 +137,16 @@
                 <i class="fa fa-gear mr-3 text-gray"></i><span>管理部门</span></a>
             </li>
         </ul>
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">报名信息</div>
+        <ul class="sidebar-menu list-unstyled">
+            <li id="actSignUpAdminNav" class="sidebar-list-item" style="display: none"><a href="#actSignUpAdmin" class="sidebar-link text-muted navs">
+                <i class="fa fa-file-o mr-3 text-gray"></i><span>活动报名</span></a>
+            </li>
+            <li id="assSignUpAdminNav" class="sidebar-list-item" style="display: none"><a href="#assSignUpAdmin" class="sidebar-link text-muted navs">
+                <i class="fa fa-file-o mr-3 text-gray"></i><span>社团纳新</span></a>
+            </li>
+        </ul>
+
     </div>
 
     <!--  内容部分  -->
@@ -148,6 +156,8 @@
         <div id="assData" class="container-fluid px-xl-5 tab-pane"></div>
         <div id="assAdmin" class="container-fluid px-xl-5 tab-pane"></div>
         <div id="depAdmin" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="actSignUpAdmin" class="container-fluid px-xl-5 tab-pane"></div>
+        <div id="assSignUpAdmin" class="container-fluid px-xl-5 tab-pane"></div>
 
     </div>
 </div>

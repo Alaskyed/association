@@ -1,4 +1,4 @@
-﻿//# sourceURL=/admin/js/adminNavication.js
+﻿//# sourceURL=adminNavication.js
 $(function () {
     // Sidebar 点击侧边导航栏伸缩
     $('.sidebar-toggler').on('click', function () {
@@ -16,9 +16,25 @@ $(function () {
         signOut();
     });
 
-    //显示第一个内容
-    $("#firstContext").addClass("active");
-    $("#userData").load("/admin/html/userData.html");
+    //首先隐藏所有板块
+    $(".tab-pane").css("display", "none");
+
+    //获取请求地址, 显示对应的页面
+    var pageAddr = location.href;
+    var addrNum = pageAddr.indexOf("#");
+    var idx = pageAddr.substring(addrNum);
+    if (addrNum == -1 || idx == "#") {
+        //显示第一个内容
+        $("#firstContext").addClass("active");
+        $("#userData").load("/admin/html/userData.html");
+        $("#userData").css("display", "block");
+    } else {
+        $("a[href='" + idx + "']").addClass("active");
+        //根据获取的id,显示相应的内容
+        $(idx).css("display", "block");
+        //加载内容
+        loadContect(idx);
+    }
 
     //点击切换内容
     $(".navs").click(function () {
@@ -83,7 +99,7 @@ function checkLogin() {
                 $("#userInfo").html("我的");
                 $("#signIn").css("display", "none");
                 $("#signOut").css("display", "block");
-                $("#userInfo").html("<a href='#'>欢迎! " + user.userName + "</a>");
+                $("#userInfo").html("<a href='#'>" + user.userName + "<span class='text-primary fa fa-caret-down'></span></a>");
             }
         },
         //响应失败执行的方法
@@ -92,7 +108,6 @@ function checkLogin() {
         }
     });
 }
-
 
 
 /**
@@ -132,8 +147,8 @@ function signOut() {
  */
 function randomOolor() {
     //随机使用一种颜色
-    var colors = new Array("default","blue","red","green","violet","sea","pink");
-    var randomColor = Math.floor(Math.random()*7);
+    var colors = new Array("default", "blue", "red", "green", "violet", "sea", "pink");
+    var randomColor = Math.floor(Math.random() * 7);
     $('#theme-color').attr("href", "css/style." + colors[randomColor] + ".css");
 }
 
@@ -156,10 +171,18 @@ function getUserPosition() {
             if (position.indexOf("1") >= 0) {
                 $("#assAdminNav").css("display", "block");
                 $("#depAdminNav").css("display", "block");
+                $("#actSignUpAdminNav").css("display", "block");
+                $("#assSignUpAdminNav").css("display", "block");
             }
             if (position.indexOf("2") >= 0) {
                 $("#depAdminNav").css("display", "block");
+                $("#actSignUpAdminNav").css("display", "block");
+                $("#assSignUpAdminNav").css("display", "block");
             }
+            if (position.indexOf("error") >= 0) {
+                alert("请先登录!");
+            }
+
         },
         //响应失败执行的方法
         error: function () {

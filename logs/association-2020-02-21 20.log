@@ -32,7 +32,7 @@
 2020-02-21 21:13:25 ERROR cn.com.alasky.controller.admin.PersonalDataController 63 getPersonalData - org.springframework.jdbc.BadSqlGrammarException: 
 ### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm.academy_name' in 'field list'
 ### The error may exist in cn/com/alasky/mapper/admin/PersonalDataMapper.java (best guess)
-### The error may involve cn.com.alasky.mapper.admin.PersonalDataMapper.queryPersonalData-Inline
+### The error may involve cn.com.alasky.mapper.master.admin.PersonalDataMapper.queryPersonalData-Inline
 ### The error occurred while setting parameters
 ### SQL: SELECT n.university_name AS university, m.academy_name AS academy, m.major_name AS major, s.stu_name AS name, s.stu_id AS stu_id, s.stu_grade AS grade FROM `user` u INNER JOIN student_info s ON u.stu_uuid=s.stu_uuid INNER JOIN major_info m ON s.major_uuid=m.major_uuid INNER JOIN university n ON s.university_code=n.id_code WHERE u.phone_number=?
 ### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm.academy_name' in 'field list'
